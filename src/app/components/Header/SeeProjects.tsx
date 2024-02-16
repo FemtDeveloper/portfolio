@@ -16,7 +16,7 @@ const SeeProjects = () => {
       <div
         className={`arrow absolute rounded-full right-0 transition duration-300 ${
           ishover ? "dark:bg-primaryOrange rotate-45" : "dark:bg-white40 "
-        } backdrop-blur-sm border dark:border-white ${ishover ? "p-4" : "p-5"}`}
+        }  border dark:border-white ${ishover ? "p-4" : "p-5"}`}
         onMouseEnter={() => setIshover(true)}
         onMouseLeave={() => setIshover(false)}
       >
