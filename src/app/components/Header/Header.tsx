@@ -38,10 +38,9 @@ const Header = () => {
           <SeeProjects />
         </div>
       </div>
-      <div className="flex-1 grayscale-[80%] opacity-60">
+      <div className="flex-1 grayscale-[80%] opacity-80 dark:opacity-60">
         <Image
           src="/images/header-gif.gif"
-          objectFit="cover"
           style={{ width: "100%", borderRadius: 48 }}
           width={471}
           height={498}
