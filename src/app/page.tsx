@@ -3,6 +3,7 @@ import { useThemeStore } from "@/store/useThemeStore";
 import { useEffect } from "react";
 import { Header } from "./components/Header";
 import { useShallow } from "zustand/react/shallow";
+import Ribbons from "./components/Ribbons/Ribbons";
 
 export default function Home() {
   const { theme } = useThemeStore(
@@ -18,8 +19,9 @@ export default function Home() {
     }
   }, [theme]);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex w-full min-h-screen flex-col items-center">
       <Header />
+      <Ribbons />
     </main>
   );
 }

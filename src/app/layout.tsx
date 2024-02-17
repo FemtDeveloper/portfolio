@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="flex justify-center w-full">
       <body
-        className={`${inter.className} w-full max-w-mw-container flex bg-white  dark:bg-neutral-950 flex-col justify-center`}
+        className={`${inter.className} w-full flex items-center bg-white  dark:bg-neutral-950 flex-col justify-center`}
       >
-        <header className="w-full flex justify-center">
+        <header className="w-full max-w-mw-container flex justify-center">
           <Navbar />
         </header>
         {children}

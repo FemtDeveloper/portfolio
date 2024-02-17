@@ -18,7 +18,7 @@ const Header = () => {
     subheaderSpanish,
   } = headerText;
   return (
-    <section className="w-full flex gap-16">
+    <section className="w-full max-w-wrapper items-center flex gap-16">
       <div className="w-[55%] gap-4 flex flex-col justify-center">
         <div className="header-title flex gap-4">
           <h2 className="h1 text-primary dark:text-white">

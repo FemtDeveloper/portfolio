@@ -56,9 +56,9 @@ const ThemeToggle = () => {
           }`}
         >
           {isDark ? (
-            <MoonIcon color={isDark ? "white" : "#FF1D"} />
+            <MoonIcon color={isDark ? "white" : "#f0e000"} />
           ) : (
-            <SunIcon color={isDark ? "white" : "#FF1D"} />
+            <SunIcon color={isDark ? "white" : "#f0e000"} />
           )}
         </div>
       </div>

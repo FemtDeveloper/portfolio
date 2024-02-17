@@ -66,6 +66,32 @@
   }
 }
 
+::-webkit-scrollbar-track {
+  background-color: #252525c2;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b0b0b0;
+}
+
+:root {
+  --orange-gradient-background: linear-gradient(90deg, rgba(252, 75, 29, 0.2) 0%, #FC4B1D 50%, rgba(252, 75, 29, 0.2) 100%);
+  --black-gradient-background: linear-gradient(90deg, #131313ec 0%, #111111 50%, #131313ec 100%);
+  --grey-gradient-background: linear-gradient(90deg, #c5c5c5cb 0%, rgba(27, 27, 27, 0.2) 50%, #c5c5c5cb 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #575757;
+  border-radius: 10px;
+}
+
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -81,11 +107,55 @@
 }
 
 .animated-gradient-text {
-  background: linear-gradient(90deg, rgba(252, 75, 29, 0.2) 0%, #FC4B1D 50%, rgba(252, 75, 29, 0.2) 100%);
+  background: var(--orange-gradient-background);
   background-size: 200%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 5s linear infinite;
   color: transparent;
+}
+
+.slideContent {
+  display: flex;
+  gap: 12rem;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.slide-orange-background {
+  background: var(--orange-gradient-background);
+}
+
+.slide-black-background {
+  background: var(--black-gradient-background);
+}
+
+.slide-grey-background {
+  background: var(--grey-gradient-background);
+  backdrop-filter: blur(8px);
+}
+
+@keyframes floatAnimation {
+
+  0%,
+  100% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: translate3d(0px, 20px, 0px) scale3d(1, 1, 1);
+  }
+}
+
+.floatingMacbook {
+  animation: floatAnimation 3s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
