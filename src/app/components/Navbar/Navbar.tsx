@@ -4,8 +4,13 @@ import { LogoIcon } from "..";
 import ListItems from "./ListItems";
 import LanguageToggle from "./ToggleLanguage";
 import ThemeToggle from "./ToggleTheme";
+import { useResponsive } from "@/hooks";
+import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   const theme = useThemeStore((state) => state.theme);
+  const { isMobile } = useResponsive();
+  if (isMobile) return <MobileNavbar />;
+
   return (
     <nav className="flex py-6 max-w-wrapper w-full gap-4">
       <div className="flex flex-1 items-center justify-between">

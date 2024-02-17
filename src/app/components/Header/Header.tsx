@@ -18,10 +18,10 @@ const Header = () => {
     subheaderSpanish,
   } = headerText;
   return (
-    <section className="w-full max-w-wrapper items-center flex gap-16">
-      <div className="w-[55%] gap-4 flex flex-col justify-center">
-        <div className="header-title flex gap-4">
-          <h2 className="h1 text-primary dark:text-white">
+    <section className="w-full max-w-wrapper items-center flex flex-col md:flex-row gap-16 px-4 md:px-0">
+      <div className="w-full md:w-[55%] gap-4 flex flex-col justify-center">
+        <div className="header-title w-full flex justify-center gap-4">
+          <h2 className="h2 md:h1 text-primary dark:text-white flex-1 md:flex-none text-right md:text-left">
             {isSpanish ? headerSpanish : headerEnglish}
           </h2>
           <Circles />
@@ -38,7 +38,7 @@ const Header = () => {
           <SeeProjects />
         </div>
       </div>
-      <div className="flex-1 grayscale-[80%] opacity-80 dark:opacity-60">
+      <div className="w-full md:flex-1 grayscale-[80%] opacity-80 dark:opacity-60">
         <Image
           src="/images/header-gif.gif"
           style={{ width: "100%", borderRadius: 48 }}

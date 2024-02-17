@@ -15,7 +15,7 @@ const SunIcon = ({ size = 24, color = "currentColor" }: IconProps) => {
       </g>
       <defs>
         <clipPath id="clip0_200_105">
-          <rect width={size} height={size} fill={color} />
+          <rect width="24" height="24" fill={color} />
         </clipPath>
       </defs>
     </svg>

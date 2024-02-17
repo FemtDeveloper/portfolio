@@ -55,8 +55,8 @@ const ThemeToggle = () => {
             isDark ? "group-hover:rotate-[360deg]" : "group-hover:rotate-180"
           }`}
         >
-          {isDark ? (
-            <MoonIcon color={isDark ? "white" : "#f0e000"} />
+          {!isDark ? (
+            <MoonIcon color={isDark ? "white" : "#000"} />
           ) : (
             <SunIcon color={isDark ? "white" : "#f0e000"} />
           )}
