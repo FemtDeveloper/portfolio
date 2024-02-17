@@ -119,7 +119,7 @@
 .slideContent {
   display: flex;
   gap: 12rem;
-  animation: slide 20s linear infinite;
+  animation: slide 70s linear infinite;
 }
 
 @keyframes slide {
@@ -150,7 +150,7 @@
   }
 
   50% {
-    transform: translate3d(0px, 20px, 0px) scale3d(1, 1, 1);
+    transform: translate3d(0px, 15px, 0px) scale3d(1, 1, 1);
   }
 }
 

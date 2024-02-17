@@ -9,14 +9,14 @@ const SeeProjects = () => {
   const theme = useThemeStore((state) => state.theme);
   const isDark = theme === "dark";
   return (
-    <div className="w-52 border flex items-center dark:border-white rounded-full py-[17px] relative">
-      <p className="b1 ml-4 dark:text-white">
+    <div className="w-32 md:w-52 border flex items-center dark:border-white rounded-full py-[9px] md:py-[17px] relative">
+      <p className="l1 md:b1 ml-4 dark:text-white">
         {isSpanish ? "Ver proyectos" : "See projects"}
       </p>
       <div
         className={`arrow absolute rounded-full right-0 transition duration-300 ${
           ishover ? "dark:bg-primaryOrange rotate-45" : "dark:bg-white40 "
-        }  border dark:border-white ${ishover ? "p-4" : "p-5"}`}
+        }  border dark:border-white ${ishover ? "p-4" : "p-[10px] md:p-5"}`}
         onMouseEnter={() => setIshover(true)}
         onMouseLeave={() => setIshover(false)}
       >

@@ -136,19 +136,19 @@ const config: Config = {
         },
         moveCircle2: {
           '0%': { transform: 'translateX(0)', backgroundColor: '#ffffff00' },
-          '100%': { transform: 'translateX(35px)', backgroundColor: '#ffffff1A' }
+          '100%': { transform: 'translateX(55%)', backgroundColor: '#ffffff1A' }
         },
         moveCircle3: {
           '0%': { transform: 'translateX(0)', backgroundColor: '#ffffff00' },
-          '100%': { transform: 'translateX(70px)', backgroundColor: '#ffffff33' }
+          '100%': { transform: 'translateX(110%)', backgroundColor: '#ffffff33' }
         },
         moveCircle4: {
           '0%': { transform: 'translateX(0)', backgroundColor: '#ffffff00' },
-          '100%': { transform: 'translateX(105px)', backgroundColor: '#ffffff4d' }
+          '100%': { transform: 'translateX(165%)', backgroundColor: '#ffffff4d' }
         },
         moveCircle5: {
           '0%': { transform: 'translateX(0)', backgroundColor: '#ffffff00' },
-          '100%': { transform: 'translateX(140px)', backgroundColor: '#ffffff66' }
+          '100%': { transform: 'translateX(220%)', backgroundColor: '#ffffff66' }
         },
 
       },
