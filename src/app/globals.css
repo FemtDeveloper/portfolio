@@ -169,8 +169,8 @@
 #profile-line {
   stroke-dasharray: 2097;
   stroke-dashoffset: 2097;
-  animation: line-animation 8s ease infinite;
-  filter: drop-shadow(2px 1px 2px #ff5e00cb);
+  animation: line-animation 4s ease infinite;
+  filter: drop-shadow(2px 1px 2px #0024c2cb);
 }
 
 @keyframes line-animation {

@@ -18,8 +18,9 @@ const About = () => {
 
   useGSAP(() => {
     gsap.from("#profile", {
-      scrollTrigger: "#profile",
+      scrollTrigger: { trigger: "#profile", scrub: true, end: "top 10%" },
       x: -400,
+      opacity: 0,
       duration: 3,
       rotate: -360,
     });
