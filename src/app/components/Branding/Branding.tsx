@@ -18,17 +18,21 @@ const Branding = () => {
         />
         <VerticalDivider color={isDark ? "white" : "#000"} />
         <div className="flex flex-col gap-3 w-full px-4 lg:px-0 lg:w-1/3 xl:w-2/3">
-          <p className="dark:text-white text-start">BRANDING</p>
-          <p className="dark:text-white text-end">
+          <p className="dark:text-white text-center lg:text-start">BRANDING</p>
+          <p className="dark:text-white text-center lg:text-end">
             UX/UI{" "}
-            <span className="text-p-2 dark:text-white text-start">DESIGN</span>
+            <span className="text-p-2 dark:text-white text-center lg:text-start">
+              DESIGN
+            </span>
           </p>
-          <p className="dark:text-white ml-20">DEVELOPMENT</p>
-          <p className="dark:text-white  text-end">
+          <p className="dark:text-white text-center lg:text-start lg:ml-10 ">
+            DEVELOPMENT
+          </p>
+          <p className="dark:text-white  text-center lg:text-end">
             MOTION <span className="text-p-2 dark:text-white">DESIGN</span>
           </p>
-          <p className="dark:text-white text-start">FULLSTACK</p>
-          <p className="dark:text-white text-center">MOBILE</p>
+          <p className="dark:text-white text-center lg:text-start">FULLSTACK</p>
+          <p className="dark:text-white text-center lg:text-center">MOBILE</p>
         </div>
         <VerticalDividerUp color={isDark ? "white" : "#000"} />
       </div>
