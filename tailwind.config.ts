@@ -9,6 +9,7 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
+    container: { center: true, padding: {} },
     colors: {
       transparent: "transparent",
       white: "#ffffff",
@@ -22,6 +23,7 @@ const config: Config = {
       primary: "#1e1e1e",
       disabled: "#d1d1d1",
       greyLight: "#dbdbdb",
+      toggleLight: '#0c0c0c18',
       neutral: {
         100: "#EEEEEE",
         200: "#e7e7e7",
@@ -152,6 +154,9 @@ const config: Config = {
         },
 
       },
+      borderRadius: {
+        48: '48px'
+      }
     },
   },
   plugins: [],

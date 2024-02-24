@@ -1,13 +1,32 @@
 "use client";
 import { useThemeStore } from "@/store/useThemeStore";
-import { LogoIcon, MoonIcon, SunIcon } from "../Icons";
+import { LogoIcon, MoonIcon, SunIcon } from "../../../Icons";
 import { useLanguageStore } from "@/store";
+import { useShallow } from "zustand/react/shallow";
 
 const MobileNavbar = () => {
-  const theme = useThemeStore((state) => state.theme);
-  const language = useLanguageStore((state) => state.language);
+  const { theme, setTheme } = useThemeStore(
+    useShallow((state) => ({ theme: state.theme, setTheme: state.setTheme }))
+  );
+  const { language, setLanguage } = useLanguageStore(
+    useShallow((state) => ({
+      language: state.language,
+      setLanguage: state.setLanguage,
+    }))
+  );
   const isSpanish = language === "ES";
   const isDark = theme === "dark";
+
+  const toggleLanguage = () => {
+    setLanguage(isSpanish ? "EN" : "ES");
+  };
+  const toggleTheme = () => {
+    if (isDark) {
+      return setTheme("light");
+    }
+    setTheme("dark");
+  };
+
   return (
     <div className="flex flex-1 items-center justify-between px-4 py-3 mt-6">
       <a href="/" className="flex flex-1">
@@ -18,18 +37,22 @@ const MobileNavbar = () => {
         />
       </a>
       <div className="toggleContainer flex gap-3 items-center">
-        <div
-          className={`transform transition-all duration-700 ease-in-out p-[10px] bg-neutral-800 rounded-full ${
+        <button
+          className={`transform transition-all duration-700 ease-in-out p-[10px] bg-toggleLight dark:bg-neutral-800 rounded-full ${
             isDark ? "group-hover:rotate-[360deg]" : "group-hover:rotate-180"
           }`}
+          onClick={toggleTheme}
         >
           {!isDark ? (
             <MoonIcon color={isDark ? "white" : "#000"} size={14} />
           ) : (
             <SunIcon color={isDark ? "white" : "#f0e000"} size={14} />
           )}
-        </div>
-        <div className="theme p-[10px] bg-neutral-800 rounded-full">
+        </button>
+        <button
+          onClick={toggleLanguage}
+          className="theme p-[10px] bg-toggleLight dark:bg-neutral-800 rounded-full"
+        >
           <p
             className={`text-[10px] ${
               isSpanish ? "text-start" : "text-end"
@@ -37,7 +60,7 @@ const MobileNavbar = () => {
           >
             {isSpanish ? "ES" : "EN"}
           </p>
-        </div>
+        </button>
       </div>
     </div>
   );

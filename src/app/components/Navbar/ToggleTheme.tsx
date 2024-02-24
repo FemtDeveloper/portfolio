@@ -2,7 +2,7 @@ import { useIsSpanish } from "@/hooks";
 import { useThemeStore } from "@/store/useThemeStore";
 import { useShallow } from "zustand/react/shallow";
 import { useState } from "react";
-import { MoonIcon, SunIcon } from "../Icons";
+import { MoonIcon, SunIcon } from "../../../Icons";
 
 const ThemeToggle = () => {
   const [ishover, setIshover] = useState(false);

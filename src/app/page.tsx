@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { Header } from "./components/Header";
 import { useShallow } from "zustand/react/shallow";
 import Ribbons from "./components/Ribbons/Ribbons";
+import { Branding } from "./components/Branding";
+import { About } from "./components/About";
 
 export default function Home() {
   const { theme } = useThemeStore(
@@ -19,9 +21,11 @@ export default function Home() {
     }
   }, [theme]);
   return (
-    <main className="flex w-full min-h-screen flex-col items-center">
+    <main className="flex w-full min-h-screen flex-col items-center gap-12">
       <Header />
       <Ribbons />
+      <Branding />
+      <About />
     </main>
   );
 }

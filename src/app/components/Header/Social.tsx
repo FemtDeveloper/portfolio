@@ -1,5 +1,5 @@
 import { useThemeStore } from "@/store/useThemeStore";
-import { GithubIcon, LinkedInIcon } from "../Icons";
+import { GithubIcon, LinkedInIcon } from "../../../Icons";
 
 const Social = () => {
   const theme = useThemeStore((state) => state.theme);

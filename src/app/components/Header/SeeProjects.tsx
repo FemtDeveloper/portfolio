@@ -1,6 +1,6 @@
 import { useIsSpanish } from "@/hooks";
 import React, { useState } from "react";
-import { ArrowRightIcon } from "../Icons";
+import { ArrowRightIcon } from "../../../Icons";
 import { useThemeStore } from "@/store/useThemeStore";
 
 const SeeProjects = () => {
