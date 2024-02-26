@@ -49,14 +49,9 @@ const Header = () => {
         )}
       </div>
       <div className="w-full md:flex-1 grayscale-[80%] opacity-80 dark:opacity-60">
-        <Image
-          src="/images/header-gif.gif"
-          style={{ width: "100%", borderRadius: 48 }}
-          width={471}
-          height={498}
-          alt=""
-          loading="lazy"
-        />
+        <video loop autoPlay className="rounded-[48px]" muted>
+          <source src="/images/header-video.webm" type="video/webm" />
+        </video>
       </div>
     </section>
   );

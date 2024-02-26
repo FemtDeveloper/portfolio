@@ -19,10 +19,10 @@ const About = () => {
   useGSAP(() => {
     gsap.from("#profile", {
       scrollTrigger: { trigger: "#profile", end: "top 10%" },
-      x: -400,
+      // x: -100,
       opacity: 0,
+      scale: 0.2,
       duration: 3,
-      rotate: -360,
     });
   });
   return (
@@ -54,6 +54,7 @@ const About = () => {
           src="/images/about/mock-profile.png"
           id="profile"
           alt="profile image"
+          loading="lazy"
           width={isMobile ? 280 : 464}
           height={isMobile ? 422 : 703}
           className="rounded-48"
