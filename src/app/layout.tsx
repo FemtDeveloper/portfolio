@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="flex justify-center w-full">
+      <head>
+        <meta key="theme-color" name="theme-color" content={"#ffddaa"} />
+      </head>
       <body
         className={`${inter.className} w-full flex items-center bg-white  dark:bg-neutral-950 flex-col justify-center`}
       >

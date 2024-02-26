@@ -55,6 +55,7 @@ const Header = () => {
           width={471}
           height={498}
           alt=""
+          loading="lazy"
         />
       </div>
     </section>
