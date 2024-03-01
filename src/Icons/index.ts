@@ -1,8 +1,16 @@
 export { default as ArrowRightIcon } from './ArrowRightIcon';
+export { default as CssIcon } from './CssIcon';
 export { default as GithubIcon } from './GithubIcon';
+export { default as HtmlIcon } from './HtmlIcon';
+export { default as JsIcon } from './JsIcon';
 export { default as LinkedInIcon } from './LinkedInIcon';
 export { default as LogoIcon } from './LogoIcon';
 export { default as MoonIcon } from './MoonIcon';
+export { default as NextIcon } from './NextIcon';
+export { default as NodeIcon } from './NodeIcon';
+export { default as PythonIcon } from './PythonIcon';
+export { default as ReactIcon } from './ReactIcon';
 export { default as SunIcon } from './SunIcon';
+export { default as TailwindIcon } from './TailwindIcon';
 export { default as VerticalDivider } from './VerticalDivider';
 export { default as VerticalDividerUp } from './VerticalDividerUp';

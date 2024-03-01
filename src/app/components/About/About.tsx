@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { language } from "./language";
-import { useIsSpanish, useResponsive } from "@/hooks";
-import { Line } from "../UI/Common";
+import parse from "html-react-parser";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { language } from "./language";
+import { useIsSpanish, useResponsive } from "@/hooks";
+import { Line } from "../UI/Common";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -19,7 +20,6 @@ const About = () => {
   useGSAP(() => {
     gsap.from("#profile", {
       scrollTrigger: { trigger: "#profile", end: "top 10%" },
-      // x: -100,
       opacity: 0,
       scale: 0.2,
       duration: 3,
@@ -38,7 +38,7 @@ const About = () => {
           Full Stack — Developer
         </p>
       </div>
-      <figure className="relative w-full flex items-center justify-center">
+      <figure className="relative w-full flex  flex-col items-center justify-center gap-12">
         <div id="profile-line" className="absolute -z-10 w-full">
           <Line />
         </div>
@@ -59,6 +59,9 @@ const About = () => {
           height={isMobile ? 422 : 703}
           className="rounded-48"
         />
+        <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white">
+          {parse(isSpanish ? contentSpanish : contentEnglish)}
+        </p>
       </figure>
     </section>
   );

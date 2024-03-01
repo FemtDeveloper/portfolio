@@ -3,4 +3,5 @@ interface IconProps {
     size?: number
     width?: number
     height?: number
+    isHovered?: boolean
 }
