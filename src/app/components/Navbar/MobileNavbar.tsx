@@ -28,7 +28,7 @@ const MobileNavbar = () => {
   };
 
   return (
-    <div className="flex flex-1 items-center justify-between px-4 py-3 mt-6">
+    <div className="flex md:hidden flex-1 items-center justify-between px-4 py-3 mt-6">
       <a href="/" className="flex flex-1">
         <LogoIcon
           color={theme === "dark" ? "white" : "#000"}

@@ -7,7 +7,7 @@ const Branding = () => {
   const theme = useThemeStore((state) => state.theme);
   const isDark = theme === "dark";
   return (
-    <div className="branding max-w-wrapper w-full">
+    <section className="branding max-w-wrapper w-full">
       <div className="container d3 lg:d1 flex flex-col items-center justify-center gap-4 relative">
         <Image
           src="/assets/bicolor-spheres.svg"
@@ -36,7 +36,7 @@ const Branding = () => {
         </div>
         <VerticalDividerUp color={isDark ? "white" : "#000"} />
       </div>
-    </div>
+    </section>
   );
 };
 
