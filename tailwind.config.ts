@@ -43,7 +43,9 @@ const config: Config = {
     },
     extend: {
       lineHeight: { normal: "120%", none: "100%" },
-
+      spacing: {
+        15: '60px'
+      },
       fontWeight: {
         thin: "100",
         hairline: "100",

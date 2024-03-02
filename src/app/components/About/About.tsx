@@ -15,8 +15,6 @@ const About = () => {
   const { aboutEnglish, aboutSpanish, contentEnglish, contentSpanish } =
     language;
 
-  const tl = gsap.timeline();
-
   useGSAP(() => {
     gsap.from("#profile", {
       scrollTrigger: { trigger: "#profile", end: "top 10%" },
@@ -28,7 +26,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center w-full gap-10 lg:gap-40"
+      className="flex flex-col items-center w-full gap-10 lg:gap-40 px-4 lg:px-0"
     >
       <div className="about-title flex flex-col gap-2 lg:gap-4 items-center">
         <p className="b3 lg:b1 text-p-2 dark:text-white">

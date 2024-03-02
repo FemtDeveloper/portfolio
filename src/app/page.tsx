@@ -7,6 +7,7 @@ import Ribbons from "./components/Ribbons/Ribbons";
 import { Branding } from "./components/Branding";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
+import { ProjectsSolo } from "./components/ProjectsSolo";
 
 export default function Home() {
   const { theme } = useThemeStore(
@@ -28,6 +29,7 @@ export default function Home() {
       <Branding />
       <About />
       <Skills />
+      <ProjectsSolo />
     </main>
   );
 }

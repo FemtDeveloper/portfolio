@@ -1,6 +1,9 @@
+export { default as ArrowDiagonalIcon } from './ArrowDiagonalIcon';
 export { default as ArrowRightIcon } from './ArrowRightIcon';
 export { default as CssIcon } from './CssIcon';
 export { default as GithubIcon } from './GithubIcon';
+export { default as HorizontalDividerLeft } from './HorizontalDividerLeft';
+export { default as HorizontalDividerRight } from './HorizontalDividerRight';
 export { default as HtmlIcon } from './HtmlIcon';
 export { default as JsIcon } from './JsIcon';
 export { default as LinkedInIcon } from './LinkedInIcon';
