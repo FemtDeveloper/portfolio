@@ -20,8 +20,8 @@ const GithubIcon = ({ size = 32, color = "currentColor" }: IconProps) => {
       <defs>
         <clipPath id="clip0_538_1452">
           <rect
-            width={size / 2}
-            height={size / 2}
+            width={(size as number) / 2}
+            height={(size as number) / 2}
             fill={color}
             transform="translate(8 8)"
           />
