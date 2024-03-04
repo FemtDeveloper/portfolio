@@ -9,7 +9,7 @@ const PythonIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
 
   const fillMain = isHovered ? "#F7DF1E" : "#fff";
   const fillSecondary = isHovered ? "#387EB8" : "#fff";
-  const fill = isHovered ? "#000B1D" : "#1E1E1E";
+  const fill = isHovered ? "#000B1D" : "#454545";
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
 

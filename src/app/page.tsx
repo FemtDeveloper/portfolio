@@ -8,6 +8,7 @@ import { Branding } from "./components/Branding";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { ProjectsSolo } from "./components/ProjectsSolo";
+import ProjectsAsEmployee from "./components/ProjectsSolo/ProjectsAsEmployee";
 
 export default function Home() {
   const { theme } = useThemeStore(
@@ -30,6 +31,7 @@ export default function Home() {
       <About />
       <Skills />
       <ProjectsSolo />
+      <ProjectsAsEmployee />
     </main>
   );
 }

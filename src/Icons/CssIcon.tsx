@@ -7,7 +7,7 @@ const CssIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
-  const fillMain = isHovered ? "#2965F1" : "#1E1E1E";
+  const fillMain = isHovered ? "#2965F1" : "#454545";
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
 

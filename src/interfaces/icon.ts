@@ -1,7 +1,7 @@
 interface IconProps {
     color?: string
-    size?: number
-    width?: number
-    height?: number
+    size?: number | string
+    width?: number | string
+    height?: number | string
     isHovered?: boolean
 }

@@ -16,7 +16,7 @@ const ProjectsSolo = () => {
     });
   });
   return (
-    <section className="w-full max-w-wrapper px-4 lg:px-0">
+    <section className="w-full h-full max-w-wrapper flex flex-col px-4 lg:px-0 gap-20 md:gap-40">
       {SOLO_PROJECTS.map((project) => (
         <Project mainProps={project} key={project.id} />
       ))}

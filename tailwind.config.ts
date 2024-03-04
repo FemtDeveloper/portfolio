@@ -38,7 +38,7 @@ const config: Config = {
         900: "#1b1b1b",
         950: "#0c0c0c",
       },
-      "p-2": "#8b8b8b",
+      "p-2": "#9b9b9b",
       "p-1": "#454545",
     },
     extend: {

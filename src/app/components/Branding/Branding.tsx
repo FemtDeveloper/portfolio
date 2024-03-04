@@ -7,7 +7,7 @@ const Branding = () => {
   const theme = useThemeStore((state) => state.theme);
   const isDark = theme === "dark";
   return (
-    <section className="branding max-w-wrapper w-fullpx-4 lg:px-0">
+    <section className="branding max-w-wrapper w-full px-4 lg:px-0">
       <div className="container d3 lg:d1 flex flex-col items-center justify-center gap-4 relative">
         <Image
           src="/assets/bicolor-spheres.svg"

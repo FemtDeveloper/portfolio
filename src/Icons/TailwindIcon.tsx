@@ -8,7 +8,7 @@ const TailwindIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const handleMouseLeave = () => setIsHovered(false);
 
   const fillMain = isHovered ? "#2298BD" : "#fff";
-  const fill = isHovered ? "#fff" : "#1E1E1E";
+  const fill = isHovered ? "#fff" : "#454545";
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
   const shadowStyle = isHovered

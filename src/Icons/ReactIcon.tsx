@@ -8,7 +8,7 @@ const ReactIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const handleMouseLeave = () => setIsHovered(false);
 
   const fillMain = isHovered ? "#61DAFB" : "#fff";
-  const fill = isHovered ? "#000B1D" : "#1E1E1E";
+  const fill = isHovered ? "#000B1D" : "#454545";
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
 
