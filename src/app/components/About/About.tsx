@@ -4,16 +4,38 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { language } from "./language";
-import { useIsSpanish, useResponsive } from "@/hooks";
+import { useIsSpanish, useOnLeave, useOnMove, useResponsive } from "@/hooks";
 import { Line } from "../UI/Common";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const About = () => {
+  const aboutRef = useRef<HTMLDivElement | null>(null);
   const isSpanish = useIsSpanish();
   const { isMobile } = useResponsive();
   const { aboutEnglish, aboutSpanish, contentEnglish, contentSpanish } =
     language;
+
+  gsap.set("#circle-about", {
+    xPercent: -5,
+    yPercent: -5,
+  });
+  const onMove = useOnMove(aboutRef, "#circle-about");
+  const onLeave = useOnLeave("#circle-about");
+
+  useEffect(() => {
+    const aboutElement = aboutRef.current;
+    if (!aboutElement) return;
+
+    aboutElement.addEventListener("mousemove", onMove);
+    aboutElement.addEventListener("mouseleave", onLeave);
+
+    return () => {
+      aboutElement.removeEventListener("mousemove", onMove);
+      aboutElement.removeEventListener("mouseleave", onLeave);
+    };
+  }, [onMove, onLeave]);
 
   useGSAP(() => {
     gsap.from("#profile", {
@@ -23,11 +45,17 @@ const About = () => {
       duration: 3,
     });
   });
+
   return (
     <section
       id="about"
-      className="flex flex-col items-center w-full gap-10 lg:gap-40 px-4 lg:px-0"
+      className="flex flex-col items-center w-full gap-10 lg:gap-40 px-4 lg:px-0 relative"
+      ref={aboutRef}
     >
+      <div
+        id="circle-about"
+        className="absolute hidden lg:flex top-1/2 h-10 w-10 z-10 bg-primaryOrange rounded-full"
+      />
       <div className="about-title flex flex-col gap-2 lg:gap-4 items-center">
         <p className="b3 lg:b1 text-p-2 dark:text-white">
           {isSpanish ? aboutSpanish : aboutEnglish}

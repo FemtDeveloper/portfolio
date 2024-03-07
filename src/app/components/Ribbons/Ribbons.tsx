@@ -9,7 +9,10 @@ const Ribbons = () => {
   const { isMobile } = useResponsive();
   const isDark = theme === "dark";
   return (
-    <div className="w-full flex justify-center items-center overflow-hidden py-5 h-full relative">
+    <section
+      id="ribbons"
+      className="w-full flex justify-center items-center overflow-hidden py-5 h-full relative"
+    >
       <div
         className={`${
           isDark ? "slide-orange-background" : "slide-grey-background"
@@ -31,7 +34,7 @@ const Ribbons = () => {
       >
         <SlideRibbon text={<SlideRibbonContent />} />
       </div>
-    </div>
+    </section>
   );
 };
 

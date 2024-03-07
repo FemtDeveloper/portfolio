@@ -3,15 +3,17 @@ import { PROJECTS_AS_EMPLOYEE } from "./projects";
 
 const ProjectsAsEmployee = () => {
   return (
-    <section className="outer-container w-full h-full relative">
-      <div className="slider-overflow-container w-full overflow-x-auto">
-        <div className="slider flex w-[200vw] md:w-[150vw] justify-start px-4 lg:px-0 gap-10">
-          {PROJECTS_AS_EMPLOYEE.map((project) => (
-            <div className="inner flex justify-center w-full" key={project.id}>
-              <Project mainProps={project} isInSlider maxWidth="90%" />
-            </div>
-          ))}
-        </div>
+    <section
+      id="employee"
+      className="outer-container w-full max-w-wrapper flex flex-col px-4 lg:px-0 gap-6 md:gap-10"
+    >
+      <h2 className="d3 md:d2 text-center text-primary dark:text-white">
+        Proyectos en los que he participado
+      </h2>
+      <div className="slider flex flex-col md:flex-row justify-start lg:px-15 gap-10">
+        {PROJECTS_AS_EMPLOYEE.map((project) => (
+          <Project mainProps={project} isInSlider key={project.id} />
+        ))}
       </div>
     </section>
   );

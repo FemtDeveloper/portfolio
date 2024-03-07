@@ -9,12 +9,15 @@ import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { ProjectsSolo } from "./components/ProjectsSolo";
 import ProjectsAsEmployee from "./components/ProjectsSolo/ProjectsAsEmployee";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Home() {
   const { theme } = useThemeStore(
     useShallow((state) => ({ theme: state.theme }))
   );
-  const hasHydrated = useThemeStore.persist?.hasHydrated();
 
   useEffect(() => {
     if (theme === "dark") {
@@ -23,6 +26,25 @@ export default function Home() {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
+
+  useGSAP(() => {
+    const sections = ["#ribbons", "#branding", "#about", "#skills", ".project"];
+    sections.forEach((section) => {
+      gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 95%",
+          end: "bottom bottom",
+          scrub: true,
+        },
+
+        opacity: 0,
+        y: 200,
+        duration: 1.5,
+      });
+    });
+  }, []);
+
   return (
     <main className="flex w-full min-h-screen flex-col items-center gap-12">
       <Header />

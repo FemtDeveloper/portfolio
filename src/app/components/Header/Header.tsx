@@ -19,7 +19,10 @@ const Header = () => {
     subheaderSpanish,
   } = headerText;
   return (
-    <section className="w-full mt-6 md:mt-14 max-w-wrapper items-center flex flex-col md:flex-row gap-4 lg:gap-16 px-4 md:px-0">
+    <section
+      id="header"
+      className="w-full mt-6 md:mt-14 max-w-wrapper items-center flex flex-col md:flex-row gap-4 lg:gap-16 px-4 md:px-0"
+    >
       <div className="w-full md:w-[55%] gap-3 md:gap-4 flex flex-col justify-center">
         <div className="header-title w-full flex justify-center md:justify-start gap-4">
           <h2 className="h2 md:h1 text-primary dark:text-white md:flex-none text-right md:text-left">
@@ -48,7 +51,7 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div className="w-full md:flex-1 grayscale-[80%] opacity-80 dark:opacity-60">
+      <div className="w-full md:flex-1 grayscale-[50%] opacity-90 dark:opacity-80">
         <video loop autoPlay className="rounded-[48px]" muted>
           <source src="/images/header-video.webm" type="video/webm" />
         </video>

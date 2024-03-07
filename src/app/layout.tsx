@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components";
+import { LenisProvider } from "./components/LenisProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Miranda dev",
-  description: "Felix Mirandas Portfolio",
+  description: "Felix Miranda's Portfolio",
 };
 
 export default function RootLayout({
@@ -16,18 +21,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="flex justify-center w-full">
+    <html lang="en" className={`${dmSans.className} scroll-smooth`}>
       <head>
         <meta key="theme-color" name="theme-color" content={"#ffddaa"} />
       </head>
-      <body
-        className={`${inter.className} w-full flex items-center bg-white  dark:bg-neutral-950 flex-col justify-center`}
-      >
-        <header className="w-full max-w-mw-container flex justify-center">
-          <Navbar />
-        </header>
-        {children}
-      </body>
+      <LenisProvider isRoot>
+        <body
+          className={`w-full flex items-center bg-white  dark:bg-neutral-950 flex-col justify-center`}
+          data-scroll-container
+        >
+          <header className="w-full max-w-mw-container flex justify-center">
+            <Navbar />
+          </header>
+          {children}
+        </body>
+      </LenisProvider>
     </html>
   );
 }

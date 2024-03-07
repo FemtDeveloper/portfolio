@@ -37,17 +37,19 @@ const Project = ({ mainProps, isInSlider = false }: Props) => {
     return englishDescription;
   };
   return (
-    <article className={`flex justify-center items-center flex-col md:gap-15`}>
+    <article
+      className={`project flex justify-center items-center flex-col gap-6 md:gap-8`}
+    >
       <figure
         className={`flex w-full  
-         relative justify-center items-center group h-full`}
+         relative justify-center items-center group h-full `}
       >
         <Image
-          width={isInSlider ? 1200 : 1440}
+          width={isInSlider ? 1000 : 1440}
           height={800}
           alt="project image"
           src={img}
-          className={`z-0`}
+          className={`z-0 w-full object-cover`}
         />
         <Link
           href={url}
@@ -63,19 +65,19 @@ const Project = ({ mainProps, isInSlider = false }: Props) => {
         <div className="flex gap-5 md:gap-6 items-center">
           <HorizontalDividerLeft
             width={"100%"}
-            color={!isDark ? "#1e1e1e" : undefined}
+            color={!isDark ? "#1e1e1e" : "#fff"}
           />
           <p className="h4 md:h2 text-primary dark:text-white text-nowrap">
             {title}
           </p>
           <HorizontalDividerRight
             width={"100%"}
-            color={!isDark ? "#1e1e1e" : undefined}
+            color={!isDark ? "#1e1e1e" : "#fff"}
           />
         </div>
         <p
           className={`text-center text-primary dark:text-white ${
-            isInSlider ? "max-w-[80%]" : ""
+            isInSlider ? "max-w-[80%]" : "max-w-[70%]"
           }  `}
         >
           {parse(renderDescription())}

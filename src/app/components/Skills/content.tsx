@@ -9,7 +9,13 @@ import {
   TailwindIcon,
 } from "@/Icons";
 
-export const SKILLS = [
+export interface Skill {
+  skill: string;
+  icon: JSX.Element;
+  bgColor: string;
+}
+
+export const SKILLS: Skill[] = [
   {
     skill: "html",
     icon: <HtmlIcon />,
