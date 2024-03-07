@@ -7,7 +7,7 @@ const NextIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
-  const fillMain = isHovered ? "#454545" : "#fff";
+  const fillMain = isHovered ? "#000" : "#fff";
   const fill = isHovered ? "#fff" : "#454545";
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };

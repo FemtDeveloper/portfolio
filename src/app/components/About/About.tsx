@@ -17,10 +17,10 @@ const About = () => {
   const { aboutEnglish, aboutSpanish, contentEnglish, contentSpanish } =
     language;
 
-  gsap.set("#circle-about", {
-    xPercent: -5,
-    yPercent: -5,
-  });
+  // gsap.set("#circle-about", {
+  //   xPercent: -5,
+  //   yPercent: -5,
+  // });
   const onMove = useOnMove(aboutRef, "#circle-about");
   const onLeave = useOnLeave("#circle-about");
 
@@ -54,7 +54,7 @@ const About = () => {
     >
       <div
         id="circle-about"
-        className="absolute hidden lg:flex top-1/2 h-10 w-10 z-10 bg-primaryOrange rounded-full"
+        className="absolute hidden lg:flex top-1/2 h-20 w-20 z-10 bg-primaryOrange rounded-full opacity-20 blur-md"
       />
       <div className="about-title flex flex-col gap-2 lg:gap-4 items-center">
         <p className="b3 lg:b1 text-p-2 dark:text-white">

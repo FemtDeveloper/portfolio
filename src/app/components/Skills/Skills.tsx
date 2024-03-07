@@ -2,7 +2,7 @@
 import { useThemeStore } from "@/store/useThemeStore";
 import { SKILLS, Skill } from "./content";
 import { VerticalDivider, VerticalDividerUp } from "@/Icons";
-import { RefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useOnMove, useOnLeave } from "@/hooks";
 
 const Skills = () => {
