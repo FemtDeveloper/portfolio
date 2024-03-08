@@ -90,7 +90,7 @@
   --black-gradient-background: linear-gradient(90deg, #131313ec 0%, #111111 50%, #131313ec 100%);
   --grey-gradient-background: linear-gradient(90deg, #c5c5c5cb 0%, rgba(27, 27, 27, 0.2) 50%, #c5c5c5cb 100%);
   --white-gradient-background: radial-gradient(circle, #818181cb 0%, #ffffff 50%, #818181cb 100%);
-  --white-oragnge-gradient: linear-gradient(90deg, #FC4B1D 0%, #333333 50%, #ffffff 100%);
+  --white-oragnge-gradient: linear-gradient(90deg, #ff3908 0%, #333333 50%, #ffffff 100%);
   --bicolor-gradient: linear-gradient(90deg, rgba(255, 134, 74, 0.2) 0%, rgba(255, 134, 74, 0.8) 50%, rgba(61, 150, 244, 0.8) 50.01%, rgba(61, 150, 244, 0.2) 100%)
 }
 
@@ -141,16 +141,16 @@
 
 .contact-button-orange {
   background: var(--white-oragnge-gradient);
-  background-size: 200%;
-  background-position: -100%;
+  background-size: 300%;
+  background-position: 100%;
   background-clip: text;
   color: transparent;
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 
 .contact-button-dark {
   background: var(--black-gradient-background);
-  background-size: 200%;
+  background-size: 300%;
   background-position: -100%;
   background-clip: text;
   color: transparent;

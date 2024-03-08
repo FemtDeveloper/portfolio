@@ -12,6 +12,7 @@ import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { ProjectsSolo, ProjectsAsEmployee } from "./components/ProjectsSolo";
 import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -56,6 +57,7 @@ export default function Home() {
       <ProjectsSolo />
       <ProjectsAsEmployee />
       <Contact />
+      <Footer />
     </main>
   );
 }

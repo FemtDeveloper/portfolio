@@ -15,7 +15,7 @@ const Contact = () => {
   } = CONTACT_INFORMATION;
 
   return (
-    <section className="text-center w-full relative flex flex-col gap-14 md:gap-44 mb-44">
+    <section className="text-center w-full relative flex flex-col gap-14 md:gap-44 mb-32">
       <div className="flex flex-col gap-[76px] mt-20 md:mt-40">
         <div className="flex flex-col text-primary gap-2 md:gap-4 dark:text-white">
           <p className="b3 md:b1">{isSpanish ? labelSapnish : labelEnglish}</p>

@@ -5,6 +5,7 @@ export { default as GithubIcon } from './GithubIcon';
 export { default as HorizontalDividerLeft } from './HorizontalDividerLeft';
 export { default as HorizontalDividerRight } from './HorizontalDividerRight';
 export { default as HtmlIcon } from './HtmlIcon';
+export { default as IsoIcon } from './IsoIcon';
 export { default as JsIcon } from './JsIcon';
 export { default as LinkedInIcon } from './LinkedInIcon';
 export { default as LogoIcon } from './LogoIcon';
