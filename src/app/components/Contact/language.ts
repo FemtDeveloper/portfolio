@@ -1,5 +1,5 @@
 export const CONTACT_INFORMATION = {
-    labelSapnish: 'Contact', subtitleSpanish: 'Trabajemos juntos', titleSpanish: 'Projectos de l a más alta calidad', titleEnglish: 'High quality projects', subtitleEnglish: "Let's work together", labelEnglish: 'Contact'
+    labelSapnish: 'Contacto', subtitleSpanish: 'Trabajemos juntos', titleSpanish: 'Proyectos de la más alta calidad', titleEnglish: 'High quality projects', subtitleEnglish: "Let's work together", labelEnglish: 'Contact'
 
 }
 

@@ -1,13 +1,18 @@
-import React from "react";
+import Image from "next/image";
+import { backOut, motion } from "framer-motion";
 import Circles from "./Circles";
 import SeeProjects from "./SeeProjects";
-import { useIsSpanish, useResponsive } from "@/hooks";
+import { useIsSpanish, useMousePosition, useResponsive } from "@/hooks";
 import { headerText } from "./language";
 import Social from "./Social";
+import { useRef, useState } from "react";
 
 const Header = () => {
   const isSpanish = useIsSpanish();
   const { isMobile } = useResponsive();
+  const [isHoverMask, setIsHoverMask] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { x, y } = useMousePosition(containerRef);
 
   const {
     headerEnglish,
@@ -17,11 +22,20 @@ const Header = () => {
     subheaderEnglish,
     subheaderSpanish,
   } = headerText;
+
+  const maskSize = 100;
   return (
     <section
       id="header"
-      className="w-full mt-6 md:mt-14 max-w-wrapper items-center flex flex-col md:flex-row gap-4 lg:gap-16 px-4 md:px-0"
+      className="w-full mt-6 md:mt-14 relative max-w-wrapper md:min-h-[650px] items-center flex flex-col md:flex-row gap-4 lg:gap-16 px-4 md:px-0"
     >
+      <Image
+        src="/images/spheres.png"
+        width={700}
+        height={620}
+        alt="spheres decorative"
+        className="absolute z-0 -top-[520px] left-1/4 opacity-60"
+      />
       <div className="w-full md:w-[55%] gap-3 md:gap-4 flex flex-col justify-center">
         <div className="header-title w-full flex justify-center md:justify-start gap-4">
           <h2 className="h2 md:h1 text-primary dark:text-white md:flex-none text-right md:text-left">
@@ -50,8 +64,24 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div className="w-full md:flex-1 grayscale-[50%] opacity-90 dark:opacity-80">
-        <video loop autoPlay className="rounded-[48px]" muted>
+      <div
+        ref={containerRef}
+        className="w-full md:flex-1 grayscale-[50%] rounded-[48px] opacity-90 dark:opacity-80"
+        onMouseEnter={() => setIsHoverMask(true)}
+        onMouseLeave={() => setIsHoverMask(false)}
+      >
+        {isHoverMask && (
+          <motion.div
+            transition={{ type: "tween", ease: backOut }}
+            animate={{
+              WebkitMaskPosition: `${x - maskSize / 2}px ${y - maskSize / 2}px`,
+            }}
+            className="mask h-full w-full absolute top-0 rounded-[48px]"
+          >
+            <Image src="/images/header/robot.webp" fill alt="robot" />
+          </motion.div>
+        )}
+        <video loop autoPlay className="video rounded-[48px]" muted>
           <source src="/images/header-video.webm" type="video/webm" />
         </video>
       </div>

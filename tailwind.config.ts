@@ -36,7 +36,7 @@ const config: Config = {
         750: "#292929",
         800: "#1e1e1e",
         900: "#1b1b1b",
-        950: "#020202",
+        950: "#040404",
       },
       "p-2": "#9b9b9b",
       "p-1": "#454545",
@@ -45,6 +45,9 @@ const config: Config = {
       lineHeight: { normal: "120%", none: "100%" },
       spacing: {
         15: '60px'
+      },
+      screens: {
+        '5xl': '2024px'
       },
       fontWeight: {
         thin: "100",

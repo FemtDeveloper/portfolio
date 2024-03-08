@@ -1,8 +1,12 @@
 // useOnMove.ts
 import { gsap } from "gsap";
-import { RefObject } from "react";
+import { RefObject, useEffect, useState } from "react";
 
-export const useOnMove = (ref: RefObject<HTMLDivElement>, targetId: string, dividedBy: number = 2) => {
+export const useOnMove = (
+    ref: RefObject<HTMLDivElement>,
+    targetId: string,
+    dividedBy: number = 2
+) => {
     return (e: MouseEvent) => {
         if (ref.current) {
             const { left, top, width, height } = ref.current.getBoundingClientRect();
@@ -38,4 +42,30 @@ export const useOnLeave = (targetId: string) => {
             overwrite: "auto",
         });
     };
+};
+
+export const useMousePosition = (containerRef: RefObject<HTMLDivElement>) => {
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+
+
+    useEffect(() => {
+        const updateMousePosition = (e: MouseEvent) => {
+            if (containerRef.current) {
+                const { left, top } = containerRef.current.getBoundingClientRect();
+                setMousePosition({
+                    x: e.clientX - left,
+                    y: e.clientY - top
+                });
+            }
+        };
+        const container = containerRef.current;
+        container?.addEventListener("mousemove", updateMousePosition);
+
+        return () => {
+            container?.removeEventListener("mousemove", updateMousePosition);
+        };
+    }, [containerRef]);
+
+    return mousePosition;
 };

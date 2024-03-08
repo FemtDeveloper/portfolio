@@ -29,14 +29,14 @@ const ThemeToggle = () => {
     >
       <div className="mode-container">
         <p
-          className={`b1 ${
+          className={`${
             isDark ? "animate-fadeIn" : "animate-fadeOut"
           } absolute top-1/2 -translate-y-1/2 dark:text-white`}
         >
           {isSpanish ? "Modo oscuro" : "Dark mode"}
         </p>
         <p
-          className={`b1 ${
+          className={`${
             isDark ? "animate-fadeOut" : "animate-fadeIn"
           } absolute top-1/2 -translate-y-1/2 dark:text-white`}
         >

@@ -19,14 +19,14 @@ const ToggleItem = ({ onToggle, titleES, titleEN }: ToggleItemProps) => {
       onClick={onToggle}
     >
       <p
-        className={`b1 ${
+        className={` ${
           isSpanish ? "animate-fadeIn" : "animate-fadeOut"
         } absolute top-1/2 -translate-y-1/2 dark:text-white`}
       >
         {titleES}
       </p>
       <p
-        className={`b1 ${
+        className={` ${
           isSpanish ? "animate-fadeOut" : "animate-fadeIn"
         } absolute top-1/2 -translate-y-1/2 dark:text-white`}
       >
@@ -38,7 +38,7 @@ const ToggleItem = ({ onToggle, titleES, titleEN }: ToggleItemProps) => {
         }`}
       >
         <p
-          className={`b1 ${
+          className={` ${
             isSpanish ? "text-start" : "text-end"
           } dark:text-white`}
         >
