@@ -54,7 +54,7 @@ const About = () => {
     >
       <div
         id="circle-about"
-        className="absolute hidden lg:flex top-1/2 h-20 w-20 z-10 bg-primaryOrange rounded-full opacity-20 blur-md"
+        className="absolute hidden lg:flex top-1/2 h-20 w-20 z-10 bg-primaryOrange rounded-full opacity-15 blur-lg"
       />
       <div className="about-title flex flex-col gap-2 lg:gap-4 items-center">
         <p className="b3 lg:b1 text-p-2 dark:text-white">

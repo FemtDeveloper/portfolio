@@ -4,7 +4,6 @@ import SeeProjects from "./SeeProjects";
 import { useIsSpanish, useResponsive } from "@/hooks";
 import { headerText } from "./language";
 import Social from "./Social";
-import Image from "next/image";
 
 const Header = () => {
   const isSpanish = useIsSpanish();

@@ -1,17 +1,18 @@
 "use client";
-import { useThemeStore } from "@/store/useThemeStore";
 import { useEffect } from "react";
+import { useThemeStore } from "@/store/useThemeStore";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Header } from "./components/Header";
 import { useShallow } from "zustand/react/shallow";
 import Ribbons from "./components/Ribbons/Ribbons";
 import { Branding } from "./components/Branding";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
-import { ProjectsSolo } from "./components/ProjectsSolo";
-import ProjectsAsEmployee from "./components/ProjectsSolo/ProjectsAsEmployee";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ProjectsSolo, ProjectsAsEmployee } from "./components/ProjectsSolo";
+import { Contact } from "./components/Contact";
+
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Home() {
@@ -54,6 +55,7 @@ export default function Home() {
       <Skills />
       <ProjectsSolo />
       <ProjectsAsEmployee />
+      <Contact />
     </main>
   );
 }

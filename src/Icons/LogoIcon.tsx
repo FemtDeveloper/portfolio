@@ -5,8 +5,6 @@ const LogoIcon = ({
   height = 40,
   color = "currentColor",
 }: IconProps) => {
-  console.log({ color });
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

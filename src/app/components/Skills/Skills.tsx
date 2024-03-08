@@ -8,8 +8,6 @@ import { useOnMove, useOnLeave } from "@/hooks";
 const Skills = () => {
   const theme = useThemeStore((state) => state.theme);
   const isDark = theme === "dark";
-  const iconRef = useRef<HTMLDivElement | null>(null);
-  console.log({ iconRef });
 
   return (
     <section

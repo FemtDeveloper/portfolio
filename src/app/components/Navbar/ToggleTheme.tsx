@@ -12,7 +12,6 @@ const ThemeToggle = () => {
   );
 
   const isDark = theme === "dark";
-  console.log({ isDark });
 
   const onToggle = () => {
     if (isDark) {
