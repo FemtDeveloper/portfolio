@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.className} scroll-smooth`}>
+    <html lang="en" className={`${dmSans.className} dark scroll-smooth`}>
       <head>
-        <meta key="theme-color" name="theme-color" content={"#ffddaa"} />
+        <meta key="theme-color" name="theme-color" content={"#0e0e0e"} />
       </head>
       <LenisProvider isRoot>
         <body

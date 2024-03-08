@@ -34,7 +34,7 @@ const Header = () => {
         width={700}
         height={620}
         alt="spheres decorative"
-        className="absolute z-0 -top-[520px] left-1/4 opacity-60"
+        className="absolute -z-10 -top-[520px] left-1/4 opacity-60"
       />
       <div className="w-full md:w-[55%] gap-3 md:gap-4 flex flex-col justify-center">
         <div className="header-title w-full flex justify-center md:justify-start gap-4">

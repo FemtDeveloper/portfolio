@@ -12,7 +12,7 @@ export const useThemeStore = create<ThemeStoreProps>()(
         (set) => ({
             theme: null,
             setTheme: (theme: 'light' | 'dark') => set({ theme }),
-            toggleTheme: () => set(state => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
+            toggleTheme: () => set(state => ({ theme: state.theme === 'light' ? 'dark' : 'dark' })),
         }),
         {
             name: 'theme',
