@@ -42,6 +42,7 @@ const MobileNavbar = () => {
             isDark ? "group-hover:rotate-[360deg]" : "group-hover:rotate-180"
           }`}
           onClick={toggleTheme}
+          aria-label="Btoggle theme"
         >
           {!isDark ? (
             <MoonIcon color={isDark ? "white" : "#000"} size={14} />

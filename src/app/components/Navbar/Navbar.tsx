@@ -14,7 +14,11 @@ const Navbar = () => {
       <MobileNavbar />
       <nav className="hidden md:flex py-6 max-w-wrapper w-full gap-4">
         <div className="flex flex-1 items-center justify-between">
-          <a href="/" className="flex flex-1">
+          <a
+            href="/"
+            className="flex flex-1"
+            aria-label="Link to redirect to homepage"
+          >
             <LogoIcon color={theme === "dark" ? "white" : "#000"} />
           </a>
           <ListItems />
