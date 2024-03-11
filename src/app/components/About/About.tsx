@@ -49,7 +49,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center w-full gap-10 lg:gap-40 relative"
+      className="flex flex-col items-center w-full gap-10 lg:gap-20 relative"
       ref={aboutRef}
     >
       <div

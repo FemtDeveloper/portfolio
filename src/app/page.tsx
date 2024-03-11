@@ -30,7 +30,14 @@ export default function Home() {
   }, [theme]);
 
   useGSAP(() => {
-    const sections = ["#ribbons", "#branding", "#about", "#skills", ".project"];
+    const sections = [
+      "#ribbons",
+      "#branding",
+      "#about",
+      "#skills",
+      ".project",
+      "#employee",
+    ];
     sections.forEach((section) => {
       gsap.from(section, {
         scrollTrigger: {

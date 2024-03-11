@@ -9,7 +9,11 @@ const SeeProjects = () => {
   const theme = useThemeStore((state) => state.theme);
   const isDark = theme === "dark";
   return (
-    <div className="w-32 md:w-52 border flex items-center dark:border-white rounded-full py-[9px] md:py-[17px] relative">
+    <a
+      className="w-32 md:w-52 border flex items-center dark:border-white rounded-full py-[9px] md:py-[17px] relative cursor-pointer"
+      aria-label="To Projects"
+      href="#solo_projects"
+    >
       <p className="l1 md:b1 ml-4 dark:text-white">
         {isSpanish ? "Ver proyectos" : "See projects"}
       </p>
@@ -25,7 +29,7 @@ const SeeProjects = () => {
           color={isDark ? "#fff" : "#000"}
         />
       </div>
-    </div>
+    </a>
   );
 };
 
