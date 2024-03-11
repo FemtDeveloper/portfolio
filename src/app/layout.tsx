@@ -24,10 +24,20 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.className} dark scroll-smooth`}>
       <head>
         <meta key="theme-color" name="theme-color" content={"#0e0e0e"} />
+        <meta
+          key="apple-mobile-web-app-status-bar-style"
+          name="apple-mobile-web-app-status-bar-style"
+          content={"#0e0e0e"}
+        />
+        <meta
+          key="msapplication-navbutton-color"
+          name="msapplication-navbutton-color"
+          content={"#0e0e0e"}
+        />
       </head>
       <LenisProvider isRoot>
         <body
-          className={`w-full flex items-center bg-white  dark:bg-neutral-950 flex-col justify-center`}
+          className={`w-full flex items-center bg-white  dark:bg-neutral-900 flex-col justify-center`}
           data-scroll-container
         >
           <header className="w-full max-w-mw-container flex justify-center">

@@ -7,14 +7,15 @@ const ReactIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
-  const fillMain = isHovered ? "#61DAFB" : "#fff";
-  const fill = isHovered ? "#000B1D" : "#454545";
+  const fillMain = isHovered || isMobile ? "#61DAFB" : "#fff";
+  const fill = isHovered || isMobile ? "#000B1D" : "#454545";
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
 
-  const shadowStyle = isHovered
-    ? { filter: "drop-shadow(2px 20px 50px #61DAFB43)" }
-    : {};
+  const shadowStyle =
+    isHovered || isMobile
+      ? { filter: "drop-shadow(2px 20px 50px #61DAFB43)" }
+      : {};
 
   return (
     <svg

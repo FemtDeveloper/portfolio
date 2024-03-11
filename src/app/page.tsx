@@ -38,7 +38,7 @@ export default function Home() {
           start: "top 115%",
           end: "bottom bottom",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
 
         opacity: 0,

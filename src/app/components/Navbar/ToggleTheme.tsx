@@ -51,7 +51,9 @@ const ThemeToggle = () => {
       >
         <div
           className={`transform transition-all duration-700 ease-in-out ${
-            isDark ? "group-hover:rotate-[360deg]" : "group-hover:rotate-180"
+            isDark
+              ? "group-hover:rotate-[360deg]"
+              : "group-hover:rotate-[270deg]"
           }`}
         >
           {!isDark ? (

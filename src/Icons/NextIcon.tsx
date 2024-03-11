@@ -7,13 +7,12 @@ const NextIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
-  const fillMain = isHovered ? "#000" : "#fff";
-  const fill = isHovered ? "#fff" : "#454545";
+  const fillMain = isHovered || isMobile ? "#000" : "#fff";
+  const fill = isHovered || isMobile ? "#fff" : "#454545";
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
-  const shadowStyle = isHovered
-    ? { boxShadow: "2px 30px 70px 30px #00008F23" }
-    : {};
+  const shadowStyle =
+    isHovered || isMobile ? { boxShadow: "2px 30px 70px 30px #00008F23" } : {};
 
   return (
     <svg

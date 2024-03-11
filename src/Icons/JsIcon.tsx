@@ -9,16 +9,17 @@ const JsIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const handleMouseLeave = () => setIsHovered(false);
 
   const fillMain = () => {
-    if (isHovered) return "#F7DF1E";
-    if (isHovered && isDark) return "#fff";
+    if (isHovered || isMobile) return "#F7DF1E";
+    if ((isHovered && isDark) || isMobile) return "#fff";
     return "#454545";
   };
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
 
-  const shadowStyle = isHovered
-    ? { filter: "drop-shadow(2px 20px 50px #F7DF1E13)" }
-    : {};
+  const shadowStyle =
+    isHovered || isMobile
+      ? { filter: "drop-shadow(2px 20px 50px #F7DF1E13)" }
+      : {};
 
   return (
     <svg

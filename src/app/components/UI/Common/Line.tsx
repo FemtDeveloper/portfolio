@@ -3,7 +3,7 @@ import { useThemeStore } from "@/store/useThemeStore";
 const Line = () => {
   const theme = useThemeStore((state) => state.theme);
   return (
-    <svg viewBox="0 0 1440 576" fill="none" preserveAspectRatio="xMidYmax meet">
+    <svg viewBox="0 0 1440 576" fill="none">
       <path
         id="profile-line"
         className="-inset-1 bg-gradient-to-tr from-primaryOrange to-orangeGradient"

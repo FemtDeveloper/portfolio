@@ -42,14 +42,14 @@ const About = () => {
       scrollTrigger: { trigger: "#profile", end: "top 10%" },
       opacity: 0,
       scale: 0.2,
-      duration: 3,
+      duration: 1.5,
     });
   });
 
   return (
     <section
       id="about"
-      className="flex flex-col items-center w-full gap-10 lg:gap-40 px-4 lg:px-0 relative"
+      className="flex flex-col items-center w-full gap-10 lg:gap-40 relative"
       ref={aboutRef}
     >
       <div
@@ -64,8 +64,8 @@ const About = () => {
           Full Stack — Developer
         </p>
       </div>
-      <figure className="relative w-full flex  flex-col items-center justify-center gap-12">
-        <div id="profile-line" className="absolute -z-10 w-full">
+      <figure className="relative w-full flex  flex-col items-center justify-center gap-12 mx-[-16px]">
+        <div id="profile-line" className="absolute -z-10 w-full ">
           <Line />
         </div>
         <Image
@@ -85,7 +85,7 @@ const About = () => {
           height={isMobile ? 422 : 703}
           className="rounded-48"
         />
-        <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white">
+        <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white px-4 lg:px-0">
           {parse(isSpanish ? contentSpanish : contentEnglish)}
         </p>
       </figure>
