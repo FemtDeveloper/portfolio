@@ -35,13 +35,14 @@ export default function Home() {
       gsap.from(section, {
         scrollTrigger: {
           trigger: section,
-          start: "top 95%",
+          start: "top 115%",
           end: "bottom bottom",
           scrub: true,
+          markers: true,
         },
 
         opacity: 0,
-        y: 200,
+        y: 100,
         duration: 1.5,
       });
     });
