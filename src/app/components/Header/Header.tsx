@@ -70,7 +70,7 @@ const Header = () => {
         onMouseEnter={() => setIsHoverMask(true)}
         onMouseLeave={() => setIsHoverMask(false)}
       >
-        {isHoverMask && (
+        {/* {isHoverMask && (
           <motion.div
             transition={{ type: "tween", ease: backOut }}
             animate={{
@@ -80,7 +80,7 @@ const Header = () => {
           >
             <Image src="/images/header/robot.webp" fill alt="robot" />
           </motion.div>
-        )}
+        )} */}
         <video loop autoPlay className="video rounded-[48px]" muted>
           <source src="/images/header-video.webm" type="video/webm" />
         </video>

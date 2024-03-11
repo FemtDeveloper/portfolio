@@ -36,6 +36,9 @@ const Project = ({ mainProps, isInSlider = false }: Props) => {
     if (isSpanish) return description;
     return englishDescription;
   };
+
+  console.log({ mainProps });
+
   return (
     <article
       className={`project flex justify-center items-center flex-col gap-6 md:gap-8`}
