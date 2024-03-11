@@ -29,7 +29,7 @@ const MobileNavbar = () => {
 
   return (
     <div className="flex md:hidden flex-1 items-center justify-between px-4 py-3 mt-6">
-      <a href="/" className="flex flex-1">
+      <a href="/" className="flex flex-1" aria-label="link to homepage">
         <LogoIcon
           color={theme === "dark" ? "white" : "#000"}
           width={31}
