@@ -22,7 +22,6 @@ const ProjectsSolo = () => {
           start,
           end: "bottom 200%",
           scrub: true,
-          markers: true,
         },
         opacity: 0,
         y: 100,
