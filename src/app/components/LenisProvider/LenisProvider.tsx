@@ -24,7 +24,7 @@ const LenisProvider = ({ children, isRoot }: Props) => {
     };
   }, []);
   return (
-    <ReactLenis root={isRoot} options={{ duration: 2 }}>
+    <ReactLenis root={isRoot} options={{ duration: 2, wheelMultiplier: 1.3 }}>
       {children}
     </ReactLenis>
   );

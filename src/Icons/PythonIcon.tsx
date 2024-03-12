@@ -1,9 +1,10 @@
-import { useResponsive } from "@/hooks";
+import { useIsDark, useResponsive } from "@/hooks";
 import { useState } from "react";
 
 const PythonIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const { isMobile } = useResponsive();
+  const isDark = useIsDark();
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
@@ -14,7 +15,7 @@ const PythonIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
 
   const shadowStyle =
-    isHovered || isMobile
+    isHovered || (isMobile && isDark)
       ? { filter: "drop-shadow(2px 20px 50px #387Ef853)" }
       : {};
 

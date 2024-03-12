@@ -1,10 +1,11 @@
-import { useIsSpanish } from "@/hooks";
+import { useIsSpanish, useResponsive } from "@/hooks";
 import React, { useState } from "react";
 import { ArrowRightIcon } from "../../../Icons";
 import { useThemeStore } from "@/store/useThemeStore";
 
 const SeeProjects = () => {
   const [ishover, setIshover] = useState(false);
+  const { isMobile } = useResponsive();
   const isSpanish = useIsSpanish();
   const theme = useThemeStore((state) => state.theme);
   const isDark = theme === "dark";
@@ -20,12 +21,14 @@ const SeeProjects = () => {
       <div
         className={`arrow absolute rounded-full right-0 transition duration-300 ${
           ishover ? "dark:bg-primaryOrange rotate-45" : "dark:bg-white40 "
-        }  border dark:border-white ${ishover ? "p-4" : "p-[10px] md:p-5"}`}
+        }  border dark:border-white ${
+          ishover && !isMobile ? "p-4" : "p-[10px] md:p-5"
+        }`}
         onMouseEnter={() => setIshover(true)}
         onMouseLeave={() => setIshover(false)}
       >
         <ArrowRightIcon
-          size={ishover ? 24 : 16}
+          size={ishover && !isMobile ? 24 : 16}
           color={isDark ? "#fff" : "#000"}
         />
       </div>

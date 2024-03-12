@@ -1,4 +1,9 @@
 import parse from "html-react-parser";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 import {
   ArrowDiagonalIcon,
@@ -41,7 +46,7 @@ const Project = ({ mainProps, isInSlider = false, index }: Props) => {
   return (
     <article
       id={`project-${index}`}
-      className={`project flex justify-center items-center flex-col gap-6 md:gap-8`}
+      className={`project  flex justify-center items-center flex-col gap-6 md:gap-8`}
     >
       <figure
         className={`flex w-full  

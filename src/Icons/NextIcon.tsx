@@ -1,9 +1,10 @@
-import { useResponsive } from "@/hooks";
+import { useIsDark, useResponsive } from "@/hooks";
 import { useState } from "react";
 
 const NextIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const { isMobile } = useResponsive();
+  const isDark = useIsDark();
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
@@ -12,7 +13,9 @@ const NextIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
 
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
   const shadowStyle =
-    isHovered || isMobile ? { boxShadow: "2px 30px 70px 30px #00008F23" } : {};
+    isHovered || (isMobile && isDark)
+      ? { boxShadow: "2px 30px 70px 30px #00008F23" }
+      : {};
 
   return (
     <svg

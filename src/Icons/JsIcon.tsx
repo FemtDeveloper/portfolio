@@ -17,7 +17,7 @@ const JsIcon = ({ size = 80, color = "currentColor" }: IconProps) => {
   const transitionStyle = { transition: "fill 0.2s ease-in-out" };
 
   const shadowStyle =
-    isHovered || isMobile
+    isHovered || (isMobile && isDark)
       ? { filter: "drop-shadow(2px 20px 50px #F7DF1E13)" }
       : {};
 
