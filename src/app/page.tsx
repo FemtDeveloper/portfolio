@@ -36,6 +36,8 @@ export default function Home() {
       "#about",
       "#skills",
       ".project",
+      "#project-0",
+      "#project-1",
       "#employee",
     ];
     sections.forEach((section) => {

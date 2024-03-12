@@ -13,8 +13,9 @@ interface Props {
   mainProps: MainProps;
   maxWidth?: number | string;
   isInSlider?: boolean;
+  index?: number;
 }
-const Project = ({ mainProps, isInSlider = false }: Props) => {
+const Project = ({ mainProps, isInSlider = false, index }: Props) => {
   const isSpanish = useIsSpanish();
   const isDark = useIsDark();
   const { isMobile } = useResponsive();
@@ -39,6 +40,7 @@ const Project = ({ mainProps, isInSlider = false }: Props) => {
 
   return (
     <article
+      id={`project-${index}`}
       className={`project flex justify-center items-center flex-col gap-6 md:gap-8`}
     >
       <figure

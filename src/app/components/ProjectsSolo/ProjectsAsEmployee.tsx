@@ -15,8 +15,8 @@ const ProjectsAsEmployee = () => {
           : "Institutional projects I have contributed to as part of a team"}
       </h2>
       <div className="slider flex flex-col md:flex-row justify-start lg:px-15 gap-10">
-        {PROJECTS_AS_EMPLOYEE.map((project) => (
-          <Project mainProps={project} isInSlider key={project.id} />
+        {PROJECTS_AS_EMPLOYEE.map((project, i) => (
+          <Project mainProps={project} isInSlider key={project.id} index={i} />
         ))}
       </div>
     </section>
