@@ -1,4 +1,4 @@
-const GithubIcon = ({ size = 32, color = "currentColor" }: IconProps) => {
+const LinkedInIcon = ({ size = 32, color = "currentColor" }: IconProps) => {
   return (
     <svg
       width={size}
@@ -31,4 +31,4 @@ const GithubIcon = ({ size = 32, color = "currentColor" }: IconProps) => {
   );
 };
 
-export default GithubIcon;
+export default LinkedInIcon;
