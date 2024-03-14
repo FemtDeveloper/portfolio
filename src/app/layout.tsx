@@ -11,8 +11,20 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Miranda dev",
-  description: "Felix Miranda's Portfolio",
+  title: "Felix Miranda s Portfolio",
+  description: "Felix Miranda. Portfolio web with some of my jobs. ",
+  openGraph: {
+    title: "Felix Miranda s Portfolio",
+    description: "Felix Miranda. Portfolio web with some of my jobs. ",
+    url: "https://www.fmiranda.com/",
+    images: [
+      {
+        url: "/images/cover.png",
+        width: 1260,
+        height: 800,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
