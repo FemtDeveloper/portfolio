@@ -291,11 +291,11 @@ html {
   }
 }
 
-/* html.lenis {
+html.lenis {
   height: auto;
-} */
+}
 
-/* .lenis.lenis-smooth {
+.lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
 
@@ -309,4 +309,4 @@ html {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-} */
+}
