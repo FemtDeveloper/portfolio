@@ -32,11 +32,11 @@ html {
   }
 
   .b3 {
-    @apply text-[14px] tracking-[-0.56px]
+    @apply text-[14px] tracking-[-0.56px];
   }
 
   .h1 {
-    @apply text-h1 leading-none tracking-light
+    @apply text-h1 leading-none tracking-light;
   }
 
   .h2 {
@@ -56,14 +56,12 @@ html {
   }
 
   .l1 {
-    @apply text-[12px] tracking-[-0.48px]
+    @apply text-[12px] tracking-[-0.48px];
   }
 
   .l2 {
-    @apply text-[10px]
+    @apply text-[10px];
   }
-
-
 }
 
 @layer utilities {
@@ -77,7 +75,6 @@ html {
   border-radius: 10px;
 }
 
-
 ::-webkit-scrollbar {
   width: 7px;
   background-color: #f0f0f0;
@@ -88,12 +85,43 @@ html {
 }
 
 :root {
-  --orange-gradient-background: linear-gradient(90deg, rgba(252, 75, 29, 0.2) 0%, #FC4B1D 50%, rgba(252, 75, 29, 0.2) 100%);
-  --black-gradient-background: linear-gradient(90deg, #131313ec 0%, #111111 50%, #131313ec 100%);
-  --grey-gradient-background: linear-gradient(90deg, #c5c5c5cb 0%, rgba(27, 27, 27, 0.2) 50%, #c5c5c5cb 100%);
-  --white-gradient-background: radial-gradient(circle, #818181cb 0%, #ffffff 50%, #818181cb 100%);
-  --white-oragnge-gradient: linear-gradient(90deg, #ff3908 0%, #333333 50%, #ffffff 100%);
-  --bicolor-gradient: linear-gradient(90deg, rgba(255, 134, 74, 0.2) 0%, rgba(255, 134, 74, 0.8) 50%, rgba(61, 150, 244, 0.8) 50.01%, rgba(61, 150, 244, 0.2) 100%)
+  --orange-gradient-background: linear-gradient(
+    90deg,
+    rgba(252, 75, 29, 0.2) 0%,
+    #fc4b1d 50%,
+    rgba(252, 75, 29, 0.2) 100%
+  );
+  --black-gradient-background: linear-gradient(
+    90deg,
+    #131313ec 0%,
+    #111111 50%,
+    #131313ec 100%
+  );
+  --grey-gradient-background: linear-gradient(
+    90deg,
+    #c5c5c5cb 0%,
+    rgba(27, 27, 27, 0.2) 50%,
+    #c5c5c5cb 100%
+  );
+  --white-gradient-background: radial-gradient(
+    circle,
+    #818181cb 0%,
+    #ffffff 50%,
+    #818181cb 100%
+  );
+  --white-oragnge-gradient: linear-gradient(
+    90deg,
+    #ff3908 0%,
+    #333333 50%,
+    #ffffff 100%
+  );
+  --bicolor-gradient: linear-gradient(
+    90deg,
+    rgba(255, 134, 74, 0.2) 0%,
+    rgba(255, 134, 74, 0.8) 50%,
+    rgba(61, 150, 244, 0.8) 50.01%,
+    rgba(61, 150, 244, 0.2) 100%
+  );
 }
 
 ::-webkit-scrollbar-thumb {
@@ -159,7 +187,6 @@ html {
   transition: all 0.2s;
 }
 
-
 .contact-button-orange:hover,
 .contact-button-dark:hover {
   background-position: 0;
@@ -176,15 +203,12 @@ html {
   bottom: 0;
   transform: translateX(-50%);
   left: 0;
-  content: '';
+  content: "";
   background: var(--white-oragnge-gradient);
   width: 400%;
   height: 2px;
   transition: all 0.2s;
 }
-
-
-
 
 .slideContent {
   display: flex;
@@ -213,7 +237,6 @@ html {
 }
 
 @keyframes floatAnimation {
-
   0%,
   100% {
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
@@ -234,7 +257,6 @@ html {
   background: var(--bicolor-gradient);
 }
 
-
 #profile-line {
   stroke-dasharray: 2097;
   stroke-dashoffset: 2097;
@@ -242,13 +264,12 @@ html {
 }
 
 .mask {
-  mask-image: url('/assets/mask.svg');
+  mask-image: url("/assets/mask.svg");
   mask-size: 100px;
   mask-repeat: no-repeat;
   mask-border: var(--bicolor-gradient) space;
   color: #111111;
 }
-
 
 @keyframes maskAnimation {
   0% {
@@ -264,19 +285,17 @@ html {
   }
 }
 
-
-
 @keyframes line-animation {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-html.lenis {
+/* html.lenis {
   height: auto;
-}
+} */
 
-.lenis.lenis-smooth {
+/* .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
 
@@ -290,4 +309,4 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-}
+} */

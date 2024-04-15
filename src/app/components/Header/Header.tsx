@@ -1,18 +1,16 @@
 import Image from "next/image";
-import { backOut, motion } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 import Circles from "./Circles";
 import SeeProjects from "./SeeProjects";
-import { useIsSpanish, useMousePosition, useResponsive } from "@/hooks";
+import { useIsSpanish, useResponsive } from "@/hooks";
 import { headerText } from "./language";
 import Social from "./Social";
-import { useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 
 const Header = () => {
   const isSpanish = useIsSpanish();
   const { isMobile } = useResponsive();
-  const [isHoverMask, setIsHoverMask] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { x, y } = useMousePosition(containerRef);
 
   const {
     headerEnglish,
@@ -23,7 +21,6 @@ const Header = () => {
     subheaderSpanish,
   } = headerText;
 
-  const maskSize = 100;
   return (
     <section
       id="header"
@@ -66,21 +63,11 @@ const Header = () => {
       </div>
       <div
         ref={containerRef}
-        className="w-full md:flex-1 grayscale-[50%] rounded-[48px] opacity-90 dark:opacity-80"
-        onMouseEnter={() => setIsHoverMask(true)}
-        onMouseLeave={() => setIsHoverMask(false)}
+        className="w-full h-[500px] md:flex-1 grayscale-[50%] rounded-[200px] opacity-90 dark:opacity-80"
       >
-        {/* {isHoverMask && (
-          <motion.div
-            transition={{ type: "tween", ease: backOut }}
-            animate={{
-              WebkitMaskPosition: `${x - maskSize / 2}px ${y - maskSize / 2}px`,
-            }}
-            className="mask h-full w-full absolute top-0 rounded-[48px]"
-          >
-            <Image src="/images/header/robot.webp" fill alt="robot" />
-          </motion.div>
-        )} */}
+        {/* <Suspense fallback={<div>Loading...</div>}>
+          <Spline scene="https://prod.spline.design/3-4pwfet29FpzR2h/scene.splinecode" />
+        </Suspense> */}
         <video loop autoPlay className="video rounded-[48px]" muted>
           <source src="/images/header-video.webm" type="video/webm" />
         </video>
