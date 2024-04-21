@@ -14,7 +14,7 @@ const config: Config = {
       transparent: "transparent",
       white: "#ffffff",
       blur: "#0C0C0C40",
-      white40: '#ffffff66',
+      white40: "#ffffff66",
       current: "currentColor",
       black: "#1B1B1B",
       primaryOrange: "#FC4B1D",
@@ -23,7 +23,7 @@ const config: Config = {
       primary: "#1e1e1e",
       disabled: "#d1d1d1",
       greyLight: "#dbdbdb",
-      toggleLight: '#0c0c0c18',
+      toggleLight: "#0c0c0c18",
       neutral: {
         100: "#EEEEEE",
         200: "#e7e7e7",
@@ -42,12 +42,13 @@ const config: Config = {
       "p-1": "#454545",
     },
     extend: {
+      transitionDuration: { 2000: "2000ms" },
       lineHeight: { normal: "120%", none: "100%" },
       spacing: {
-        15: '60px'
+        15: "60px",
       },
       screens: {
-        '5xl': '2024px'
+        "5xl": "2024px",
       },
       fontWeight: {
         thin: "100",
@@ -70,11 +71,11 @@ const config: Config = {
         light: "-2.8px",
       },
       translate: {
-        '30': '30px',
-        '60': '60px',
-        '90': '90px',
-        '120': '120px',
-        '150': '150px',
+        "30": "30px",
+        "60": "60px",
+        "90": "90px",
+        "120": "120px",
+        "150": "150px",
       },
       maxWidth: {
         "mw-container": "1440px",
@@ -101,12 +102,12 @@ const config: Config = {
         moveUp: "moveUp 3s forwards 1.5s",
         fadeOut: "fadeOut 2s forwards",
         fadeIn: "fadeIn 2s forwards",
-        translateX: 'translateToRight 2s linear',
-        circle1: 'moveCircle1 3s forwards',
-        circle2: 'moveCircle2 3s forwards',
-        circle3: 'moveCircle3 3s forwards',
-        circle4: 'moveCircle4 3s forwards',
-        circle5: 'moveCircle5 3s forwards',
+        translateX: "translateToRight 2s linear",
+        circle1: "moveCircle1 3s forwards",
+        circle2: "moveCircle2 3s forwards",
+        circle3: "moveCircle3 3s forwards",
+        circle4: "moveCircle4 3s forwards",
+        circle5: "moveCircle5 3s forwards",
       },
       keyframes: {
         fadeOut: {
@@ -131,37 +132,48 @@ const config: Config = {
         },
         translateToRight: {
           from: {
-            transform: 'translateX(0)'
+            transform: "translateX(0)",
           },
           to: {
-            transform: 'translateX(30px)'
-          }
+            transform: "translateX(30px)",
+          },
         },
         moveCircle1: {
-          '0%': { backgroundColor: '#ffffff00' },
-          '100%': { backgroundColor: '#ffffff0D' }
+          "0%": { backgroundColor: "#ffffff00" },
+          "100%": { backgroundColor: "#ffffff0D" },
         },
         moveCircle2: {
-          '0%': { transform: 'translateX(0)', backgroundColor: '#ffffff00' },
-          '100%': { transform: 'translateX(55%)', backgroundColor: '#ffffff1A' }
+          "0%": { transform: "translateX(0)", backgroundColor: "#ffffff00" },
+          "100%": {
+            transform: "translateX(55%)",
+            backgroundColor: "#ffffff1A",
+          },
         },
         moveCircle3: {
-          '0%': { transform: 'translateX(0)', backgroundColor: '#ffffff00' },
-          '100%': { transform: 'translateX(110%)', backgroundColor: '#ffffff33' }
+          "0%": { transform: "translateX(0)", backgroundColor: "#ffffff00" },
+          "100%": {
+            transform: "translateX(110%)",
+            backgroundColor: "#ffffff33",
+          },
         },
         moveCircle4: {
-          '0%': { transform: 'translateX(0)', backgroundColor: '#ffffff00' },
-          '100%': { transform: 'translateX(165%)', backgroundColor: '#ffffff4d' }
+          "0%": { transform: "translateX(0)", backgroundColor: "#ffffff00" },
+          "100%": {
+            transform: "translateX(165%)",
+            backgroundColor: "#ffffff4d",
+          },
         },
         moveCircle5: {
-          '0%': { transform: 'translateX(0)', backgroundColor: '#ffffff00' },
-          '100%': { transform: 'translateX(220%)', backgroundColor: '#ffffff66' }
+          "0%": { transform: "translateX(0)", backgroundColor: "#ffffff00" },
+          "100%": {
+            transform: "translateX(220%)",
+            backgroundColor: "#ffffff66",
+          },
         },
-
       },
       borderRadius: {
-        48: '48px'
-      }
+        48: "48px",
+      },
     },
   },
   plugins: [],

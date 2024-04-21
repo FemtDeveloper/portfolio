@@ -49,12 +49,9 @@ export default function RootLayout({
       </head>
       <LenisProvider isRoot>
         <body
-          className={`w-full flex items-center bg-white  dark:bg-neutral-900 flex-col justify-center`}
+          className={`w-full flex items-center bg-white  dark:bg-neutral-900 flex-col justify-center relative`}
           data-scroll-container
         >
-          <header className="w-full max-w-mw-container flex justify-center">
-            <Navbar />
-          </header>
           {children}
         </body>
       </LenisProvider>

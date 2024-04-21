@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useThemeStore } from "@/store/useThemeStore";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -13,6 +13,9 @@ import { Skills } from "./components/Skills";
 import { ProjectsSolo, ProjectsAsEmployee } from "./components/ProjectsSolo";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import Loader from "./components/Loader/Loader";
+import { Navbar } from "./components";
+import clsx from "clsx";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -20,6 +23,7 @@ export default function Home() {
   const { theme } = useThemeStore(
     useShallow((state) => ({ theme: state.theme }))
   );
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -45,18 +49,41 @@ export default function Home() {
       });
     });
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 8000);
+  }, []);
 
   return (
-    <main className="flex w-full min-h-screen flex-col items-center gap-12">
-      <Header />
-      <Ribbons />
-      <Branding />
-      <About />
-      <Skills />
-      <ProjectsSolo />
-      <ProjectsAsEmployee />
-      <Contact />
-      <Footer />
+    <main className="flex w-full min-h-screen flex-col items-center relative gap-12">
+      <div
+        className={clsx(
+          "transition-opacity transform duration-2000 h-screen w-screen fixed top-0 z-50",
+          !isLoading ? "opacity-0 hidden" : "opacity-100"
+        )}
+      >
+        <Loader />
+      </div>
+      <div
+        className={clsx(
+          "w-full flex flex-col items-center relative gap-12 transition-opacity transform duration-1000",
+          isLoading ? "lg:opacity-0" : "opacity-100"
+        )}
+      >
+        <header className="w-full max-w-mw-container flex justify-center">
+          <Navbar />
+        </header>
+        <Header />
+        <Ribbons />
+        <Branding />
+        <About />
+        <Skills />
+        <ProjectsSolo />
+        <ProjectsAsEmployee />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }
