@@ -77,13 +77,14 @@ const About = () => {
         />
 
         <Image
-          src="/images/about/mock-profile.png"
+          src="/images/about/setup.webp"
+          // src="/images/about/mock-profile.png"
           id="profile"
           alt="profile image"
           loading="lazy"
           width={isMobile ? 280 : 464}
           height={isMobile ? 422 : 703}
-          className="rounded-48"
+          className="rounded-3xl grayscale"
         />
         <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white px-4 lg:px-0">
           {parse(isSpanish ? contentSpanish : contentEnglish)}
