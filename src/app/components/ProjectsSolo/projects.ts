@@ -19,17 +19,17 @@ export const SOLO_PROJECTS: MainProps[] = [
     id: 4,
     title: "Madrugón Mayorista",
     description:
-      'Proyecto <span className="text-primaryOrange">Madrugón Mayorista</span>. Este proyecto de tienda en línea se desarrolla con Next.js, Tailwind CSS y Supabase, combinando renderizado eficiente, diseño responsivo y gestión de datos en tiempo real.En construcción, busca ofrecer una experiencia de usuario óptima y un proceso de compra ágil, con una plataforma escalable y fácil de mantener.',
+      'Proyecto <span className="text-primaryOrange">Madrugón Mayorista</span>. Este proyecto de tienda en línea se desarrolla con Next.js, Tailwind CSS y Supabase, combinando renderizado eficiente, diseño responsivo y gestión de datos en tiempo real.En construcción, busca ofrecer una experiencia de usuario óptima y un proceso de compra ágil, con una plataforma escalable y fácil de mantener. <span className="text-neutral-500">(Under construction)</span>',
     englishDescription:
-      'Project <span className="text-primaryOrange">Madrugón Mayorista</span>.This online store project is being developed using Next.js, Tailwind CSS, and Supabase, combining efficient rendering, responsive design, and real-time data management. Currently under construction, it aims to deliver an optimal user experience and a streamlined purchasing process, with a scalable and maintainable platform.',
+      'Project <span className="text-primaryOrange">Madrugón Mayorista</span>.This online store project is being developed using Next.js, Tailwind CSS, and Supabase, combining efficient rendering, responsive design, and real-time data management. Currently under construction, it aims to deliver an optimal user experience and a streamlined purchasing process, with a scalable and maintainable platform. <span className="text-neutral-500">(Under construction)</span>',
     bgButtonColor: "bg-black",
     img: "/images/projects/madrugon-store.png",
     titleButton: "Online",
     url: "https://madrugon.vercel.app/",
     mobileDescription:
-      'Proyecto <span className="text-primaryOrange">Madrugón Mayorista</span>. Página web desarrollada en colaboración estrecha con el cliente quien fue el creador del diseño, utilizando Next.js y Tailwind CSS.',
+      'Proyecto <span className="text-primaryOrange">Madrugón Mayorista</span>. Página web desarrollada en colaboración estrecha con el cliente quien fue el creador del diseño, utilizando Next.js y Tailwind CSS. <span className="text-neutral-500">(Under construction)</span>',
     mobileEnglishDescription:
-      'Project <span className="text-primaryOrange">Madrugón Mayorista</span>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS.',
+      'Project <span className="text-primaryOrange">Madrugón Mayorista</span>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS. <span className="text-neutral-500">(Under construction)</span>',
   },
 ];
 export const PROJECTS_AS_EMPLOYEE: MainProps[] = [

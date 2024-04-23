@@ -16,8 +16,8 @@ const ListItems = () => {
             className="text-primary dark:text-white md:hover:scale-110 md:dark:hover:text-primaryOrange relative flex flex-col justify-center items-center hover:text-primaryOrange transition-all duration-500 group"
             aria-label="link that redirects to other section"
           >
-            <p>{link}</p>
-            <div className="dot opacity-0 absolute top-9 group-hover:opacity-100 w-2 h-2 bg-primaryOrange rounded-full transition-all duration-500" />
+            <p className="b1">{link}</p>
+            <div className="dot opacity-0 absolute top-9 group-hover:opacity-100 w-[10px] h-[10px] bg-primaryOrange rounded-full transition-all duration-500" />
           </Link>
         </li>
       ))}
