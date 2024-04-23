@@ -11,7 +11,9 @@ const Footer = () => {
           <p className="l1 md:b3 text-primary dark:text-white">
             ©2024 Felix Miranda. All Rights Reserved.
           </p>
-          <IsoIcon color={isDark ? "#fff" : "#1e1e1e"} />
+          <div className="iso ">
+            <IsoIcon color={isDark ? "#fff" : "#1e1e1e"} />
+          </div>
         </div>
         <figure className="absolute -left-12 md:left-24 w-72 md:w-[700px] -bottom-20 h-60 md:h-[620px] md:-bottom-72 -rotate-12">
           <Image

@@ -84,7 +84,7 @@ const About = () => {
           loading="lazy"
           width={isMobile ? 280 : 464}
           height={isMobile ? 422 : 703}
-          className="rounded-3xl grayscale"
+          className="rounded-3xl grayscale hover:grayscale-0 transition duration-500"
         />
         <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white px-4 lg:px-0">
           {parse(isSpanish ? contentSpanish : contentEnglish)}

@@ -65,9 +65,6 @@ const Header = () => {
         ref={containerRef}
         className="w-full h-[500px] md:flex-1 grayscale-[50%] rounded-[200px] opacity-90 dark:opacity-80"
       >
-        {/* <Suspense fallback={<div>Loading...</div>}>
-          <Spline scene="https://prod.spline.design/3-4pwfet29FpzR2h/scene.splinecode" />
-        </Suspense> */}
         <video loop autoPlay className="video rounded-[48px]" muted>
           <source src="/images/header-video.webm" type="video/webm" />
         </video>

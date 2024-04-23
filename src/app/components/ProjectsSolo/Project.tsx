@@ -13,6 +13,7 @@ import {
 import { useIsDark, useIsSpanish, useResponsive } from "@/hooks";
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
 
 interface Props {
   mainProps: MainProps;
@@ -62,11 +63,19 @@ const Project = ({ mainProps, isInSlider = false, index }: Props) => {
         <Link
           href={url}
           target="_blank"
-          className={`rounded-full w-44 h-44 ${bgButtonColor} absolute  z-10 flex opacity-0 group-hover:opacity-100 duration-300 transition-all items-center flex-col justify-center gap-2`}
+          className={clsx(
+            `rounded-full w-44 h-44 ${bgButtonColor} absolute scale-0 group-hover:scale-100  z-10 flex opacity-0 group-hover:opacity-100 duration-500 transition-all items-center flex-col justify-center gap-2`,
+            bgButtonColor === "bg-primaryGreen" ? undefined : "text-white"
+          )}
         >
-          <ArrowDiagonalIcon />
+          <ArrowDiagonalIcon
+            color={bgButtonColor === "bg-primaryGreen" ? undefined : "#fff"}
+            size={32}
+          />
           <p className="l1">{titleButton}</p>
-          <p className="b1">{isSpanish ? "Ver projecto" : "See project"}</p>
+          <p className="b1: md:h4_medium">
+            {isSpanish ? "Ver projecto" : "See project"}
+          </p>
         </Link>
       </figure>
       <div className="flex flex-col items-center gap-4 md:gap-6">
