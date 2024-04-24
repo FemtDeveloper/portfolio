@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { VerticalDivider, VerticalDividerUp } from "@/Icons";
 import { useThemeStore } from "@/store/useThemeStore";
 
@@ -24,20 +23,20 @@ const Branding = () => {
         <VerticalDivider color={isDark ? "white" : "#000"} />
         <div className="flex flex-col gap-3 w-full lg:w-4/5 xl:w-2/3">
           <div className="relative">
-            <p className="hover:scale-125 transition-all duration-500 dark:text-white text-center lg:text-start">
+            <p className="hover:scale-125 transition-all duration-500 dark:text-white relative text-center lg:text-start hover:z-50">
               BRANDING
             </p>
             <Image
               quality={100}
-              src="/images/branding/branding.webp"
-              width={200}
+              src="/images/branding/glasses.jpg"
+              width={600}
               height={400}
               alt="branding image "
-              className="opacity-0 group-hover:opacity-100 scale-y-0 group-hover:scale-y-100 transition duration-700 absolute -bottom-28 -right-20 xl:-right-56 h-[550px] w-80 object-cover"
+              className="opacity-0 group-hover:opacity-100 transition duration-500 absolute -bottom-28 -right-20  h-[350px] w-72 object-cover"
             />
           </div>
           <div className="relative">
-            <p className="hover:scale-125 transition-all duration-500 dark:text-white text-center lg:text-end z-10">
+            <p className="hover:scale-125 transition-all relative duration-500 dark:text-white text-center lg:text-end z-0 hover:z-50">
               UX/UI{" "}
               <span className="text-p-2 dark:text-white text-center lg:text-start">
                 DESIGN
@@ -46,47 +45,55 @@ const Branding = () => {
 
             <Image
               quality={100}
-              src="/images/branding/ux.webp"
-              width={200}
+              src="/images/branding/design.jpg"
+              width={600}
               height={400}
-              alt="branding image "
-              className="opacity-0 group-hover:opacity-100 scale-y-0 group-hover:scale-y-100 translate-y-0 group-hover:translate-y-80 z-30 transition-all duration-2000 absolute bottom-2 -left-24 h-96 w-64 object-cover"
+              alt="branding image"
+              className="opacity-0 group-hover:opacity-100   transition-all duration-1000 absolute bottom-16 -left-36 h-80 w-56 object-cover"
             />
           </div>
         </div>
         <div className="relative">
-          <p className="hover:scale-125 transition-all duration-500 dark:text-white text-center lg:text-start lg:ml-10 ">
+          <p className="hover:scale-125 z-0 hover:z-50 transition-all relative duration-500 dark:text-white text-center lg:text-start lg:ml-10">
             DEVELOPMENT
           </p>
           <Image
             quality={100}
-            src="/images/branding/development.jpeg"
-            width={200}
+            src="/images/branding/luxury.jpg"
+            width={600}
             height={400}
             alt="branding image "
-            className="opacity-0 group-hover:opacity-100 scale-x-0 group-hover:scale-x-100   transition-all duration-2000 absolute bottom-2 left-24 h-96 w-64 object-cover z-50"
+            className="opacity-0 group-hover:opacity-100    transition-all duration-700 absolute bottom-2 left-24 h-80 w-56 object-cover z-30"
           />
         </div>
         <div className="relative">
-          <p className="hover:scale-125 transition-all duration-500 dark:text-white  text-center lg:text-end">
+          <p className="hover:scale-125 transition-all relative duration-500 dark:text-white z-0 hover:z-50 text-center lg:text-end">
             MOTION <span className="text-p-2 dark:text-white">DESIGN</span>
           </p>
           <Image
             quality={100}
-            src="/images/branding/mobile.webp"
-            width={200}
+            src="/images/branding/mobile.jpg"
+            width={600}
             height={400}
             alt="branding image "
-            className="opacity-0 group-hover:opacity-100 scale-y-0 group-hover:scale-y-100  group-hover:translate-y-0 translate-y-96 z-30 transition-all duration-2000 absolute -bottom-2 right-24 h-96 w-64 object-cover"
+            className="opacity-0 group-hover:opacity-100 z-30 transition-all duration-1000 absolute -bottom-2 right-24 h-80 w-56 object-cover"
           />
         </div>
         <div className="relative">
-          <p className="hover:scale-125 transition-all duration-500 dark:text-white text-center lg:text-start">
+          <p className="hover:scale-125 transition-all duration-500 relative dark:text-white text-center lg:text-start  z-0 hover:z-50">
             FULLSTACK
           </p>
+          <Image
+            quality={100}
+            src="/images/branding/optica.jpg"
+            width={600}
+            height={400}
+            alt="branding image "
+            className="opacity-0 group-hover:opacity-100  z-40  transition-all duration-2000 absolute -bottom-20 -left-24 h-80 w-56 object-cover"
+          />
         </div>
         <div className="relative">
-          <p className="hover:scale-125 transition-all duration-500 dark:text-white text-center lg:text-center">
+          <p className="hover:scale-125 transition-all relative hover:z-50 duration-500 dark:text-white text-center lg:text-center">
             MOBILE
           </p>
         </div>

@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <section
       id="header"
-      className="w-full mt-6 md:mt-14 relative max-w-wrapper md:min-h-[650px] overflow-x-hidden items-center flex flex-col md:flex-row gap-4 lg:gap-16 px-4 md:px-0"
+      className="w-full relative max-w-wrapper  overflow-x-hidden items-center flex flex-col md:flex-row gap-4 lg:gap-16 px-4 md:px-0"
     >
       <Image
         src="/images/spheres.png"

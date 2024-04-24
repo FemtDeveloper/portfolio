@@ -52,10 +52,10 @@ const About = () => {
       className="flex flex-col items-center w-full gap-10 lg:gap-20 relative"
       ref={aboutRef}
     >
-      <div
+      {/* <div
         id="circle-about"
         className="absolute hidden lg:flex top-1/2 h-20 w-20 z-10 bg-primaryOrange rounded-full opacity-15 blur-lg"
-      />
+      /> */}
       <div className="about-title flex flex-col gap-2 lg:gap-4 items-center">
         <p className="b3 lg:b1 text-p-2 dark:text-white">
           {isSpanish ? aboutSpanish : aboutEnglish}
@@ -64,7 +64,7 @@ const About = () => {
           Full Stack — Developer
         </p>
       </div>
-      <figure className="relative w-full flex  flex-col items-center justify-center gap-12 mx-[-16px]">
+      <figure className="absolute w-full flex  flex-col items-center justify-center gap-12 mx-[-16px]">
         <div id="profile-line" className="absolute -z-10 w-full ">
           <Line />
         </div>
@@ -75,21 +75,21 @@ const About = () => {
           alt="background svg"
           className="absolute -z-10 opacity-80"
         />
-
+      </figure>
+      <figure className="max-w-[600px] max-h-96 flex relative flex-col overflow-hidden items-center justify-center rounded-3xl z-10">
         <Image
-          src="/images/about/setup.webp"
-          // src="/images/about/mock-profile.png"
+          src="/images/about/setup.jpg"
           id="profile"
           alt="profile image"
           loading="lazy"
-          width={isMobile ? 280 : 464}
-          height={isMobile ? 422 : 703}
-          className="rounded-3xl grayscale hover:grayscale-0 transition duration-500"
+          width={isMobile ? 580 : 864}
+          height={isMobile ? 822 : 1403}
+          className="setup rounded-3xl grayscale object-contain hover:grayscale-[30%] hover:scale-110 transition-all duration-700"
         />
-        <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white px-4 lg:px-0">
-          {parse(isSpanish ? contentSpanish : contentEnglish)}
-        </p>
       </figure>
+      <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white px-4 lg:px-0">
+        {parse(isSpanish ? contentSpanish : contentEnglish)}
+      </p>
     </section>
   );
 };
