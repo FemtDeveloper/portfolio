@@ -1,11 +1,10 @@
-import Image from "next/image";
-import Spline from "@splinetool/react-spline";
-import Circles from "./Circles";
-import SeeProjects from "./SeeProjects";
 import { useIsSpanish, useResponsive } from "@/hooks";
+import Image from "next/image";
+import { useRef } from "react";
+import Circles from "./Circles";
 import { headerText } from "./language";
+import SeeProjects from "./SeeProjects";
 import Social from "./Social";
-import { Suspense, useRef, useState } from "react";
 
 const Header = () => {
   const isSpanish = useIsSpanish();

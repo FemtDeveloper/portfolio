@@ -1,21 +1,21 @@
 "use client";
-import { useEffect, useState } from "react";
 import { useThemeStore } from "@/store/useThemeStore";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import clsx from "clsx";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Header } from "./components/Header";
+import { useEffect, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
-import Ribbons from "./components/Ribbons/Ribbons";
-import { Branding } from "./components/Branding";
+import { Navbar } from "./components";
 import { About } from "./components/About";
-import { Skills } from "./components/Skills";
-import { ProjectsSolo, ProjectsAsEmployee } from "./components/ProjectsSolo";
+import { Branding } from "./components/Branding";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
 import Loader from "./components/Loader/Loader";
-import { Navbar } from "./components";
-import clsx from "clsx";
+import { ProjectsAsEmployee, ProjectsSolo } from "./components/ProjectsSolo";
+import Ribbons from "./components/Ribbons/Ribbons";
+import { Skills } from "./components/Skills";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
