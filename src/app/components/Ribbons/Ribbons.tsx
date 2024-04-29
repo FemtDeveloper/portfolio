@@ -1,8 +1,7 @@
-import React from "react";
-import { SlideRibbon, SlideRibbonContent } from "../UI/SlideRibbon";
-import Image from "next/image";
-import { useThemeStore } from "@/store/useThemeStore";
 import { useResponsive } from "@/hooks";
+import { useThemeStore } from "@/store/useThemeStore";
+import Image from "next/image";
+import { SlideRibbon, SlideRibbonContent } from "../UI/SlideRibbon";
 
 const Ribbons = () => {
   const theme = useThemeStore((state) => state.theme);
@@ -21,7 +20,7 @@ const Ribbons = () => {
         <SlideRibbon text={<SlideRibbonContent />} />
       </div>
       <Image
-        src="/images/floating-macbook.png"
+        src="/images/floating-macbook.webp"
         width={isMobile ? 266 : 645}
         height={isMobile ? 235 : 570}
         alt="macbook-image"

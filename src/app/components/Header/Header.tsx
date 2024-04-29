@@ -25,13 +25,6 @@ const Header = () => {
       id="header"
       className="w-full relative max-w-wrapper  overflow-x-hidden items-center flex flex-col md:flex-row gap-4 lg:gap-16 px-4 md:px-0"
     >
-      <Image
-        src="/images/spheres.png"
-        width={700}
-        height={620}
-        alt="spheres decorative"
-        className="absolute -z-10 -top-[520px] left-1/4 opacity-60"
-      />
       <div className="w-full md:w-[55%] gap-3 md:gap-4 flex flex-col justify-center">
         <div className="header-title w-full flex justify-center md:justify-start gap-4">
           <h2 className="h2 md:h1 text-primary dark:text-white md:flex-none text-right md:text-left">
@@ -55,7 +48,7 @@ const Header = () => {
         </p>
         <Social />
         {!isMobile && (
-          <div className="flex gap-4">
+          <div className="flex gap-4 z-40">
             <SeeProjects />
           </div>
         )}
@@ -64,9 +57,14 @@ const Header = () => {
         ref={containerRef}
         className="w-full h-[500px] md:flex-1 grayscale-[50%] rounded-[200px] opacity-90 dark:opacity-80"
       >
-        <video loop autoPlay className="video rounded-[48px]" muted>
-          <source src="/images/header-video.webm" type="video/webm" />
-        </video>
+        <Image
+          src="/images/header/header.gif"
+          className="video rounded-[48px] w-full h-full"
+          width={500}
+          priority
+          height={500}
+          alt="gif header"
+        />
       </div>
     </section>
   );

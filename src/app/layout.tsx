@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import "./globals.css";
 import { LenisProvider } from "./components/LenisProvider";
+import "./globals.css";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://www.fmiranda.com/",
     images: [
       {
-        url: "/images/cover.png",
+        url: "/images/cover.webp",
         width: 1260,
         height: 800,
       },

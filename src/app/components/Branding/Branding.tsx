@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import { VerticalDivider, VerticalDividerUp } from "@/Icons";
 import { useThemeStore } from "@/store/useThemeStore";
+import Image from "next/image";
 
 const Branding = () => {
   const theme = useThemeStore((state) => state.theme);
@@ -28,9 +28,10 @@ const Branding = () => {
             </p>
             <Image
               quality={100}
-              src="/images/branding/glasses.jpg"
-              width={600}
-              height={400}
+              src="/images/branding/glasses.webp"
+              width={224}
+              loading="lazy"
+              height={320}
               alt="branding image "
               className="opacity-0 group-hover:opacity-100 transition duration-500 absolute -bottom-28 -right-20  h-[350px] w-72 object-cover"
             />
@@ -45,9 +46,10 @@ const Branding = () => {
 
             <Image
               quality={100}
-              src="/images/branding/design.jpg"
-              width={600}
-              height={400}
+              src="/images/branding/design.webp"
+              width={230}
+              loading="lazy"
+              height={340}
               alt="branding image"
               className="opacity-0 group-hover:opacity-100   transition-all duration-1000 absolute bottom-16 -left-36 h-80 w-56 object-cover"
             />
@@ -59,9 +61,10 @@ const Branding = () => {
           </p>
           <Image
             quality={100}
-            src="/images/branding/luxury.jpg"
-            width={600}
-            height={400}
+            src="/images/branding/luxury.webp"
+            width={230}
+            loading="lazy"
+            height={340}
             alt="branding image "
             className="opacity-0 group-hover:opacity-100    transition-all duration-700 absolute bottom-2 left-24 h-80 w-56 object-cover z-30"
           />
@@ -72,9 +75,10 @@ const Branding = () => {
           </p>
           <Image
             quality={100}
-            src="/images/branding/mobile.jpg"
-            width={600}
-            height={400}
+            src="/images/branding/mobile.webp"
+            width={250}
+            loading="lazy"
+            height={340}
             alt="branding image "
             className="opacity-0 group-hover:opacity-100 z-30 transition-all duration-1000 absolute -bottom-2 right-24 h-80 w-56 object-cover"
           />
@@ -85,9 +89,10 @@ const Branding = () => {
           </p>
           <Image
             quality={100}
-            src="/images/branding/optica.jpg"
-            width={600}
-            height={400}
+            src="/images/branding/optica.webp"
+            width={230}
+            loading="lazy"
+            height={340}
             alt="branding image "
             className="opacity-0 group-hover:opacity-100  z-40  transition-all duration-2000 absolute -bottom-20 -left-24 h-80 w-56 object-cover"
           />

@@ -1,7 +1,7 @@
-import parse from "html-react-parser";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import parse from "html-react-parser";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -11,9 +11,9 @@ import {
   HorizontalDividerRight,
 } from "@/Icons";
 import { useIsDark, useIsSpanish, useResponsive } from "@/hooks";
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import clsx from "clsx";
 
 interface Props {
   mainProps: MainProps;
@@ -56,6 +56,8 @@ const Project = ({ mainProps, isInSlider = false, index }: Props) => {
         <Image
           width={isInSlider ? 1000 : 1440}
           height={800}
+          quality={100}
+          loading="lazy"
           alt="project image"
           src={img}
           className={`z-0 w-full object-cover`}
@@ -84,7 +86,7 @@ const Project = ({ mainProps, isInSlider = false, index }: Props) => {
             width={"100%"}
             color={!isDark ? "#1e1e1e" : "#fff"}
           />
-          <p className="h4 md:h2 text-primary dark:text-white text-nowrap">
+          <p className="h4 md:h2 text-primary dark:text-white text-nowrap whitespace-nowrap">
             {title}
           </p>
           <HorizontalDividerRight

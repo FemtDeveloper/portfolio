@@ -19,10 +19,3 @@ const Loader = () => {
 };
 
 export default Loader;
-
-{
-  /* <Spline
-  scene="https://prod.spline.design/WFzUKorGO5F46ifn/scene.splinecode"
-  className="h-full w-full"
-/> */
-}

@@ -1,12 +1,12 @@
-import Image from "next/image";
-import parse from "html-react-parser";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { language } from "./language";
 import { useIsSpanish, useOnLeave, useOnMove, useResponsive } from "@/hooks";
-import { Line } from "../UI/Common";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import parse from "html-react-parser";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { Line } from "../UI/Common";
+import { language } from "./language";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -39,7 +39,7 @@ const About = () => {
 
   useGSAP(() => {
     gsap.from("#profile", {
-      scrollTrigger: { trigger: "#profile", end: "top 10%" },
+      scrollTrigger: { trigger: "#about", end: "top 10%" },
       opacity: 0,
       scale: 0.2,
       duration: 1.5,
@@ -52,10 +52,10 @@ const About = () => {
       className="flex flex-col items-center w-full gap-10 lg:gap-20 relative"
       ref={aboutRef}
     >
-      {/* <div
+      <div
         id="circle-about"
         className="absolute hidden lg:flex top-1/2 h-20 w-20 z-10 bg-primaryOrange rounded-full opacity-15 blur-lg"
-      /> */}
+      />
       <div className="about-title flex flex-col gap-2 lg:gap-4 items-center">
         <p className="b3 lg:b1 text-p-2 dark:text-white">
           {isSpanish ? aboutSpanish : aboutEnglish}
@@ -70,22 +70,24 @@ const About = () => {
         </div>
         <Image
           src="/assets/bicolor-spheres.svg"
-          width={1000}
-          height={500}
+          width={800}
+          height={400}
+          loading="lazy"
           alt="background svg"
           className="absolute -z-10 opacity-80"
         />
       </figure>
       <figure className="max-w-[600px] max-h-96 flex relative flex-col overflow-hidden items-center justify-center rounded-3xl z-10">
         <Image
-          src="/images/about/setup.jpg"
+          src="/images/about/setup.webp"
           id="profile"
           alt="profile image"
-          loading="lazy"
-          width={isMobile ? 580 : 864}
-          height={isMobile ? 822 : 1403}
-          className="setup rounded-3xl grayscale object-contain hover:grayscale-[30%] hover:scale-110 transition-all duration-700"
+          // loading="lazy"
+          height={450}
+          width={600}
+          className="setup rounded-3xl grayscale object-contain hover:grayscale-[30%] hover:scale-110 transition-all duration-700 z-50"
         />
+        {/* <Blocks /> */}
       </figure>
       <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white px-4 lg:px-0">
         {parse(isSpanish ? contentSpanish : contentEnglish)}

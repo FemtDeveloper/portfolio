@@ -7,7 +7,7 @@ export const SOLO_PROJECTS: MainProps[] = [
     englishDescription:
       'Project <a href="www.efraincaicedo.com" target="_blank" className="text-primaryOrange">www.efraincaicedo.com</a>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS. The outcome of this project is a website with excellent performance, good practices, accessibility, and SEO.',
     bgButtonColor: "bg-primaryGreen",
-    img: "/images/projects/efra-portfolio.png",
+    img: "/images/projects/efra-portfolio.webp",
     titleButton: "Web - Portfolio",
     url: "https://efraincaicedo.com/",
     mobileDescription:
@@ -23,7 +23,7 @@ export const SOLO_PROJECTS: MainProps[] = [
     englishDescription:
       'Project <span className="text-primaryOrange">Madrugón Mayorista</span>.This online store project is being developed using Next.js, Tailwind CSS, and Supabase, combining efficient rendering, responsive design, and real-time data management. Currently under construction, it aims to deliver an optimal user experience and a streamlined purchasing process, with a scalable and maintainable platform. <span className="text-neutral-500">(Under construction)</span>',
     bgButtonColor: "bg-black",
-    img: "/images/projects/madrugon-store.png",
+    img: "/images/projects/madrugon-store.webp",
     titleButton: "Online",
     url: "https://madrugon.vercel.app/",
     mobileDescription:
@@ -41,7 +41,7 @@ export const PROJECTS_AS_EMPLOYEE: MainProps[] = [
     englishDescription:
       'Project <a href="www.aviva.pe" target="_blank" className="text-primaryOrange">www.aviva.pe</a>. This project merges Next.js, SASS, and Django to craft a dynamic website, featuring sleek design and efficient content management. It employs Next.js for a seamless user experience, SASS for styling, and Django as a robust CMS for backend.',
     bgButtonColor: "bg-primaryBlue",
-    img: "/images/projects/aviva.png",
+    img: "/images/projects/aviva.webp",
     titleButton: "Web - Portfolio",
     url: "https://aviva.pe/",
     mobileDescription:
@@ -57,7 +57,7 @@ export const PROJECTS_AS_EMPLOYEE: MainProps[] = [
     englishDescription:
       'Project <span className="text-primaryOrange">Up e-learning</span>. This e-learning platform, currently in the pre-production phase, incorporates Next.js, SASS, and Django, poised to revolutionize online education with an intuitive interface, customizable styles, and a powerful backend for efficient educational content management.',
     bgButtonColor: "bg-primaryRed",
-    img: "/images/projects/up.png",
+    img: "/images/projects/up.webp",
     titleButton: "Online",
     url: "https://up.alimdreams.com",
     mobileDescription:

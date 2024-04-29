@@ -17,14 +17,14 @@ const Footer = () => {
         </div>
         <figure className="absolute -left-12 md:left-24 w-72 md:w-[700px] -bottom-20 h-60 md:h-[620px] md:-bottom-72 -rotate-12">
           <Image
-            src="/images/spheres.png"
+            src="/images/spheres.webp"
             width={700}
             height={620}
             alt="spheres decorative"
             className="absolute z-0 -right-16 md-right-52"
           />
           <Image
-            src="/images/floating-macbook.png"
+            src="/images/floating-macbook.webp"
             width={700}
             height={620}
             alt="macbook decorative"
