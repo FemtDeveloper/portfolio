@@ -29,9 +29,9 @@ const Branding = () => {
             <Image
               quality={100}
               src="/images/branding/glasses.webp"
-              width={224}
+              width={324}
               loading="lazy"
-              height={320}
+              height={620}
               alt="branding image "
               className="opacity-0 group-hover:opacity-100 transition duration-500 absolute -bottom-28 -right-20  h-[350px] w-72 object-cover"
             />
@@ -47,9 +47,9 @@ const Branding = () => {
             <Image
               quality={100}
               src="/images/branding/design.webp"
-              width={230}
+              width={330}
               loading="lazy"
-              height={340}
+              height={440}
               alt="branding image"
               className="opacity-0 group-hover:opacity-100   transition-all duration-1000 absolute bottom-16 -left-36 h-80 w-56 object-cover"
             />
@@ -62,9 +62,9 @@ const Branding = () => {
           <Image
             quality={100}
             src="/images/branding/luxury.webp"
-            width={230}
+            width={330}
             loading="lazy"
-            height={340}
+            height={440}
             alt="branding image "
             className="opacity-0 group-hover:opacity-100    transition-all duration-700 absolute bottom-2 left-24 h-80 w-56 object-cover z-30"
           />
@@ -76,9 +76,9 @@ const Branding = () => {
           <Image
             quality={100}
             src="/images/branding/mobile.webp"
-            width={250}
+            width={350}
             loading="lazy"
-            height={340}
+            height={440}
             alt="branding image "
             className="opacity-0 group-hover:opacity-100 z-30 transition-all duration-1000 absolute -bottom-2 right-24 h-80 w-56 object-cover"
           />
@@ -90,9 +90,9 @@ const Branding = () => {
           <Image
             quality={100}
             src="/images/branding/optica.webp"
-            width={230}
+            width={330}
             loading="lazy"
-            height={340}
+            height={440}
             alt="branding image "
             className="opacity-0 group-hover:opacity-100  z-40  transition-all duration-2000 absolute -bottom-20 -left-24 h-80 w-56 object-cover"
           />
