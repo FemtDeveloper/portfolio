@@ -1,2 +1,14 @@
-export { default as LogoIcon } from '../../Icons/LogoIcon';
-export * from './UI';
+export * from "./About";
+export * from "./Branding";
+export * from "./Contact";
+export * from "./Footer";
+export * from "./Header";
+export * from "./LenisProvider";
+export * from "./Loader";
+export * from "./Navbar";
+export * from "./ProjectsSolo";
+export { default as Ribbons } from "./Ribbons/Ribbons";
+export * from "./Skills";
+export * from "./UI";
+export * from "./UI/Common";
+export * from "./UI/SlideRibbon";

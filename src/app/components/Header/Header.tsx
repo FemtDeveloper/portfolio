@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <section
       id="header"
-      className="w-full relative max-w-wrapper  overflow-x-hidden items-center flex flex-col md:flex-row gap-4 lg:gap-16 px-4 md:px-0"
+      className="w-full relative max-w-wrapper  overflow-x-hidden items-center flex flex-col md:flex-row gap-8 lg:gap-16 px-4 md:px-0"
     >
       <div className="w-full md:w-[55%] gap-3 md:gap-4 flex flex-col justify-center">
         <div className="header-title w-full flex justify-center md:justify-start gap-4">
@@ -55,11 +55,11 @@ const Header = () => {
       </div>
       <div
         ref={containerRef}
-        className="w-full h-[500px] md:flex-1 grayscale-[50%] rounded-[200px] opacity-90 dark:opacity-80"
+        className="w-full md:h-[500px] md:flex-1 grayscale-[50%] rounded-[200px] opacity-90 dark:opacity-80"
       >
         <Image
           src="/images/header/header.gif"
-          className="video rounded-[48px] w-full h-full"
+          className="video rounded-[48px] w-full h-full max-h-96 md:max-h-none"
           width={500}
           priority
           height={500}

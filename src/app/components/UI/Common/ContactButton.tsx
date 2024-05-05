@@ -1,5 +1,4 @@
 import { useIsDark } from "@/hooks";
-import { useThemeStore } from "@/store/useThemeStore";
 
 interface Props {
   url: string;
@@ -11,6 +10,7 @@ const ContactButton = ({ url, title }: Props) => {
   return (
     <a
       href={url}
+      target="_blank"
       className={`${
         isDark ? "contact-button-orange" : "contact-button-dark"
       } dark: py-6 px-8 h4 text-primary relative overflow-hidden border-b border-b-transparent`}

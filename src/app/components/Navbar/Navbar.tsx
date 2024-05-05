@@ -1,10 +1,10 @@
 "use client";
+import { LogoIcon } from "@/Icons";
 import { useThemeStore } from "@/store/useThemeStore";
-import { LogoIcon } from "..";
 import ListItems from "./ListItems";
+import MobileNavbar from "./MobileNavbar";
 import LanguageToggle from "./ToggleLanguage";
 import ThemeToggle from "./ToggleTheme";
-import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
   const theme = useThemeStore((state) => state.theme);

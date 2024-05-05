@@ -1,10 +1,12 @@
 import { useIsSpanish, useResponsive } from "@/hooks";
-import React, { useState } from "react";
-import { ArrowRightIcon } from "../../../Icons";
+import { ArrowRightIcon } from "@/Icons";
 import { useThemeStore } from "@/store/useThemeStore";
+import { useLenis } from "@studio-freight/react-lenis";
+import { useState } from "react";
 
 const SeeProjects = () => {
   const [ishover, setIshover] = useState(false);
+  const lenis = useLenis(({ scroll }) => {});
   const { isMobile } = useResponsive();
   const isSpanish = useIsSpanish();
   const theme = useThemeStore((state) => state.theme);
@@ -13,7 +15,8 @@ const SeeProjects = () => {
     <a
       className="w-32 md:w-52 border flex items-center dark:border-white rounded-full py-[9px] md:py-[17px] relative cursor-pointer"
       aria-label="To Projects"
-      href="#solo_projects"
+      href="#"
+      onClick={() => lenis?.scrollTo("#solo_projects")}
     >
       <p className="l1 md:b1 ml-4 dark:text-white">
         {isSpanish ? "Ver proyectos" : "See projects"}

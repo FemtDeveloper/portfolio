@@ -6,16 +6,19 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { Navbar } from "./components";
-import { About } from "./components/About";
-import { Branding } from "./components/Branding";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
-import Loader from "./components/Loader/Loader";
-import { ProjectsAsEmployee, ProjectsSolo } from "./components/ProjectsSolo";
-import Ribbons from "./components/Ribbons/Ribbons";
-import { Skills } from "./components/Skills";
+import {
+  About,
+  Branding,
+  Contact,
+  Footer,
+  Header,
+  Loader,
+  Navbar,
+  ProjectsAsEmployee,
+  ProjectsSolo,
+  Ribbons,
+  Skills,
+} from "./components";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
