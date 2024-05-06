@@ -10,15 +10,17 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Felix Miranda s Portfolio",
-  description: "Felix Miranda. Portfolio web with some of my jobs. ",
+  title: "Felix Miranda- Crafting Engaging & Effective Web Experiences",
+  description:
+    "Discover innovative web solutions and projects by Felix Miranda. Explore my portfolio and see how I can help bring your vision online.",
   openGraph: {
-    title: "Felix Miranda s Portfolio",
-    description: "Felix Miranda. Portfolio web with some of my jobs. ",
+    title: "Felix Miranda- Crafting Engaging & Effective Web Experiences",
+    description:
+      "Discover innovative web solutions and projects by Felix Miranda. Explore my portfolio and see how I can help bring your vision online.",
     url: "https://www.fmiranda.com/",
     images: [
       {
-        url: "/images/cover.webp",
+        url: "https://www.fmiranda.com/images/cover.jpg",
         width: 1260,
         height: 800,
       },
