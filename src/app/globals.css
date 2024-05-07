@@ -16,7 +16,7 @@ html {
   }
 
   .d2 {
-    @apply text-[60px] tracking-tight leading-none;
+    @apply text-[70px] tracking-tight leading-none;
   }
 
   .d3 {
@@ -323,4 +323,20 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+@media (min-width: 1025px) {
+  .header-figure {
+    animation: scrolling 15s linear;
+    animation-timeline: scroll();
+    transform: translateY(0%);
+    animation-range: exit 0% exit 60%;
+  }
+}
+
+@keyframes scrolling {
+  to {
+    transform: translateY(1000%) translateX(-100%);
+    scale: 1.5;
+  }
 }

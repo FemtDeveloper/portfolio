@@ -32,7 +32,7 @@ const Header = () => {
           </h2>
           <Circles />
         </div>
-        <h2 className="h2 md:h1 animated-gradient-text text-primary dark:text-primaryOrange text-center md:text-left">
+        <h2 className="h2 md:d2 animated-gradient-text text-primary dark:text-primaryOrange text-center md:text-left">
           {isSpanish ? headerLabelSpanish : headerLabelEnglish}
         </h2>
         {isMobile && (

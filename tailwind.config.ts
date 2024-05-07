@@ -14,6 +14,7 @@ const config: Config = {
       white: "#ffffff",
       blur: "#0C0C0C40",
       white40: "#ffffff66",
+      white20: "#ffffff10",
       current: "currentColor",
       black: "#1B1B1B",
       primaryOrange: "#FC4B1D",
@@ -95,6 +96,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        main: "url(/images/bg.webp)",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
