@@ -1,4 +1,4 @@
-import { useIsSpanish, useOnLeave, useOnMove, useResponsive } from "@/hooks";
+import { useIsSpanish, useOnLeave, useOnMove } from "@/hooks";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,14 +13,9 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const About = () => {
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const isSpanish = useIsSpanish();
-  const { isMobile } = useResponsive();
   const { aboutEnglish, aboutSpanish, contentEnglish, contentSpanish } =
     language;
 
-  // gsap.set("#circle-about", {
-  //   xPercent: -5,
-  //   yPercent: -5,
-  // });
   const onMove = useOnMove(aboutRef, "#circle-about");
   const onLeave = useOnLeave("#circle-about");
 
@@ -70,24 +65,23 @@ const About = () => {
         </div>
         <Image
           src="/assets/bicolor-spheres.svg"
-          width={800}
-          height={400}
+          sizes="(max-width: 768px) 85ww, 35vw"
           loading="lazy"
+          fill
           alt="background svg"
           className="absolute -z-10 opacity-80"
         />
       </figure>
-      <figure className="max-w-[600px] max-h-96 flex relative flex-col overflow-hidden items-center justify-center rounded-3xl z-10">
+      <figure className="max-w-[600px] w-[95%] md:w-[600px] h-80 md:h-96 max-h-96 flex relative flex-col overflow-hidden items-center justify-center rounded-3xl z-10">
         <Image
+          sizes="(max-width: 768px) 95ww, 35vw"
           src="/images/about/setup.webp"
           id="profile"
           alt="profile image"
-          // loading="lazy"
-          height={450}
-          width={600}
-          className="setup rounded-3xl grayscale object-contain hover:grayscale-[30%] hover:scale-110 transition-all duration-700 z-50"
+          loading="lazy"
+          fill
+          className="setup rounded-3xl grayscale object-cover hover:grayscale-[30%] hover:scale-110 transition-all duration-700 z-50"
         />
-        {/* <Blocks /> */}
       </figure>
       <p className="md:text-2xl max-w-[571px] text-center tracking-wide dark:text-white px-4 lg:px-0">
         {parse(isSpanish ? contentSpanish : contentEnglish)}

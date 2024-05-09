@@ -1,10 +1,10 @@
-import { SOLO_PROJECTS } from "./projects";
 import Project from "./Project";
+import { SOLO_PROJECTS } from "./projects";
 
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useResponsive } from "@/hooks";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 

@@ -102,15 +102,15 @@ html {
   );
   --grey-gradient-background: linear-gradient(
     90deg,
-    #c5c5c5cb 0%,
+    #c5c5c54b 0%,
     rgba(27, 27, 27, 0.2) 50%,
-    #c5c5c5cb 100%
+    #c5c5c579 100%
   );
   --white-gradient-background: radial-gradient(
     circle,
-    #818181cb 0%,
+    #818181ad 0%,
     #ffffff 50%,
-    #818181cb 100%
+    #81818198 100%
   );
   --white-oragnge-gradient: linear-gradient(
     90deg,
@@ -247,6 +247,7 @@ html {
 
 .slide-grey-background {
   background: var(--grey-gradient-background);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -267,22 +268,10 @@ html {
   will-change: transform;
 }
 
-.bicolor-gradient {
-  background: var(--bicolor-gradient);
-}
-
 #profile-line {
   stroke-dasharray: 2097;
   stroke-dashoffset: 2097;
   animation: line-animation 4s ease forwards;
-}
-
-.mask {
-  mask-image: url("/assets/mask.svg");
-  mask-size: 100px;
-  mask-repeat: no-repeat;
-  mask-border: var(--bicolor-gradient) space;
-  color: #111111;
 }
 
 @keyframes maskAnimation {

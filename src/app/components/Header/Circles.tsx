@@ -1,5 +1,3 @@
-import React from "react";
-
 const Circles = () => {
   return (
     <div className="circle-container relative items-center min-w-20 flex">

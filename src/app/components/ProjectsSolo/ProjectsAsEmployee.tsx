@@ -1,16 +1,15 @@
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 import { useIsSpanish, useResponsive } from "@/hooks";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Project from "./Project";
 import { PROJECTS_AS_EMPLOYEE } from "./projects";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const ProjectsAsEmployee = () => {
   const isSpanish = useIsSpanish();
   const { isMobile } = useResponsive();
-  // const start = isMobile ? "top 90%" : "top 80%";
   useGSAP(() => {
     const projects = ["#project-0", "#project-1"];
 

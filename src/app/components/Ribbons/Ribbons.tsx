@@ -14,21 +14,25 @@ const Ribbons = () => {
     >
       <div
         className={`${
-          isDark ? "slide-orange-background" : "slide-grey-background"
+          isDark
+            ? "slide-orange-background"
+            : "slide-grey-background opacity-70"
         } w-[105vw] absolute rotate-[7deg] py-[9px] md:py-5 z-20`}
       >
         <SlideRibbon text={<SlideRibbonContent />} />
       </div>
-      <Image
-        src="/images/floating-macbook.webp"
-        width={isMobile ? 266 : 645}
-        height={isMobile ? 235 : 570}
-        alt="macbook-image"
-        className="floatingMacbook z-10"
-      />
+      <figure className="floatingMacbook h-72 w-96 md:h-[35vw] md:w-[35vw]">
+        <Image
+          src="/images/floating-macbook.webp"
+          alt="macbook-image"
+          className="z-10 object-contain"
+          fill
+          sizes="(max-width: 768px) 70vw, 35vw"
+        />
+      </figure>
       <div
         className={`${
-          isDark ? "slide-black-background" : "slide-grey-background"
+          isDark ? "slide-black-background" : "slide-grey-background opacity-70"
         } w-[105vw] absolute -rotate-[7deg] py-5 z-0`}
       >
         <SlideRibbon text={<SlideRibbonContent />} />

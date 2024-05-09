@@ -1,6 +1,4 @@
 import { useIsSpanish, useResponsive } from "@/hooks";
-import Image from "next/image";
-import { useRef } from "react";
 import Circles from "./Circles";
 import { headerText } from "./language";
 import SeeProjects from "./SeeProjects";
@@ -9,7 +7,6 @@ import Social from "./Social";
 const Header = () => {
   const isSpanish = useIsSpanish();
   const { isMobile } = useResponsive();
-  const containerRef = useRef<HTMLDivElement>(null);
 
   const {
     headerEnglish,
@@ -53,19 +50,25 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div
-        ref={containerRef}
-        className="w-full md:h-[500px] md:flex-1 grayscale-[50%] rounded-[200px] opacity-90 dark:opacity-80"
-      >
-        <Image
-          src="/images/header/header.gif"
-          className="video rounded-[48px] w-full h-full max-h-96 md:max-h-none"
-          width={500}
-          priority
-          height={500}
-          alt="gif header"
+      <picture className="w-full h-72 md:h-[500px] md:flex-1 grayscale-[50%] rounded-[200px] opacity-90 dark:opacity-80">
+        <video
+          src="/images/header/header.mp4"
+          autoPlay
+          muted
+          loop
+          className="video rounded-[48px] object-cover w-full h-full"
         />
-      </div>
+        {/* <img src="/images/header/header.gif" alt="decorative giv" /> */}
+        {/* <Image
+          src="/images/header/header.mp4"
+          // src="/images/header/header.gif"
+          className="video rounded-[48px] object-cover w-full h-full"
+          sizes="(min-width: 768px) 90vw, 45vw"
+          priority
+          fill
+          alt="gif header"
+        /> */}
+      </picture>
     </section>
   );
 };

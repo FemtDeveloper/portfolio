@@ -1,7 +1,7 @@
 "use client";
-import { useThemeStore } from "@/store/useThemeStore";
-import { LogoIcon, MoonIcon, SunIcon } from "../../../Icons";
+import { LogoIcon, MoonIcon, SunIcon } from "@/Icons";
 import { useLanguageStore } from "@/store";
+import { useThemeStore } from "@/store/useThemeStore";
 import { useShallow } from "zustand/react/shallow";
 
 const MobileNavbar = () => {

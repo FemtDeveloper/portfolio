@@ -63,8 +63,8 @@ export default function Home() {
       <Image
         src={theme === "dark" ? "/images/bg.webp" : "/images/bg-light.webp"}
         alt="decorative"
-        width={600}
-        height={400}
+        width={640}
+        height={440}
         className="fixed h-screen w-screen left-0 top-0 opacity-10 -z-10"
       />
       {/* <div

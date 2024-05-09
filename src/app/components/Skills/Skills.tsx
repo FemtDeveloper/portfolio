@@ -1,9 +1,9 @@
 "use client";
-import { useThemeStore } from "@/store/useThemeStore";
-import { SKILLS, Skill } from "./content";
+import { useOnLeave, useOnMove } from "@/hooks";
 import { VerticalDivider, VerticalDividerUp } from "@/Icons";
+import { useThemeStore } from "@/store/useThemeStore";
 import { useEffect, useRef } from "react";
-import { useOnMove, useOnLeave } from "@/hooks";
+import { SKILLS, Skill } from "./content";
 
 const Skills = () => {
   const theme = useThemeStore((state) => state.theme);

@@ -55,6 +55,7 @@ const Project = ({ mainProps, isInSlider = false, index }: Props) => {
       >
         <Image
           width={isInSlider ? 1000 : 1440}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           height={800}
           quality={100}
           loading="lazy"

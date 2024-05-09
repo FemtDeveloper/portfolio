@@ -106,11 +106,11 @@ const config: Config = {
         fadeOut: "fadeOut 2s forwards",
         fadeIn: "fadeIn 2s forwards",
         translateX: "translateToRight 2s linear",
-        circle1: "moveCircle1 3s forwards 7s",
-        circle2: "moveCircle2 3s forwards 7s",
-        circle3: "moveCircle3 3s forwards 7s",
-        circle4: "moveCircle4 3s forwards 7s",
-        circle5: "moveCircle5 3s forwards 7s",
+        circle1: "moveCircle1 3s forwards 2s",
+        circle2: "moveCircle2 3s forwards 2s",
+        circle3: "moveCircle3 3s forwards 2s",
+        circle4: "moveCircle4 3s forwards 2s",
+        circle5: "moveCircle5 3s forwards 2s",
       },
       keyframes: {
         fadeOut: {

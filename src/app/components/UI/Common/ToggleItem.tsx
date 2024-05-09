@@ -1,5 +1,4 @@
 import { useIsSpanish } from "@/hooks";
-import React from "react";
 
 interface ToggleItemProps {
   onToggle: () => void;

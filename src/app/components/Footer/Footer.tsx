@@ -15,20 +15,19 @@ const Footer = () => {
             <IsoIcon color={isDark ? "#fff" : "#1e1e1e"} />
           </div>
         </div>
-        <figure className="absolute -left-12 md:left-24 w-72 md:w-[700px] -bottom-20 h-60 md:h-[620px] md:-bottom-72 -rotate-12">
+        <figure className="absolute -left-12 md:left-24 w-72 md:w-[50vw]  -bottom-20 h-[35vh] md:h-[70vh]  md:-bottom-72 -rotate-12">
           <Image
             src="/images/spheres.webp"
-            width={700}
-            height={620}
+            fill
             alt="spheres decorative"
             className="absolute z-0 -right-16 md-right-52"
           />
           <Image
             src="/images/floating-macbook.webp"
-            width={700}
-            height={620}
+            sizes="(max-width: 768px) 55vw, 35vw"
+            fill
             alt="macbook decorative"
-            className="z-10 relative"
+            className="z-10 relative object-contain"
           />
         </figure>
       </div>

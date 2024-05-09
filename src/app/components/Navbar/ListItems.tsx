@@ -18,8 +18,10 @@ const ListItems = () => {
             aria-label="link that redirects to other section"
             onClick={() => lenis?.scrollTo(`#${urls[i]}`)}
           >
-            <p className="b1">{link}</p>
-            <div className="dot opacity-0 absolute top-9 group-hover:opacity-100 w-[10px] h-[10px] bg-primaryOrange rounded-full transition-all duration-500" />
+            <p className="b1 relative group-hover:-translate-y-1 transition duration-500">
+              {link}
+            </p>
+            <div className="dot opacity-0 absolute top-6 group-hover:opacity-100 w-[10px] h-[10px] bg-primaryOrange rounded-full transition-all duration-500" />
           </a>
         </li>
       ))}
