@@ -1,3 +1,4 @@
+"use client";
 import { useResponsive } from "@/hooks";
 import { useState } from "react";
 

@@ -247,7 +247,7 @@ html {
 
 .slide-grey-background {
   background: var(--grey-gradient-background);
-  -webkit-backdrop-filter: blur(8px);
+  --webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 

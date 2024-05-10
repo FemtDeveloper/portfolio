@@ -1,16 +1,10 @@
 "use client";
-import { LogoIcon } from "@/Icons";
-import { useThemeStore } from "@/store/useThemeStore";
 import { useLenis } from "@studio-freight/react-lenis";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import ListItems from "./ListItems";
-import MobileNavbar from "./MobileNavbar";
-import LanguageToggle from "./ToggleLanguage";
-import ThemeToggle from "./ToggleTheme";
 
 const Navbar = () => {
-  const theme = useThemeStore((state) => state.theme);
   const [bgNavbar, setBgNavbar] = useState(false);
   const [isSafari, setIsSafari] = useState(false);
 
@@ -44,28 +38,25 @@ const Navbar = () => {
 
   return (
     <>
-      <MobileNavbar />
+      {/* <MobileNavbar /> */}
       <nav
         className={clsx(
-          "hidden md:flex px-2 py-3 max-w-wrapper rounded-2xl w-full gap-4 transition justify-between duration-500",
+          "hidden md:flex  max-w-wrapper justify-center rounded-2xl w-full gap-4 transition duration-500",
           bgNavbar && !isSafari
             ? "bg-white20 backdrop-blur-md"
             : "bg-transparent"
         )}
       >
-        <div className="flex w-3/5 items-center justify-between">
+        <div className="flex flex-1 items-center justify-between">
           <a
             href="/"
-            className="flex md: min-w-20"
+            className="flex flex-1 d3 text-white items-end"
             aria-label="Link to redirect to homepage"
           >
-            <LogoIcon color={theme === "dark" ? "white" : "#000"} />
+            Forge
+            <div className="bg-primaryOrange h-2 w-2 rounded-full relative bottom-1" />
           </a>
           <ListItems />
-        </div>
-        <div className="flex relative justify-end gap-4">
-          <LanguageToggle />
-          <ThemeToggle />
         </div>
       </nav>
     </>

@@ -18,6 +18,8 @@ const config: Config = {
       current: "currentColor",
       black: "#1B1B1B",
       primaryOrange: "#FC4B1D",
+      primaryPurple: "#0e0c15",
+      purpleText: "#544f68",
       orangeGradient: "#ff5b2a80",
       primaryGreen: "#E8FB8E",
       primaryBlue: "#3397c2",
@@ -91,12 +93,14 @@ const config: Config = {
       fontSize: {
         h1: "56px",
         super: "164px",
+        clamp: "clamp(2rem, 5vw, 3.5rem)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         main: "url(/images/bg.webp)",
+        forge: "url(/images/forge-bg.webp)",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",

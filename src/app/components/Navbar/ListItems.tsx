@@ -9,16 +9,16 @@ const ListItems = () => {
   const { spanish, english, urls } = languageLinks;
   const links = isSpanish ? spanish : english;
   return (
-    <ul className="flex flex-2 justify-between">
+    <ul className="flex flex-2 gap-10 justify-center">
       {links.map((link, i) => (
         <li key={i}>
           <a
-            href={`#`}
+            href={link === "UI/UX" ? "/implementations" : undefined}
             className="text-primary dark:text-white md:hover:scale-110 cursor-pointer md:dark:hover:text-primaryOrange relative flex flex-col justify-center items-center hover:text-primaryOrange transition-all duration-500 group"
             aria-label="link that redirects to other section"
             onClick={() => lenis?.scrollTo(`#${urls[i]}`)}
           >
-            <p className="b1 relative group-hover:-translate-y-1 transition duration-500">
+            <p className="b1 relative group-hover:-translate-y-1  transition duration-500">
               {link}
             </p>
             <div className="dot opacity-0 absolute top-6 group-hover:opacity-100 w-[10px] h-[10px] bg-primaryOrange rounded-full transition-all duration-500" />

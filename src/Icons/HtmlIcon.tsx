@@ -1,3 +1,4 @@
+"use client";
 import { useIsDark, useResponsive } from "@/hooks";
 import { useState } from "react";
 
