@@ -19,11 +19,13 @@ const LeftContent = () => {
             Solutions that drive <br /> real results and make <br /> a
             difference
           </h3>
-          <button className="p-4 lg:w-20 lg:h-20 w-14 h-14 rounded-full flex justify-center hover:-translate-y-[2px] transition duration-500 hover:drop-shadow-sm pointer-events-auto hover:shadow-primaryOrange items-center -rotate-[25deg] ">
+          <button className="relative p-4 lg:w-20 lg:h-20 w-14 h-14 rounded-full flex justify-center hover:-translate-y-[2px] transition duration-500 hover:drop-shadow-sm pointer-events-auto hover:shadow-primaryOrange items-center -rotate-[25deg] ">
             <Image
-              src="/images/uxui/letstalk.webp"
+              src="/images/letstalk.webp"
               alt="lets talk button"
-              fill
+              // fill
+              width={640}
+              height={440}
             />
           </button>
         </div>

@@ -16,9 +16,9 @@ const RightContent = () => {
         </div>
         <figure className="h-32 w-36 flex relative self-center lg:self-end">
           <Image
-            src="/images/uxui/forge-lat.webp"
+            src="/images/forge-lat.webp"
             alt="decorative image"
-            sizes="(max-width: 768px) 95ww, 35vw"
+            sizes="15vw"
             fill
             className="object-contain"
           />
