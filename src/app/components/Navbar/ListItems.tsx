@@ -1,6 +1,7 @@
 "use client";
 import { useIsSpanish } from "@/hooks";
 import { useLenis } from "@studio-freight/react-lenis";
+import { usePathname } from "next/navigation";
 import { languageLinks } from "./language";
 
 const ListItems = () => {
@@ -8,12 +9,18 @@ const ListItems = () => {
   const lenis = useLenis(({ scroll }) => {});
   const { spanish, english, urls } = languageLinks;
   const links = isSpanish ? spanish : english;
+  const pathName = usePathname();
+  const onImplementaions = pathName.includes("implementations");
+  const getHref = (link: string) => {
+    if (link === "UI/UX") return "/implementations";
+    if (onImplementaions) return "/";
+  };
   return (
     <ul className="flex flex-2 gap-10 justify-center">
       {links.map((link, i) => (
         <li key={i}>
           <a
-            href={link === "UI/UX" ? "/implementations" : undefined}
+            href={getHref(link)}
             className="text-primary dark:text-white md:hover:scale-110 cursor-pointer md:dark:hover:text-primaryOrange relative flex flex-col justify-center items-center hover:text-primaryOrange transition-all duration-500 group"
             aria-label="link that redirects to other section"
             onClick={() => lenis?.scrollTo(`#${urls[i]}`)}

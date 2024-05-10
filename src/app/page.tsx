@@ -4,7 +4,6 @@ import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
 import {
@@ -13,7 +12,6 @@ import {
   Contact,
   Footer,
   Header,
-  Navbar,
   ProjectsAsEmployee,
   ProjectsSolo,
   Ribbons,
@@ -59,14 +57,7 @@ export default function Home() {
   // }, []);
 
   return (
-    <main className="flex w-full min-h-screen flex-col items-center relative gap-12">
-      <Image
-        src={theme === "dark" ? "/images/bg.webp" : "/images/bg-light.webp"}
-        alt="decorative"
-        width={640}
-        height={440}
-        className="fixed h-screen w-screen left-0 top-0 opacity-10 -z-10"
-      />
+    <main className="flex w-full min-h-screen flex-col items-center relative gap-12 mt-24 lg:mt-36">
       {/* <div
         className={clsx(
           "transition-opacity transform duration-2000 h-screen w-screen fixed top-0 z-50",
@@ -82,9 +73,9 @@ export default function Home() {
           "opacity-100"
         )}
       >
-        <header className="w-full max-w-mw-container flex justify-center sticky top-3 z-50">
+        {/* <header className="w-full max-w-mw-container flex justify-center sticky top-3 z-50">
           <Navbar />
-        </header>
+        </header> */}
 
         <Header />
         <Ribbons />

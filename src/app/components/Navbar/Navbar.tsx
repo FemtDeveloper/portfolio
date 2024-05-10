@@ -3,6 +3,7 @@ import { LogoIcon } from "@/Icons";
 import { useThemeStore } from "@/store/useThemeStore";
 import { useLenis } from "@studio-freight/react-lenis";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ListItems from "./ListItems";
 import MobileNavbar from "./MobileNavbar";
@@ -12,6 +13,8 @@ import ThemeToggle from "./ToggleTheme";
 const Navbar = () => {
   const theme = useThemeStore((state) => state.theme);
   const [bgNavbar, setBgNavbar] = useState(false);
+  const pathName = usePathname();
+  const onImplementaions = pathName.includes("implementations");
   const [isSafari, setIsSafari] = useState(false);
 
   const lenis = useLenis(() => {});
@@ -47,9 +50,9 @@ const Navbar = () => {
       <MobileNavbar />
       <nav
         className={clsx(
-          "hidden md:flex px-2 py-3 max-w-wrapper rounded-2xl w-full gap-4 transition justify-between duration-500",
-          bgNavbar && !isSafari
-            ? "bg-white20 backdrop-blur-md"
+          "hidden md:flex px-4 py-3 max-w-wrapper rounded-2xl w-full gap-4 transition justify-between duration-500",
+          (bgNavbar || !onImplementaions) && !isSafari
+            ? "bg-white20 bd-blur"
             : "bg-transparent"
         )}
       >
@@ -59,13 +62,15 @@ const Navbar = () => {
             className="flex md: min-w-20"
             aria-label="Link to redirect to homepage"
           >
-            <LogoIcon color={theme === "dark" ? "white" : "#000"} />
+            <LogoIcon
+              color={theme === "dark" || onImplementaions ? "white" : "#000"}
+            />
           </a>
-          <ListItems />
+          {!onImplementaions && <ListItems />}
         </div>
         <div className="flex relative justify-end gap-4">
           <LanguageToggle />
-          <ThemeToggle />
+          {!onImplementaions && <ThemeToggle />}
         </div>
       </nav>
     </>

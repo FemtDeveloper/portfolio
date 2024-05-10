@@ -1,4 +1,7 @@
+"use client";
 import { useIsSpanish } from "@/hooks";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 interface ToggleItemProps {
   onToggle: () => void;
@@ -8,13 +11,17 @@ interface ToggleItemProps {
 
 const ToggleItem = ({ onToggle, titleES, titleEN }: ToggleItemProps) => {
   const isSpanish = useIsSpanish();
+  const pathName = usePathname();
+  const onImplementaions = pathName.includes("implementations");
   return (
     <div
-      className={`flex items-center relative ${
-        isSpanish ? "pr-16" : "pl-16"
-      } px-6 bg-neutral-200 dark:bg-neutral-800 rounded-full cursor-pointer transition-all duration-1000 min-h-[56px] ${
-        isSpanish ? "min-w-36" : "min-w-44"
-      }`}
+      className={clsx(
+        `flex items-center relative  px-6 rounded-full cursor-pointer transition-all duration-1000 min-h-[56px]`,
+        isSpanish ? "pr-16 min-w-36" : "pl-16 min-w-44",
+        onImplementaions
+          ? "bg-transparent"
+          : " bg-neutral-200 dark:bg-neutral-800"
+      )}
       onClick={onToggle}
     >
       <p
@@ -32,9 +39,13 @@ const ToggleItem = ({ onToggle, titleES, titleEN }: ToggleItemProps) => {
         {titleEN}
       </p>
       <div
-        className={`flex p-4 transition-all duration-1000 justify-center absolute transform items-center rounded-full bg-neutral-300 dark:bg-neutral-650 ${
-          isSpanish ? "translate-x-[130%]" : "-translate-x-[130%]"
-        }`}
+        className={clsx(
+          `flex p-4 transition-all duration-1000 justify-center absolute transform items-center rounded-full`,
+          isSpanish ? "translate-x-[130%]" : "-translate-x-[130%]",
+          onImplementaions
+            ? "bg-white20"
+            : " bg-neutral-300 dark:bg-neutral-650 "
+        )}
       >
         <p
           className={` ${

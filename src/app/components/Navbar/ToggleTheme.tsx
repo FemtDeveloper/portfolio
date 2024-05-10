@@ -1,11 +1,15 @@
 import { useIsSpanish } from "@/hooks";
 import { MoonIcon, SunIcon } from "@/Icons";
 import { useThemeStore } from "@/store/useThemeStore";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useShallow } from "zustand/react/shallow";
 
 const ThemeToggle = () => {
   const [ishover, setIshover] = useState(false);
+  const pathName = usePathname();
+  const onImplementaions = pathName.includes("implementations");
   const isSpanish = useIsSpanish();
   const { theme, setTheme } = useThemeStore(
     useShallow((state) => ({ theme: state.theme, setTheme: state.setTheme }))
@@ -22,7 +26,12 @@ const ThemeToggle = () => {
 
   return (
     <div
-      className={`flex items-center relative justify-between px-6 bg-neutral-200 dark:bg-neutral-800 rounded-full cursor-pointer transition-all duration-1000 min-h-[56px] min-w-52 group`}
+      className={clsx(
+        `flex items-center relative justify-between px-6 rounded-full cursor-pointer transition-all duration-1000 min-h-[56px] min-w-52 group`,
+        onImplementaions
+          ? "bg-transparent"
+          : " bg-neutral-200 dark:bg-neutral-800"
+      )}
       onClick={onToggle}
       onMouseEnter={() => setIshover(true)}
       onMouseLeave={() => setIshover(false)}
@@ -45,9 +54,13 @@ const ThemeToggle = () => {
       </div>
       <div className="relative w-14 p-4" />
       <div
-        className={`flex ${
-          ishover ? "w-full" : "w-14"
-        } p-4 transition-all duration-1000 justify-center absolute transform items-center right-0 rounded-full bg-neutral-300 dark:bg-neutral-650`}
+        className={clsx(
+          `flex p-4 transition-all duration-1000 justify-center absolute transform items-center right-0 rounded-full`,
+          ishover ? "w-full" : "w-14",
+          onImplementaions
+            ? "bg-purpleText"
+            : " bg-neutral-300 dark:bg-neutral-650"
+        )}
       >
         <div
           className={`transform transition-all duration-700 ease-in-out ${

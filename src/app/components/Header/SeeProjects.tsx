@@ -1,3 +1,4 @@
+"use client";
 import { useIsSpanish, useResponsive } from "@/hooks";
 import { ArrowRightIcon } from "@/Icons";
 import { useThemeStore } from "@/store/useThemeStore";

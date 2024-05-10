@@ -1,3 +1,4 @@
+"use client";
 import { useIsSpanish, useOnLeave, useOnMove } from "@/hooks";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

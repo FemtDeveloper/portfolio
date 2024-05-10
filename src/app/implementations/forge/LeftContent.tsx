@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const LeftContent = () => {
   return (
-    <div className="flex-1 flex py-6 justify-center z-10 px-4 lg:pl-10 flex-col h-full lg:bd-blur gap-20 lg:bg-white20 pointer-events-none">
-      <div className="inner-container h-1/2 flex flex-col lg:h-2/3 justify-between lg:w-4/5 gap-10 lg:gap-12">
+    <div className="flex-1 flex py-6 justify-center z-10 px-4 lg:pl-10 flex-col  lg:bd-blur gap-20 lg:bg-white20 pointer-events-none">
+      <div className="inner-container h-1/2 flex flex-col lg:h-4/5 justify-center lg: w-full gap-10 lg:gap-12">
         <div className="flex flex-col gap-7 lg:gap-5">
           <h1 className="text-clamp text-white text-start leading-normal">
             Ready to Take <br /> the Next Step?
@@ -23,9 +23,8 @@ const LeftContent = () => {
             <Image
               src="/images/letstalk.webp"
               alt="lets talk button"
-              // fill
-              width={640}
-              height={440}
+              fill
+              sizes="(min-width: 768px), 5vw, 7vw"
             />
           </button>
         </div>
