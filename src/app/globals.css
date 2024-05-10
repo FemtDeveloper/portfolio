@@ -200,6 +200,10 @@ html {
   color: transparent;
   transition: all 0.2s;
 }
+.bd-blur {
+  --webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
 
 .contact-button-orange:hover,
 .contact-button-dark:hover {

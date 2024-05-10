@@ -19,7 +19,7 @@ const config: Config = {
       black: "#1B1B1B",
       primaryOrange: "#FC4B1D",
       primaryPurple: "#0e0c15",
-      purpleText: "#544f68",
+      purpleText: "#9a90bf",
       orangeGradient: "#ff5b2a80",
       primaryGreen: "#E8FB8E",
       primaryBlue: "#3397c2",
@@ -92,8 +92,9 @@ const config: Config = {
       },
       fontSize: {
         h1: "56px",
+        h2: "36px",
         super: "164px",
-        clamp: "clamp(2rem, 5vw, 3.5rem)",
+        clamp: "clamp(2rem, 5vw, 3.8rem)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
