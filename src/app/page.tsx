@@ -12,6 +12,7 @@ import {
   Contact,
   Footer,
   Header,
+  Navbar,
   ProjectsAsEmployee,
   ProjectsSolo,
   Ribbons,
@@ -57,7 +58,7 @@ export default function Home() {
   // }, []);
 
   return (
-    <main className="flex w-full min-h-screen flex-col items-center relative gap-12 mt-24 lg:mt-36">
+    <main className="flex w-full min-h-screen flex-col items-center relative gap-12">
       {/* <div
         className={clsx(
           "transition-opacity transform duration-2000 h-screen w-screen fixed top-0 z-50",
@@ -73,9 +74,9 @@ export default function Home() {
           "opacity-100"
         )}
       >
-        {/* <header className="w-full max-w-mw-container flex justify-center sticky top-3 z-50">
+        <header className="w-full max-w-mw-container flex justify-center sticky top-3 z-50">
           <Navbar />
-        </header> */}
+        </header>
 
         <Header />
         <Ribbons />

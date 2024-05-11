@@ -1,9 +1,10 @@
 "use client";
 import { LogoIcon } from "@/Icons";
 import { useThemeStore } from "@/store/useThemeStore";
+import { animationPageOut } from "@/utils";
 import { useLenis } from "@studio-freight/react-lenis";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import ListItems from "./ListItems";
 import MobileNavbar from "./MobileNavbar";
@@ -14,6 +15,7 @@ const Navbar = () => {
   const theme = useThemeStore((state) => state.theme);
   const [bgNavbar, setBgNavbar] = useState(false);
   const pathName = usePathname();
+  const router = useRouter();
   const onImplementaions = pathName.includes("implementations");
   const [isSafari, setIsSafari] = useState(false);
 
@@ -57,15 +59,19 @@ const Navbar = () => {
         )}
       >
         <div className="flex w-3/5 items-center justify-between">
-          <a
-            href="/"
+          <button
             className="flex md: min-w-20"
             aria-label="Link to redirect to homepage"
+            onClick={
+              pathName === "/"
+                ? () => lenis?.scrollTo("top")
+                : () => animationPageOut("/", router)
+            }
           >
             <LogoIcon
               color={theme === "dark" || onImplementaions ? "white" : "#000"}
             />
-          </a>
+          </button>
           {!onImplementaions && <ListItems />}
         </div>
         <div className="flex relative justify-end gap-4">

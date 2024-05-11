@@ -112,6 +112,8 @@ const config: Config = {
         fadeOut: "fadeOut 2s forwards",
         fadeIn: "fadeIn 2s forwards",
         translateX: "translateToRight 2s linear",
+        translateX100: "translateX100 2s forwards",
+        translateX100N: "translateX100N 2s forwards",
         circle1: "moveCircle1 3s forwards",
         circle2: "moveCircle2 3s forwards",
         circle3: "moveCircle3 3s forwards",
@@ -137,6 +139,22 @@ const config: Config = {
           to: {
             opacity: "1",
             display: "block",
+          },
+        },
+        translateX100: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(110%)",
+          },
+        },
+        translateX100N: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-110%)",
           },
         },
         translateToRight: {

@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <section
       id="header"
-      className="w-full relative max-w-wrapper  overflow-x-hidden items-center flex flex-col md:flex-row gap-8 lg:gap-16 px-4 md:px-0"
+      className="w-full relative max-w-wrapper h-full items-center flex flex-col md:flex-row gap-8 lg:gap-16 px-4 md:px-0"
     >
       <div className="w-full md:w-[55%] gap-3 md:gap-4 flex flex-col justify-center">
         <div className="header-title w-full flex justify-center md:justify-start gap-4">

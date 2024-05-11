@@ -11,10 +11,15 @@ const Loader = () => {
   }, [isLoading]);
 
   return (
-    <Spline
-      scene="https://prod.spline.design/WFzUKorGO5F46ifn/scene.splinecode"
-      className="h-screen w-screen bg-black block"
-    />
+    <div
+      className="fixed w-full top-0 min-h-screen bg-black left-0 z-50"
+      // id="loader"
+    >
+      <Spline
+        scene="https://prod.spline.design/WFzUKorGO5F46ifn/scene.splinecode"
+        className="h-screen w-screen bg-black block"
+      />
+    </div>
   );
 };
 

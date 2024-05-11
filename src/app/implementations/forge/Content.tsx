@@ -10,7 +10,7 @@ const Content = () => {
   return (
     <div
       className={clsx(
-        "w-full h-full relative flex-col lg:flex-row bd-blur bg-white20 max-w-wrapper flex lg:h-4/5 lg:min-h-[550px] border-2 border-[#13111a] gap-32 lg:gap-0",
+        "w-full relative flex-col lg:flex-row bd-blur bg-white20 max-w-wrapper flex lg:h-4/5 lg:min-h-[550px] border-2 border-[#13111a] gap-32 lg:gap-0",
         mediator.className
       )}
     >

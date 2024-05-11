@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import { Navbar } from "./components";
 import { BgImage } from "./components/BgImage";
 import { LenisProvider } from "./components/LenisProvider";
 import "./globals.css";
@@ -55,9 +54,6 @@ export default function RootLayout({
           className={`w-full flex items-center bg-white  dark:bg-neutral-900 flex-col justify-center relative`}
           data-scroll-container
         >
-          <header className="w-full max-w-mw-container flex justify-center fixed top-3 z-50">
-            <Navbar />
-          </header>
           <BgImage />
           {children}
         </body>

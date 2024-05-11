@@ -79,6 +79,7 @@ html {
 }
 
 ::-webkit-scrollbar {
+  display: none;
   width: 7px;
   background-color: #f0f0f0;
 }
@@ -203,6 +204,17 @@ html {
 .bd-blur {
   --webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+}
+/* .bd-blur-md {
+  --webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+} */
+
+@media (min-width: 768px) {
+  .bd-blur-md {
+    --webkit-backdrop-filter: blur(15x);
+    backdrop-filter: blur(15x);
+  }
 }
 
 .contact-button-orange:hover,
@@ -331,5 +343,19 @@ html.lenis {
   to {
     transform: translateY(1000%) translateX(-100%);
     scale: 1.5;
+  }
+}
+
+.glow {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ffb23f;
+  }
+
+  to {
+    text-shadow: 0 0 3px #fd0000;
   }
 }

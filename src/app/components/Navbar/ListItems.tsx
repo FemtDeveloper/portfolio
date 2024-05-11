@@ -2,6 +2,7 @@
 import { useIsSpanish } from "@/hooks";
 import { useLenis } from "@studio-freight/react-lenis";
 import { usePathname } from "next/navigation";
+import { AnimationLink } from "../UI/Common";
 import { languageLinks } from "./language";
 
 const ListItems = () => {
@@ -32,6 +33,12 @@ const ListItems = () => {
           </a>
         </li>
       ))}
+      <div className="relative">
+        <span className="glow absolute -top-[6px] -right-4 tracking-wider l2 text-primaryPurple dark:text-primaryOrange font-semibold">
+          NEW
+        </span>
+        <AnimationLink href="/implementations" label="UX|UI" />
+      </div>
     </ul>
   );
 };

@@ -2,14 +2,18 @@
 import { LogoIcon, MoonIcon, SunIcon } from "@/Icons";
 import { useLanguageStore } from "@/store";
 import { useThemeStore } from "@/store/useThemeStore";
+import { animationPageOut } from "@/utils";
+import { useLenis } from "@studio-freight/react-lenis";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useShallow } from "zustand/react/shallow";
 
 const MobileNavbar = () => {
   const { theme, setTheme } = useThemeStore(
     useShallow((state) => ({ theme: state.theme, setTheme: state.setTheme }))
   );
+  const router = useRouter();
+  const lenis = useLenis(() => {});
   const { language, setLanguage } = useLanguageStore(
     useShallow((state) => ({
       language: state.language,
@@ -33,13 +37,21 @@ const MobileNavbar = () => {
 
   return (
     <div className="flex md:hidden flex-1 items-center justify-between px-5 py-3 mt-2">
-      <a href="/" className="flex flex-1" aria-label="link to homepage">
+      <button
+        onClick={
+          pathName === "/"
+            ? () => lenis?.scrollTo("top")
+            : () => animationPageOut("/", router)
+        }
+        className="flex flex-1"
+        aria-label="link to homepage"
+      >
         <LogoIcon
           color={theme === "dark" || onImplementaions ? "white" : "#000"}
           width={31}
           height={24}
         />
-      </a>
+      </button>
       <div className="toggleContainer flex gap-3 items-center">
         {!onImplementaions && (
           <button

@@ -16,7 +16,7 @@ const RightContent = () => {
         </div>
         <figure className="h-32 w-36 flex relative self-center lg:self-end">
           <Image
-            src="/images/forge-lat.webp"
+            src="/images/forge-right.webp"
             alt="decorative image"
             sizes="15vw"
             fill

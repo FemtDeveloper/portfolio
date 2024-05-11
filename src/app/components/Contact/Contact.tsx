@@ -1,7 +1,6 @@
-import React from "react";
-import { CONTACT_INFORMATION, CONTACT_LINKS } from "./language";
 import { useIsSpanish } from "@/hooks";
 import { ContactButton, Line } from "../UI/Common";
+import { CONTACT_INFORMATION, CONTACT_LINKS } from "./language";
 
 const Contact = () => {
   const isSpanish = useIsSpanish();
@@ -17,7 +16,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="text-center w-full relative flex flex-col gap-14 md:gap-44 mb-32"
+      className="text-center w-full relative flex flex-col gap-14 md:gap-44 mb-32 md:mb-0"
     >
       <div className="flex flex-col gap-[76px] mt-20 md:mt-40">
         <div className="flex flex-col text-primary gap-2 md:gap-4 dark:text-white">
