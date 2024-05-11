@@ -13,7 +13,6 @@ const ListItems = () => {
   const pathName = usePathname();
   const onImplementaions = pathName.includes("implementations");
   const getHref = (link: string) => {
-    if (link === "UI/UX") return "/implementations";
     if (onImplementaions) return "/";
   };
   return (
@@ -37,7 +36,7 @@ const ListItems = () => {
         <span className="glow absolute -top-[6px] -right-4 tracking-wider l2 text-primaryPurple dark:text-primaryOrange font-semibold">
           NEW
         </span>
-        <AnimationLink href="/implementations" label="UX|UI" />
+        <AnimationLink href="/ux-ui" label="UX|UI" />
       </div>
     </ul>
   );

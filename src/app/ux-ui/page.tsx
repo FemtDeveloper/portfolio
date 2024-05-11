@@ -7,10 +7,10 @@ import { Header } from "./forge";
 const UxuiPage = () => {
   const router = useRouter();
   return (
-    <div className="flex w-full flex-col justify-center items-center gap-4 min-h-screen relative">
+    <div className="flex w-full flex-col justify-center items-center gap-4 min-h-screen relative pb-4">
       <button
         onClick={() => animationPageOut("/", router)}
-        className="fixed top-5"
+        className="fixed top-5 z-30"
       >
         <HomeIcon size={40} color="#fff" />
       </button>

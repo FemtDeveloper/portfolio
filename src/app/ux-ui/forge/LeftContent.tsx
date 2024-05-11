@@ -3,8 +3,8 @@ import Image from "next/image";
 const LeftContent = () => {
   return (
     <div className="flex-1 flex py-6 justify-center z-10 px-4 w-full lg:pl-10 flex-col bd-blur-md gap-20 lg:bg-white20">
-      <div className="inner-container h-1/2 flex flex-col lg:h-4/5 justify-center lg:w-full gap-10 lg:gap-16">
-        <div className="flex flex-col gap-7 lg:gap-5">
+      <div className="inner-container h-1/2 flex flex-col lg:h-4/5 justify-center md:flex-row md:h-full  lg:flex-col lg:w-full gap-10 lg:gap-16">
+        <div className="flex flex-col w-full gap-7 lg:gap-5">
           <h1 className="text-clamp text-white text-start leading-normal">
             Ready to Take <br /> the Next Step?
           </h1>
@@ -15,7 +15,7 @@ const LeftContent = () => {
             stand out and achieve their goals.
           </p>
         </div>
-        <div className="flex justify-between gap-5 w-full max-w-[460px]">
+        <div className="flex md:flex-col lg:flex-row md:justify-start h-full justify-between gap-5 w-full max-w-[460px]">
           <h3 className="b1 lg:h3 text-white w-4/5 text-wrap">
             Solutions that drive <br /> real results and make <br /> a
             difference
