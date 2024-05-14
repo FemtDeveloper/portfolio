@@ -41,13 +41,10 @@ const Navbar = () => {
       {/* <MobileNavbar /> */}
       <nav
         className={clsx(
-          "hidden md:flex  max-w-wrapper justify-center rounded-2xl w-full gap-4 transition duration-500",
-          bgNavbar && !isSafari
-            ? "bg-white20 backdrop-blur-md"
-            : "bg-transparent"
+          "hidden md:flex  max-w-wrapper justify-center rounded-2xl w-full gap-4 transition duration-500"
         )}
       >
-        <div className="flex flex-1 items-center justify-between">
+        <div className="flex w-full items-center justify-between">
           <a
             href="/"
             className="flex flex-1 d3 text-white items-end"

@@ -2,7 +2,7 @@ import { links } from "./navbarLinks";
 
 const ListItems = () => {
   return (
-    <ul className="flex flex-2 justify-between">
+    <ul className="flex w-1/2 justify-between px-4 gap-4">
       {links.map((link, i) => (
         <li key={i}>
           <a

@@ -6,7 +6,7 @@ const Footer = () => {
   const isDark = useIsDark();
   return (
     <footer className="w-full h-72 relative md:h-[385px] flex items-center justify-start md:justify-center">
-      <div className="container flex  w-full  items-start md:items-center justify-center h-[400px]">
+      <div className="container relative flex  w-full  items-start md:items-center justify-center h-[220px] lg:h-[400px] overflow-y-hidden">
         <div className="flex flex-col items-center z-10 gap-3 md:gap-8">
           <p className="l1 md:b3 text-primary dark:text-white">
             ©2024 Felix Miranda. All Rights Reserved.

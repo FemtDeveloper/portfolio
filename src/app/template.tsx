@@ -4,7 +4,7 @@ import { Loader } from "./components/UI/Loader";
 
 const Template = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="w-full flex justify-center overflow-y-hidden">
+    <div className="w-full flex justify-center">
       <Loader />
 
       {children}

@@ -2,7 +2,6 @@
 import { useIsSpanish } from "@/hooks";
 import { useLenis } from "@studio-freight/react-lenis";
 import { usePathname } from "next/navigation";
-import { AnimationLink } from "../UI/Common";
 import { languageLinks } from "./language";
 
 const ListItems = () => {
@@ -25,6 +24,11 @@ const ListItems = () => {
             aria-label="link that redirects to other section"
             onClick={() => lenis?.scrollTo(`#${urls[i]}`)}
           >
+            {i === links.length - 1 && (
+              <span className="glow absolute -top-[6px] -right-4 tracking-wider l2 text-primaryPurple dark:text-primaryOrange font-semibold">
+                NEW
+              </span>
+            )}
             <p className="b1 relative group-hover:-translate-y-1  transition duration-500">
               {link}
             </p>
@@ -32,12 +36,6 @@ const ListItems = () => {
           </a>
         </li>
       ))}
-      <div className="relative">
-        <span className="glow absolute -top-[6px] -right-4 tracking-wider l2 text-primaryPurple dark:text-primaryOrange font-semibold">
-          NEW
-        </span>
-        <AnimationLink href="/ux-ui" label="UX|UI" />
-      </div>
     </ul>
   );
 };

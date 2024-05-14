@@ -1,19 +1,15 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import parse from "html-react-parser";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-import {
-  ArrowDiagonalIcon,
-  HorizontalDividerLeft,
-  HorizontalDividerRight,
-} from "@/Icons";
+import { ArrowDiagonalIcon } from "@/Icons";
 import { useIsDark, useIsSpanish, useResponsive } from "@/hooks";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
+import { Description } from "../UI/Common";
 
 interface Props {
   mainProps: MainProps;
@@ -81,28 +77,11 @@ const Project = ({ mainProps, isInSlider = false, index }: Props) => {
           </p>
         </Link>
       </figure>
-      <div className="flex flex-col items-center gap-4 md:gap-6">
-        <div className="flex gap-5 md:gap-6 items-center">
-          <HorizontalDividerLeft
-            width={"100%"}
-            color={!isDark ? "#1e1e1e" : "#fff"}
-          />
-          <p className="h4 md:h2 text-primary dark:text-white text-nowrap whitespace-nowrap">
-            {title}
-          </p>
-          <HorizontalDividerRight
-            width={"100%"}
-            color={!isDark ? "#1e1e1e" : "#fff"}
-          />
-        </div>
-        <p
-          className={`text-center text-primary dark:text-white ${
-            isInSlider ? "max-w-[80%]" : "max-w-[70%]"
-          }  `}
-        >
-          {parse(renderDescription())}
-        </p>
-      </div>
+      <Description
+        title={title}
+        description={renderDescription()}
+        isInSlider={isInSlider}
+      />
     </article>
   );
 };
