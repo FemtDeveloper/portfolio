@@ -41,7 +41,7 @@ export default function Home() {
       "#branding",
       "#about",
       "#skills",
-      "#collaborations",
+      // "#collaborations",
     ];
     sections.forEach((section) => {
       gsap.from(section, {

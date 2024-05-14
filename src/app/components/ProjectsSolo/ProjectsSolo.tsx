@@ -1,7 +1,7 @@
 import Project from "./Project";
 import { SOLO_PROJECTS } from "./projects";
 
-import { useResponsive } from "@/hooks";
+import { useIsSpanish, useResponsive } from "@/hooks";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,6 +10,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const ProjectsSolo = () => {
   const { isMobile } = useResponsive();
+  const isSpanish = useIsSpanish();
 
   const start = isMobile ? "top 90%" : "top bottom";
   useGSAP(() => {
@@ -32,8 +33,13 @@ const ProjectsSolo = () => {
   return (
     <section
       id="solo_projects"
-      className="w-full h-full max-w-wrapper px-4 lg:px-0 flex flex-col"
+      className="w-full h-full max-w-wrapper px-4 lg:px-0 flex flex-col gap-4"
     >
+      <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 text-primary dark:text-white lg: px-4 lg:px-0">
+        <h2 className="h2 lg:d1 font-bold tracking-widest">
+          {isSpanish ? "PROECTOS" : "PROJECTS"}
+        </h2>
+      </div>
       <div className="inner flex flex-col gap-20 md:gap-32">
         {SOLO_PROJECTS.map((project, i) => (
           <Project mainProps={project} key={project.id} index={project.id} />
