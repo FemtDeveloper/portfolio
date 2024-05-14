@@ -1,7 +1,9 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { BgImage } from "./components/BgImage";
 import { LenisProvider } from "./components/LenisProvider";
+
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -55,6 +57,7 @@ export default function RootLayout({
           data-scroll-container
         >
           <BgImage />
+          <Analytics />
           {children}
         </body>
       </LenisProvider>
