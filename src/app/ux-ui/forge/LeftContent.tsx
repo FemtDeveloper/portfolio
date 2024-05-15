@@ -16,10 +16,10 @@ const LeftContent = () => {
           </p>
         </div>
         <div className="flex md:flex-col lg:flex-row md:justify-start h-full justify-between gap-5 w-full max-w-[460px]">
-          <h3 className="b1 lg:h3 text-white w-4/5 text-wrap">
+          <h4 className="b1 lg:h3 text-white w-4/5 text-wrap">
             Solutions that drive <br /> real results and make <br /> a
             difference
-          </h3>
+          </h4>
           <button className="relative p-4 lg:w-20 lg:h-20 w-14 h-14 rounded-full flex justify-center hover:-translate-y-[2px] transition duration-500 hover:drop-shadow-sm pointer-events-auto hover:shadow-primaryOrange items-center -rotate-[25deg] ">
             <Image
               src="/images/letstalk.webp"

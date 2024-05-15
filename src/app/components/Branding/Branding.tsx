@@ -35,9 +35,7 @@ const Branding = () => {
                 quality={100}
                 fill
                 src="/images/branding/glasses.webp"
-                // width={324}
                 loading="lazy"
-                // height={620}
                 alt="branding image "
                 className="opacity-0 md:group-hover:opacity-100 group-hover:opacity-90 transition duration-500 object-cover"
               />
@@ -57,9 +55,7 @@ const Branding = () => {
                 quality={100}
                 fill
                 src="/images/branding/design.webp"
-                // width={330}
                 loading="lazy"
-                // height={440}
                 alt="branding image"
                 className="opacity-0 md:group-hover:opacity-100 group-hover:opacity-90 transition-all duration-1000  object-cover"
               />
@@ -76,9 +72,7 @@ const Branding = () => {
               quality={100}
               fill
               src="/images/branding/luxury.webp"
-              // width={330}
               loading="lazy"
-              // height={440}
               alt="branding image "
               className="opacity-0 md:group-hover:opacity-100 group-hover:opacity-90 transition-all duration-700  object-cover z-30"
             />
@@ -94,9 +88,7 @@ const Branding = () => {
               quality={100}
               fill
               src="/images/branding/mobile.webp"
-              // width={350}
               loading="lazy"
-              // height={440}
               alt="branding image "
               className="opacity-0 md:group-hover:opacity-100 group-hover:opacity-90 z-30 transition-all duration-1000  object-cover"
             />
@@ -112,9 +104,7 @@ const Branding = () => {
               quality={100}
               fill
               src="/images/branding/optica.webp"
-              // width={330}
               loading="lazy"
-              // height={440}
               alt="branding image "
               className="opacity-0 md:group-hover:opacity-100 group-hover:opacity-90  z-40  transition-all duration-2000 object-cover"
             />

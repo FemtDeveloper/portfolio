@@ -11,9 +11,9 @@ const Collaborations = () => {
     >
       <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 text-primary dark:text-white lg: px-4 lg:px-0">
         <h2 className="h2 lg:d1 font-bold tracking-widest">COLLABORATIONS</h2>
-        <h4 className="h4 lg:d3 font-bold text-right dark:text-primaryOrange">
+        <h3 className="h4 lg:d3 font-bold text-right dark:text-primaryOrange">
           UX/UI Components
-        </h4>
+        </h3>
       </div>
       <Header />
       <div className="w-full">
@@ -21,8 +21,8 @@ const Collaborations = () => {
           title={"Forge Agency"}
           description={
             isSpanish
-              ? "Proyecto de UI/UX para una agencia líder en innovación y desarrollo, creando experiencias digitales que destacan. Creado por <a href='https://dribbble.com/akramhs' className='text-primaryOrange cursor-pointer'>Akram Hossain</a>"
-              : "UI/UX project for Forge Agency, a leader in innovation and development, creating standout digital experiences. Created by <a href='https://dribbble.com/akramhs' className='text-primaryOrange cursor-pointer'>Akram Hossain</a>"
+              ? "Proyecto de UI/UX para una agencia líder en innovación y desarrollo, creando experiencias digitales que destacan. Creado por <a href='https://dribbble.com/akramhs' className='text-primary dark:text-primaryOrange cursor-pointer'>Akram Hossain</a>"
+              : "UI/UX project for Forge Agency, a leader in innovation and development, creating standout digital experiences. Created by <a href='https://dribbble.com/akramhs' className='text-primary dark:text-primaryOrange cursor-pointer'>Akram Hossain</a>"
           }
         />
       </div>

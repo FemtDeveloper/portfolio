@@ -58,16 +58,6 @@ const Header = () => {
           loop
           className="video rounded-[48px] object-cover w-full h-full"
         />
-        {/* <img src="/images/header/header.gif" alt="decorative giv" /> */}
-        {/* <Image
-          src="/images/header/header.mp4"
-          // src="/images/header/header.gif"
-          className="video rounded-[48px] object-cover w-full h-full"
-          sizes="(min-width: 768px) 90vw, 45vw"
-          priority
-          fill
-          alt="gif header"
-        /> */}
       </picture>
     </section>
   );

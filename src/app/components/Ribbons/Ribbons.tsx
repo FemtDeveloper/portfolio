@@ -27,6 +27,7 @@ const Ribbons = () => {
           alt="macbook-image"
           className="z-10 object-contain"
           fill
+          priority
           sizes="(max-width: 768px) 70vw, 35vw"
         />
       </figure>

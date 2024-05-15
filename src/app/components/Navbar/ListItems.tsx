@@ -13,6 +13,7 @@ const ListItems = () => {
   const onImplementaions = pathName.includes("implementations");
   const getHref = (link: string) => {
     if (onImplementaions) return "/";
+    return "#";
   };
   return (
     <ul className="flex flex-2 gap-10 justify-center">
