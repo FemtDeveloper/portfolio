@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Forge } from "./forge";
+import { Opticore } from "./opticore";
 
 const UxuiPage = () => {
   const router = useRouter();
@@ -27,7 +28,7 @@ const UxuiPage = () => {
   }, []);
 
   return (
-    <div className="flex w-full flex-col justify-center items-center gap-4 min-h-screen relative lg:bg-primaryPurple pb-4">
+    <div className="flex w-full flex-col justify-center items-center min-h-screen relative lg:bg-primaryPurple pb-4 gap-40">
       <button
         onClick={() => router.push("/")}
         className={clsx(
@@ -38,6 +39,7 @@ const UxuiPage = () => {
         <HomeIcon size={50} color="#fff" />
       </button>
       <Forge />
+      <Opticore />
     </div>
   );
 };

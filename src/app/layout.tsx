@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
+import localfont from "next/font/local";
 import { BgImage } from "./components/BgImage";
 import { LenisProvider } from "./components/LenisProvider";
 
@@ -10,6 +11,12 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
   weight: "400",
+});
+
+const skinz = localfont({
+  src: "./fonts/Skinz.ttf",
+  display: "swap",
+  variable: "--font-skinz",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +44,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.className} dark scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${dmSans.className} ${skinz.variable} dark scroll-smooth`}
+    >
       <head>
         <meta key="theme-color" name="theme-color" content={"#0e0e0e"} />
         <meta

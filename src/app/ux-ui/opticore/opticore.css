@@ -1,0 +1,41 @@
+.opt-btn-container {
+  inset: 0;
+  filter: url("#goo");
+}
+
+.phone {
+  animation: movePhone 7s linear infinite;
+}
+
+@keyframes movePhone {
+  0% {
+    transform: translateX(0) scaleY(0.2);
+    z-index: -1000;
+  }
+
+  20% {
+    transform: translateX(70px);
+  }
+  24% {
+    transform: translateX(71px) scaleY(1.1);
+  }
+  26% {
+    transform: translateX(69px) scaleY(0.9);
+  }
+  28% {
+    transform: translateX(71px) scaleY(1);
+  }
+  50% {
+    transform: translateX(70px);
+    z-index: 1000;
+  }
+
+  80% {
+    transform: translateX(70px);
+    z-index: -1000;
+  }
+
+  100% {
+    transform: translateX(0) scaleY(0.2);
+  }
+}
