@@ -25,6 +25,7 @@ const config: Config = {
       primaryGreen: "#E8FB8E",
       primaryBlue: "#3397c2",
       primaryRed: "#fd515a",
+      pink: "#fb0269",
       primary: "#1e1e1e",
       disabled: "#d1d1d1",
       greyLight: "#dbdbdb",
@@ -67,6 +68,9 @@ const config: Config = {
         extrabold: "800",
         "extra-bold": "800",
         black: "900",
+      },
+      fontFamily: {
+        skinz: "var(--font-skinz)",
       },
       letterSpacing: {
         wider: "-0.72px",

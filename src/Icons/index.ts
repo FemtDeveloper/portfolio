@@ -14,6 +14,8 @@ export { default as LogoIcon } from "./LogoIcon";
 export { default as MoonIcon } from "./MoonIcon";
 export { default as NextIcon } from "./NextIcon";
 export { default as NodeIcon } from "./NodeIcon";
+export { default as OpticoreImage } from "./OpticoreImage";
+export { default as PhoneIcon } from "./PhoneIcon";
 export { default as PlusIcon } from "./PlusIcon";
 export { default as PythonIcon } from "./PythonIcon";
 export { default as ReactIcon } from "./ReactIcon";

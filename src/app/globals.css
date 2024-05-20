@@ -205,10 +205,10 @@ html {
   --webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
-/* .bd-blur-md {
-  --webkit-backdrop-filter: blur(25px);
-  backdrop-filter: blur(25px);
-} */
+.bd-blur-md {
+  --webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
 
 @media (min-width: 768px) {
   .bd-blur-md {

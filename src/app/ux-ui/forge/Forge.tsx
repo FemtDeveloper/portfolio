@@ -1,3 +1,4 @@
+"use client";
 import { DescriptionCollab } from "@/app/components";
 import { useIsSpanish } from "@/hooks";
 import Header from "./Header";
