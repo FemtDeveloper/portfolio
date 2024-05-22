@@ -32,7 +32,7 @@ const Contact = () => {
             <Line />
           </div>
 
-          <h2 className="d2 md:d1 text-primary dark:text-white">
+          <h2 className="text-clamp-big text-primary dark:text-white font-medium tracking-wider">
             {isSpanish ? titleSpanish : titleEnglish}
           </h2>
         </div>

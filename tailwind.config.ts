@@ -73,7 +73,7 @@ const config: Config = {
         skinz: "var(--font-skinz)",
       },
       letterSpacing: {
-        wider: "-0.72px",
+        wider: "2.72px",
         wide: "-1.2px",
         normal: "-1.8px",
         tight: "-4.5px",
@@ -100,6 +100,9 @@ const config: Config = {
         h2: "36px",
         super: "164px",
         clamp: "clamp(2rem, 5vw, 3.8rem)",
+        "clamp-big": "clamp(2rem, 8vw, 8rem)",
+        "clamp-opticore": "clamp(1.3rem, 3vw, 2rem)",
+        "clamp-opticore-big": "clamp(2.15rem, 5vw, 4.4rem)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -110,21 +113,41 @@ const config: Config = {
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
+        scale: "scale 2s infinite",
+        rotate: "rotate 15s infinite linear",
         "spin-left": "rotateLeft 1s linear infinite 0.2s",
         "spin-loader": "spinVariableSpeed 3s infinite",
+        "bounce-slow": "bounce 3s linear infinite",
         moveUp: "moveUp 3s forwards 1.5s",
         fadeOut: "fadeOut 2s forwards",
         fadeIn: "fadeIn 2s forwards",
         translateX: "translateToRight 2s linear",
         translateX100: "translateX100 2s forwards",
         translateX100N: "translateX100N 2s forwards",
-        circle1: "moveCircle1 3s forwards",
-        circle2: "moveCircle2 3s forwards",
-        circle3: "moveCircle3 3s forwards",
-        circle4: "moveCircle4 3s forwards",
-        circle5: "moveCircle5 3s forwards",
+        circle1: "moveCircle1 2s forwards 2s",
+        circle2: "moveCircle2 2s forwards 2s",
+        circle3: "moveCircle3 2s forwards 2s",
+        circle4: "moveCircle4 2s forwards 2s",
+        circle5: "moveCircle5 2s forwards 2s",
       },
       keyframes: {
+        scale: {
+          "0%": {
+            transform: "scale(0.95)",
+          },
+          "50%": {
+            transform: "scale(1.05)",
+          },
+          "100%": {
+            transform: "scale(0.95)",
+          },
+        },
+        rotate: {
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+
         fadeOut: {
           "0%": {
             opacity: "1",

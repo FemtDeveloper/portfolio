@@ -13,7 +13,7 @@ const ProjectsAsEmployee = () => {
   useGSAP(() => {
     const projects = ["#project-0", "#project-1"];
 
-    projects.forEach((project, index) => {
+    projects.forEach((project) => {
       gsap.from(project, {
         scrollTrigger: {
           trigger: "#employee-slider",
@@ -31,9 +31,9 @@ const ProjectsAsEmployee = () => {
   return (
     <section
       id="employee-projects"
-      className="outer-container  w-full max-w-wrapper flex flex-col items-center px-4 lg:px-0 gap-6 md:gap-10 "
+      className="outer-container branding-title w-full max-w-wrapper flex flex-col items-center px-4 lg:px-0 gap-6 md:gap-10 "
     >
-      <h2 className="h2 md:d1 text-center text-primary max-w-80  md:max-w-max dark:text-neutral-200 my-20 md:my-40 anim animated-gradient-text-gemeric dark: dark:gradient-grey-white">
+      <h2 className="h2 md:d1 text-center max-w-80  md:max-w-max  my-20 md:my-40 bg-gradient-to-r from-transparent to-primary dark:to-white">
         {isSpanish
           ? "Proyectos institucionales en los que he participado"
           : "Institutional projects I have contributed to as part of a team"}

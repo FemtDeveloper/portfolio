@@ -3,13 +3,13 @@
   filter: url("#goo");
 }
 
-.phone {
+/* .phone {
   animation: movePhone 7s linear infinite;
-}
+} */
 
 @keyframes movePhone {
   0% {
-    transform: translateX(0) scaleY(0.5);
+    transform: translateX(0) scaleY(0.2);
     z-index: -1000;
   }
 
@@ -17,13 +17,13 @@
     transform: translateX(70px);
   }
   24% {
-    transform: translateX(72px) scaleY(1.1);
+    transform: translateX(71px) scaleY(1.1);
   }
   26% {
-    transform: translateX(68px) scaleY(0.9);
+    transform: translateX(69px) scaleY(0.9);
   }
   28% {
-    transform: translateX(70px) scaleY(1);
+    transform: translateX(71px) scaleY(1);
   }
   50% {
     transform: translateX(70px);
@@ -36,6 +36,25 @@
   }
 
   100% {
-    transform: translateX(0) scaleY(0.5);
+    transform: translateX(0) scaleY(0.2);
+  }
+}
+
+span {
+  position: absolute;
+  transform-origin: 0 90px;
+}
+
+#circle-text {
+  animation: rotate linear 5s infinite;
+  border: #fff solid 2px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

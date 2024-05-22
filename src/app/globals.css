@@ -210,6 +210,13 @@ html {
   backdrop-filter: blur(16px);
 }
 
+.bd-blur-opticore {
+  @media (max-width: 768px) {
+    --webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
+
 @media (min-width: 768px) {
   .bd-blur-md {
     --webkit-backdrop-filter: blur(15x);
@@ -358,4 +365,13 @@ html.lenis {
   to {
     text-shadow: 0 0 3px #fd0000;
   }
+}
+
+.branding-title > * {
+  background-size: 400% 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  --webkit-background-clip: text;
+  color: transparent;
 }

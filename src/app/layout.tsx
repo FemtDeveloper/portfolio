@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Open_Sans } from "next/font/google";
 import localfont from "next/font/local";
 import { BgImage } from "./components/BgImage";
 import { LenisProvider } from "./components/LenisProvider";
@@ -17,6 +17,11 @@ const skinz = localfont({
   src: "./fonts/Skinz.ttf",
   display: "swap",
   variable: "--font-skinz",
+});
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -46,10 +51,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.className} ${skinz.variable} dark scroll-smooth`}
+      className={`${dmSans.className} ${skinz.variable} ${openSans.className} dark scroll-smooth`}
     >
       <head>
-        <meta key="theme-color" name="theme-color" content={"#0e0e0e"} />
+        <meta key="theme-color" name="theme-color" content={"#0e0e0f"} />
         <meta
           key="apple-mobile-web-app-status-bar-style"
           name="apple-mobile-web-app-status-bar-style"

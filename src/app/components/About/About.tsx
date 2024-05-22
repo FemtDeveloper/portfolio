@@ -35,10 +35,10 @@ const About = () => {
 
   useGSAP(() => {
     gsap.from("#profile", {
-      scrollTrigger: { trigger: "#about", end: "top 10%" },
+      scrollTrigger: { trigger: "#about", start: "top bottom", end: "top 10%" },
       opacity: 0,
       scale: 0.2,
-      duration: 1.5,
+      duration: 0.6,
     });
   });
 
