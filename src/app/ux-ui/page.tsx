@@ -28,12 +28,14 @@ const UxuiPage = () => {
   }, []);
 
   return (
-    <div className="flex w-full flex-col justify-center items-center min-h-screen relative lg:bg-primaryPurple pb-4 gap-40">
+    <div
+      className={`flex w-full flex-col justify-center items-center min-h-screen relative lg:bg-primaryPurple gap-40`}
+    >
       <button
         onClick={() => router.push("/")}
         className={clsx(
-          "fixed top-5 z-30 right-5 lg:right-20 transition duration-500",
-          isVisible ? "opacity-100" : "opacity-15 lg:opacity-0"
+          "fixed bottom-5 md:bottom-auto md:top-5 z-30 right-5 lg:right-20 transition duration-500",
+          isVisible ? "opacity-100" : "opacity-5 lg:opacity-0"
         )}
       >
         <HomeIcon size={50} color="#fff" />

@@ -10,7 +10,7 @@ interface Props {
 
 const LenisProvider = ({ children, isRoot }: Props) => {
   return (
-    <ReactLenis root={isRoot} options={{ duration: 2, wheelMultiplier: 1.3 }}>
+    <ReactLenis root={isRoot} options={{ duration: 2, wheelMultiplier: 0.7 }}>
       {children}
     </ReactLenis>
   );

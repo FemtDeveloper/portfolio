@@ -1,21 +1,38 @@
 import { Header } from "@/app/ux-ui/forge";
 import { useIsSpanish } from "@/hooks";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { AnimationLink, Description } from "../UI/Common";
 
 const Collaborations = () => {
   const isSpanish = useIsSpanish();
+  useGSAP(() => {
+    gsap.to(".branding-title > *", {
+      backgroundPositionX: "100%",
+      stagger: 1,
+      duration: 2000,
+      scrollTrigger: {
+        trigger: ".branding-title h2",
+        scrub: 1,
+        start: "top 80%",
+        end: "center center",
+      },
+    });
+  }, []);
   return (
     <section
       id="collaborations"
       className="w-full h-full max-w-wrapper gap-4 lg:gap-8 flex flex-col items-end"
     >
-      <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 text-primary dark:text-white lg: px-4 lg:px-0">
-        <h2 className="h2 lg:d1 font-bold tracking-widest">COLLABORATIONS</h2>
-        <h3 className="h4 lg:d3 font-bold text-right dark:text-primaryOrange">
+      <div className="branding-title flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 text-primary dark:text-white lg: px-4 lg:px-0 ">
+        <h2 className="h2 lg:d1 font-bold tracking-widest bg-gradient-to-r from-transparent to-primary dark:to-white">
+          COLLABORATIONS
+        </h2>
+        <h3 className="h4 lg:d3 font-bold text-right bg-gradient-to-r from-transparent to-primary dark:to-white">
           UX/UI Components
         </h3>
       </div>
-      <Header />
+      <Header inHome />
       <div className="w-full">
         <Description
           title={"Forge Agency"}

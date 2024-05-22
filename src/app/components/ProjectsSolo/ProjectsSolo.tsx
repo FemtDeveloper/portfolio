@@ -30,13 +30,14 @@ const ProjectsSolo = () => {
       });
     });
   }, [isMobile]);
+
   return (
     <section
       id="solo_projects"
       className="w-full h-full max-w-wrapper px-4 lg:px-0 flex flex-col gap-4"
     >
-      <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 text-primary dark:text-white lg: px-4 lg:px-0">
-        <h2 className="h2 lg:d1 font-bold tracking-widest">
+      <div className="branding-title flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 lg: px-4 lg:px-0">
+        <h2 className="h2 lg:d1 font-bold tracking-widest bg-gradient-to-r from-transparent to-primary dark:to-white">
           {isSpanish ? "PROECTOS" : "PROJECTS"}
         </h2>
       </div>

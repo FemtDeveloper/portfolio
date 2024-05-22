@@ -3,9 +3,9 @@
   filter: url("#goo");
 }
 
-.phone {
+/* .phone {
   animation: movePhone 7s linear infinite;
-}
+} */
 
 @keyframes movePhone {
   0% {
@@ -37,5 +37,24 @@
 
   100% {
     transform: translateX(0) scaleY(0.2);
+  }
+}
+
+span {
+  position: absolute;
+  transform-origin: 0 90px;
+}
+
+#circle-text {
+  animation: rotate linear 5s infinite;
+  border: #fff solid 2px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

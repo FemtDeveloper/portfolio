@@ -3,7 +3,11 @@ import { DescriptionCollab } from "@/app/components";
 import { useIsSpanish } from "@/hooks";
 import Header from "./Header";
 
-const Forge = () => {
+interface Props {
+  inHome?: boolean;
+}
+
+const Forge = ({ inHome = false }: Props) => {
   const isSpanish = useIsSpanish();
   return (
     <section className="flex w-full items-center max-w-wrapper h-full flex-col gap-4">
