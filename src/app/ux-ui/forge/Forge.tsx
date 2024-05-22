@@ -10,7 +10,7 @@ interface Props {
 const Forge = ({ inHome = false }: Props) => {
   const isSpanish = useIsSpanish();
   return (
-    <section className="flex w-full items-center max-w-wrapper h-full flex-col gap-4">
+    <section className="flex w-full items-center justify-center max-w-wrapper h-screen flex-col gap-4">
       <Header />
       <div className="w-full px-4 lg:px-0">
         <DescriptionCollab

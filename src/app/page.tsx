@@ -4,6 +4,8 @@ import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLenis } from "lenis/react";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useShallow } from "zustand/react/shallow";
 import {
@@ -26,6 +28,17 @@ export default function Home() {
   const { theme } = useThemeStore(
     useShallow((state) => ({ theme: state.theme }))
   );
+
+  const lenis = useLenis(() => {});
+
+  const pathName = usePathname();
+
+  useEffect(() => {
+    const target = pathName.split("#")[1];
+    if (target) {
+      lenis?.scrollTo(`#${target}`);
+    }
+  }, [lenis, pathName]);
 
   useEffect(() => {
     if (theme === "dark") {

@@ -29,7 +29,7 @@ const UxuiPage = () => {
 
   return (
     <div
-      className={`flex w-full flex-col justify-center items-center min-h-screen relative lg:bg-primaryPurple gap-40`}
+      className={`flex w-full flex-col justify-center items-center min-h-screen relative lg:bg-primaryPurple`}
     >
       <button
         onClick={() => router.push("/")}
@@ -40,8 +40,8 @@ const UxuiPage = () => {
       >
         <HomeIcon size={50} color="#fff" />
       </button>
-      <Forge />
       <Opticore />
+      <Forge />
     </div>
   );
 };
