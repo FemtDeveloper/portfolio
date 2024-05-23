@@ -36,10 +36,10 @@
   }
 } */
 
-span {
+/* span {
   position: absolute;
   transform-origin: 0 90px;
-}
+} */
 
 #circle-text {
   animation: rotate linear 5s infinite;
