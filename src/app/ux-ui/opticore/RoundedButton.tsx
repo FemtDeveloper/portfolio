@@ -1,3 +1,4 @@
+"use client";
 import { useResponsive } from "@/hooks";
 import { ArrowDownIcon } from "@/Icons";
 import Image from "next/image";

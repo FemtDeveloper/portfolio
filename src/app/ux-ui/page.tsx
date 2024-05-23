@@ -1,45 +1,47 @@
-"use client";
-import { HomeIcon } from "@/Icons";
-import clsx from "clsx";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Metadata } from "next";
 import { Forge } from "./forge";
+import HomeButton from "./HomeButton";
 import { Opticore } from "./opticore";
 
+export const metadata: Metadata = {
+  title: "UX/UI Components - Felix Miranda",
+  description:
+    "Discover components translated from UX/UI designs by Felix Miranda.",
+  openGraph: {
+    type: "website",
+    url: "https://www.fmiranda.com/ux-ui",
+    title: "UX/UI Components - Felix Miranda",
+    description:
+      "Discover components translated from UX/UI designs by Felix Miranda.",
+    images: [
+      {
+        url: "https://www.fmiranda.com/images/ux-ui-cover.webp",
+        width: 1260,
+        height: 630,
+        alt: "UX/UI Components",
+      },
+    ],
+  },
+  twitter: {
+    title: "UX/UI Components - Felix Miranda",
+    description:
+      "Discover components translated from UX/UI designs by Felix Miranda.",
+    images: [
+      {
+        url: "https://www.fmiranda.com/images/ux-ui-cover.webp",
+        width: 1260,
+        height: 630,
+        alt: "UX/UI Components",
+      },
+    ],
+  },
+};
 const UxuiPage = () => {
-  const router = useRouter();
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    let timeout: any;
-
-    const handleMouseMove = () => {
-      setIsVisible(true);
-      clearTimeout(timeout);
-      timeout = setTimeout(() => setIsVisible(false), 2000);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      clearTimeout(timeout);
-    };
-  }, []);
-
   return (
     <div
       className={`flex w-full flex-col justify-center items-center min-h-screen relative lg:bg-primaryPurple`}
     >
-      <button
-        onClick={() => router.push("/")}
-        className={clsx(
-          "fixed bottom-5 md:bottom-auto md:top-5 z-30 right-5 lg:right-20 transition duration-500",
-          isVisible ? "opacity-100" : "opacity-5 lg:opacity-0"
-        )}
-      >
-        <HomeIcon size={50} color="#fff" />
-      </button>
+      <HomeButton />
       <Opticore />
       <Forge />
     </div>

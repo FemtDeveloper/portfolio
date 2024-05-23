@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       {
         url: "https://www.fmiranda.com/images/cover.jpg",
         width: 1260,
-        height: 800,
+        height: 630,
       },
     ],
   },
