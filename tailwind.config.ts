@@ -101,8 +101,8 @@ const config: Config = {
         super: "164px",
         clamp: "clamp(2rem, 5vw, 3.8rem)",
         "clamp-big": "clamp(2rem, 8vw, 8rem)",
-        "clamp-opticore": "clamp(1.3rem, 3vw, 2rem)",
-        "clamp-opticore-big": "clamp(2.15rem, 5vw, 4.4rem)",
+        "clamp-opticore": "clamp(1rem, 3vw, 1.5rem)",
+        "clamp-opticore-big": "clamp(2rem, 5vw, 4.4rem)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

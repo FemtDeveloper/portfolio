@@ -17,9 +17,9 @@ const Opticore = () => {
     text: "OPTICORE",
     speed: 0.15,
     tick: 10,
-    step: 1,
+    step: 9,
     seed: 7,
-    scramble: 10,
+    scramble: 20,
     overflow: false,
     range: [65, 90],
     overdrive: 103,
@@ -49,32 +49,51 @@ const Opticore = () => {
       <div className="w-full px-4 md:px-0 flex justify-center">
         <Navbar />
       </div>
-      <div className="max-w-wrapper w-full flex justify-center relative h-full md:max-h-[550px] mt-10 md:mt-16 pb-4">
-        <div className="left-content w-full  md:flex-1 gap-4 md:gap-8 flex flex-col z-10 justify-center lg:justify-end pb-6 bd-blur-opticore p-4 md:px-0">
-          <div className="title-container font-skinz flex md:gap-4 flex-col">
-            <h3 className="text-clamp-opticore">WE ARE</h3>
-            <h2 className="text-clamp-opticore-big" ref={ref} />
+      <div className="max-w-wrapper w-full flex flex-col justify-center  items-center relative h-full md:max-h-[550px]  md:mt-16 pb-4">
+        <div className="left-content w-full md:flex-1 gap-4 flex flex-col z-10 justify-center lg:justify-end md:pb-10 pt-10 p-4 md:px-0">
+          <div className="title-container flex flex-col">
+            <h3 className="text-clamp-opticore font-skinz text-center md:text-start">
+              WE ARE
+            </h3>
+            <h2
+              className="text-clamp-opticore-big leading-tight text-center md:text-start font-skinz "
+              ref={ref}
+            />
+            <p className="b3 md:b1 tracking-widest text-neutral-400 hidden md:flex">
+              In the dynamic landscape of business, navigating
+              <br className="hidden md:flex" />
+              complexities and amazing opportunities requires
+              <br className="hidden md:flex" />
+              expertise, vision and strategic acumen.
+            </p>
           </div>
-          <p className={`b3 md:b1 tracking-widest `}>
+          <div className="hidden md:flex">
+            <OpticoreButton />
+          </div>
+        </div>
+        <figure className="h-full w-full min-w-72 relative md:w-1/2 md:h-full md:absolute md:top-auto right-0">
+          <Image
+            src="/images/uxui/opticore2.webp"
+            alt="figure"
+            fill
+            className="object-contain"
+          />
+        </figure>
+        <div className="flex flex-col gap-4">
+          <p className="b3 md:b1 tracking-widest text-neutral-400 md:hidden flex text-center">
             In the dynamic landscape of business, navigating
             <br className="hidden md:flex" />
             complexities and amazing opportunities requires
             <br className="hidden md:flex" />
             expertise, vision and strategic acumen.
           </p>
-          <OpticoreButton />
+          <div className="flex w-full justify-center md:hidden">
+            <OpticoreButton />
+          </div>
         </div>
-        <figure className="h-[110%] w-[110%] md:w-1/2 md:h-full absolute -top-10 md:top-auto right-0">
-          <Image
-            src="/images/uxui/opticore2.webp"
-            alt="figure"
-            fill
-            className="object-cover md:object-contain"
-          />
-        </figure>
         <SlideIndicator slideSelected={slideSelected} />
       </div>
-      <div className="relative flex flex-col md:flex-row justify-between items-center w-full max-w-wrapper mb-6 md:mb-10 gap-8 md:gap-0">
+      <div className="relative hidden md:flex  justify-between items-center w-full max-w-wrapper mb-6 md:mb-10 gap-8 md:gap-0">
         <SocialLinks />
         <RoundedButton />
         <Pagination

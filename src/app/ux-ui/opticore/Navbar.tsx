@@ -1,4 +1,5 @@
 "use client";
+import { MenuOpticore } from "@/app/components";
 import clsx from "clsx";
 import { useState } from "react";
 import { links, OpticoreLinks } from "./linkList";
@@ -6,7 +7,7 @@ import { links, OpticoreLinks } from "./linkList";
 const Navbar = () => {
   const [linkSelected, setlinkSelected] = useState<OpticoreLinks>("Home");
   return (
-    <nav className="relative bd-blur top-4 md:top-8 bg-white20 z-20 rounded-full flex items-center px-2 md:px-0 gap-4 md:gap-0 md:pl-8 w-full max-w-wrapper">
+    <nav className="relative navbar-blur-opticore top-4 md:bg-white20 z-20 rounded-full flex items-center px-2 md:px-0 gap-4 md:gap-0 md:pl-8 w-full max-w-wrapper">
       <div className="w-full md:w-1/3 py-5">
         <a
           href="#"
@@ -16,13 +17,13 @@ const Navbar = () => {
           <p className="font-skinz mt-1 md:mt-2">CORE</p>
         </a>
       </div>
-      <div className="w-full md:w-2/3 flex h-full gap-8 font-medium justify-end">
-        <ul className="hidden lg:flex h-full items-center justify-between w-full">
+      <div className="w-full md:w-2/3 hidden md:flex h-full lg:gap-8 font-medium justify-end">
+        <ul className="flex h-full items-center justify-between w-full">
           {links.map((link, i) => (
             <li
               key={i}
               className={
-                "h-full flex items-center px-5  transition-all duration-300 relative pointer-events-auto"
+                "h-full flex items-center px-2 lg:px-5  transition-all duration-300 relative pointer-events-auto"
               }
               onClick={() => setlinkSelected(link)}
             >
@@ -41,10 +42,11 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <button className="md:b1 w-full max-w-[170px] transition-all duration-300 bd-blur-md px-3 md:px-5 text-nowrap rounded-full my-2 md:m-2">
+        <button className="md:b1 w-full max-w-[170px] transition-all duration-300 bd-blur-md-opticore bg-white20 px-3 md:px-5 text-nowrap rounded-full my-2 md:m-2">
           Start a Project
         </button>
       </div>
+      <MenuOpticore />
     </nav>
   );
 };

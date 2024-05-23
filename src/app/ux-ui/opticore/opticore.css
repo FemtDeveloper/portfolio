@@ -3,11 +3,7 @@
   filter: url("#goo");
 }
 
-/* .phone {
-  animation: movePhone 7s linear infinite;
-} */
-
-@keyframes movePhone {
+/* @keyframes movePhone {
   0% {
     transform: translateX(0) scaleY(0.2);
     z-index: -1000;
@@ -38,7 +34,7 @@
   100% {
     transform: translateX(0) scaleY(0.2);
   }
-}
+} */
 
 span {
   position: absolute;

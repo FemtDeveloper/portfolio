@@ -205,11 +205,17 @@ html {
   --webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
-.bd-blur-md {
+.bd-blur-md-opticore {
   --webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 }
 
+.navbar-blur-opticore {
+  @media (min-width: 768px) {
+    --webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
 .bd-blur-opticore {
   @media (max-width: 768px) {
     --webkit-backdrop-filter: blur(8px);

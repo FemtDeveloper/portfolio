@@ -9,7 +9,7 @@ interface Props {
 
 const SlideIndicator = ({ slideSelected }: Props) => {
   return (
-    <aside className="flex flex-col gap-2 h-full justify-center absolute z-20 right-2 md:right-0">
+    <aside className="hidden md:flex flex-col gap-2 h-full justify-center absolute z-20 right-2 md:right-0">
       {slides.map((slide) => (
         <div
           className={clsx(
