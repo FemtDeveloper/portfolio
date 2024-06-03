@@ -1,11 +1,13 @@
 import { Header } from "@/app/ux-ui/forge";
-import { useIsSpanish } from "@/hooks";
+import { useIsSpanish, useResponsive } from "@/hooks";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { AnimationLink, Description } from "../UI/Common";
 
 const Collaborations = () => {
   const isSpanish = useIsSpanish();
+  const isMobile = useResponsive();
+
   useGSAP(() => {
     gsap.to(".branding-title > *", {
       backgroundPositionX: "100%",
@@ -19,6 +21,7 @@ const Collaborations = () => {
       },
     });
   }, []);
+  if (isMobile) return null;
   return (
     <section
       id="collaborations"
