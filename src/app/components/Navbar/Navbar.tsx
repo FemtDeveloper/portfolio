@@ -62,11 +62,7 @@ const Navbar = () => {
           <button
             className="flex md: min-w-20"
             aria-label="Link to redirect to homepage"
-            onClick={
-              pathName === "/"
-                ? () => lenis?.scrollTo("top")
-                : () => animationPageOut("/", router)
-            }
+            onClick={() => animationPageOut("/", router)}
           >
             <LogoIcon
               color={theme === "dark" || onImplementaions ? "white" : "#000"}
