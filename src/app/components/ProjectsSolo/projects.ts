@@ -53,13 +53,13 @@ export const PROJECTS_AS_EMPLOYEE: MainProps[] = [
     id: 2,
     title: "Up",
     description:
-      'Proyecto <a href="https://up.alimdreams.com" target="_blank" className="text-primaryOrange">Up e-learning</a>. Esta página de e-learning, aún en etapa de preproducción, integra Next.js, SASS y Django para ofrecer una plataforma educativa interactiva y personalizable. Con Next.js aseguramos una navegación rápida, SASS permite una experiencia visual rica y Django gestiona el contenido de forma eficaz.',
+      'Proyecto <a href="https://up-capacitaciones.com/" target="_blank" className="text-primaryOrange">Up e-learning</a>. Esta página de e-learning, aún en etapa de preproducción, integra Next.js, SASS y Django para ofrecer una plataforma educativa interactiva y personalizable. Con Next.js aseguramos una navegación rápida, SASS permite una experiencia visual rica y Django gestiona el contenido de forma eficaz.',
     englishDescription:
       'Project <span className="text-primaryOrange">Up e-learning</span>. This e-learning platform, currently in the pre-production phase, incorporates Next.js, SASS, and Django, poised to revolutionize online education with an intuitive interface, customizable styles, and a powerful backend for efficient educational content management.',
     bgButtonColor: "bg-primaryRed",
     img: "/images/projects/up.webp",
     titleButton: "Online",
-    url: "https://up.alimdreams.com",
+    url: "https://up-capacitaciones.com/",
     mobileDescription:
       "Actualmente en etapa de preproducción, integra Next.js, SASS y Django, preparándose para revolucionar la educación en línea con una interfaz intuitiva, estilos personalizables y un backend potente para una gestión eficaz del contenido educativo.",
     mobileEnglishDescription:
