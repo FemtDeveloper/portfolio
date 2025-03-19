@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     title: "Felix Miranda- Crafting Engaging & Effective Web Experiences",
     description:
       "Discover innovative web solutions and projects by Felix Miranda. Explore my portfolio and see how I can help bring your vision online.",
-    url: "https://www.fmiranda.com/",
+    url: "https://www.mirandadev.com/",
     images: [
       {
-        url: "https://www.fmiranda.com/images/cover.jpg",
+        url: "https://www.mirandadev.com/images/cover.jpg",
         width: 1260,
         height: 630,
       },

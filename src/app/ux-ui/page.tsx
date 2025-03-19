@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     "Discover components translated from UX/UI designs by Felix Miranda.",
   openGraph: {
     type: "website",
-    url: "https://www.fmiranda.com/ux-ui",
+    url: "https://www.mirandadev.com/ux-ui",
     title: "UX/UI Components - Felix Miranda",
     description:
       "Discover components translated from UX/UI designs by Felix Miranda.",
     images: [
       {
-        url: "https://www.fmiranda.com/images/ux-ui-cover.webp",
+        url: "https://www.mirandadev.com/images/ux-ui-cover.webp",
         width: 1260,
         height: 630,
         alt: "UX/UI Components",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "Discover components translated from UX/UI designs by Felix Miranda.",
     images: [
       {
-        url: "https://www.fmiranda.com/images/ux-ui-cover.webp",
+        url: "https://www.mirandadev.com/images/ux-ui-cover.webp",
         width: 1260,
         height: 630,
         alt: "UX/UI Components",
