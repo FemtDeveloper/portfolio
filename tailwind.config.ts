@@ -19,6 +19,7 @@ const config: Config = {
       black: "#1B1B1B",
       primaryOrange: "#FC4B1D",
       primaryOrange20: "#FC4B1D33",
+      lightPink: "#dd6580",
       primaryPurple: "#0e0c15",
       purpleText: "#9a90bf",
       orangeGradient: "#ff5b2a80",

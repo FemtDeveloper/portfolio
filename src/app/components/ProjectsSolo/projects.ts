@@ -31,6 +31,22 @@ export const SOLO_PROJECTS: MainProps[] = [
     mobileEnglishDescription:
       'Project <span className="text-primaryOrange">Madrugón Mayorista</span>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS. <span className="text-neutral-500">(Under construction)</span>',
   },
+  {
+    id: 5,
+    title: "The Moms Guide",
+    description:
+      'Proyecto <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. Página web que ofrece consejos para padres sobre salud, crecimiento y orientación durante la infancia y adolescencia. Desarrollada con Next.js, PostgreSQL y NestJS. Cada publicación se genera al instante con un único prompt, creando imágenes y blogs impulsados por IA, lo que representa un adelanto en la generación de contenido digital para el futuro.',
+    englishDescription:
+      'Project <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. A website that offers advice for parents on health, growth, and guidance throughout childhood and adolescence. Developed with Next.js, PostgreSQL, and NestJS, every post is generated instantly with a single prompt, delivering AI-powered images and blogs—a glimpse into the future of digital content creation.',
+    bgButtonColor: "bg-lightPink",
+    img: "/images/projects/the-moms-guidee.webp",
+    titleButton: "Online",
+    url: "https://themomsguide.com/",
+    mobileDescription:
+      'Proyecto <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. Página web que ofrece consejos para padres, desarrollada con Next.js, PostgreSQL y NestJS, donde cada publicación se genera instantáneamente con un único prompt mediante IA.',
+    mobileEnglishDescription:
+      'Project <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. A website offering parental advice, developed with Next.js, PostgreSQL, and NestJS, with every post generated instantly with a single prompt through AI.',
+  },
 ];
 export const PROJECTS_AS_EMPLOYEE: MainProps[] = [
   {

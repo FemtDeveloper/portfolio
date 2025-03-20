@@ -38,7 +38,7 @@ const ProjectsSolo = () => {
     >
       <div className="branding-title flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 lg: px-4 lg:px-0">
         <h2 className="h2 lg:d1 font-bold tracking-widest bg-gradient-to-r from-transparent to-primary dark:to-white">
-          {isSpanish ? "PROECTOS" : "PROJECTS"}
+          {isSpanish ? "PROYECTOS" : "PROJECTS"}
         </h2>
       </div>
       <div className="inner flex flex-col gap-20 md:gap-32">
