@@ -1,0 +1,21 @@
+{
+  "name": "Felix Miranda - Full Stack Developer Portfolio",
+  "short_name": "Felix Miranda",
+  "description": "Full Stack Developer & UX/UI Designer specializing in React, Next.js, Node.js, and modern web technologies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e0e0f",
+  "theme_color": "#0e0e0f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/cover.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "portfolio", "developer"],
+  "lang": "en",
+  "dir": "ltr"
+}
