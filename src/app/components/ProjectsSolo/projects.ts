@@ -1,9 +1,41 @@
 export const SOLO_PROJECTS: MainProps[] = [
   {
+    id: 2,
+    title: "Reevolución Tech",
+    description:
+      'Proyecto <a href="https://www.reevoluciontech.com/" target="_blank" className="text-greenRevolution">Reevolución Tech</a>. Agencia de desarrollo web especializada en crear sitios y aplicaciones que convierten visitantes en clientes. Desarrollada con Next.js y tecnologías modernas, ofrece servicios de desarrollo web, aplicaciones móviles y automatizaciones para startups y empresas en crecimiento.',
+    englishDescription:
+      'Project <a href="https://www.reevoluciontech.com/" target="_blank" className="text-greenRevolution">Reevolución Tech</a>. Web development agency specialized in creating websites and applications that convert visitors into clients. Built with Next.js and modern technologies, offering web development, mobile applications, and automation services for startups and growing companies.',
+    bgButtonColor: "bg-greenRevolution",
+    img: "/images/projects/revolution-mockup.webp",
+    titleButton: "Web - Agency",
+    url: "https://www.reevoluciontech.com/",
+    mobileDescription:
+      'Proyecto <a href="https://www.reevoluciontech.com/" target="_blank" className="text-greenRevolution">Reevolución Tech</a>. Agencia de desarrollo especializada en crear sitios web que convierten visitantes en clientes, usando Next.js y tecnologías modernas.',
+    mobileEnglishDescription:
+      'Project <a href="https://www.reevoluciontech.com/" target="_blank" className="text-greenRevolution">Reevolución Tech</a>. Development agency specialized in creating websites that convert visitors into clients, using Next.js and modern technologies.',
+  },
+  {
+    id: 5,
+    title: "The Moms Guide",
+    description:
+      'Proyecto <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. Página web que ofrece consejos para padres sobre salud, crecimiento y orientación durante la infancia y adolescencia. Desarrollada con Next.js, PostgreSQL y NestJS. Cada publicación se genera al instante con un único prompt, creando imágenes y blogs impulsados por IA, lo que representa un adelanto en la generación de contenido digital para el futuro.',
+    englishDescription:
+      'Project <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. A website that offers advice for parents on health, growth, and guidance throughout childhood and adolescence. Developed with Next.js, PostgreSQL, and NestJS, every post is generated instantly with a single prompt, delivering AI-powered images and blogs—a glimpse into the future of digital content creation.',
+    bgButtonColor: "bg-lightPink",
+    img: "/images/projects/the-moms-guidee.webp",
+    titleButton: "Online",
+    url: "https://themomsguide.com/",
+    mobileDescription:
+      'Proyecto <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. Página web que ofrece consejos para padres, desarrollada con Next.js, PostgreSQL y NestJS, donde cada publicación se genera instantáneamente con un único prompt mediante IA.',
+    mobileEnglishDescription:
+      'Project <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. A website offering parental advice, developed with Next.js, PostgreSQL, and NestJS, with every post generated instantly with a single prompt through AI.',
+  },
+  {
     id: 3,
     title: "Web Portafolio",
     description:
-      'Proyecto <a href="www.efraincaicedo.com" target="_blank" className="text-primaryOrange">www.efraincaicedo.com</a>. Página web desarrollada en colaboración estrecha con el cliente quien fue el creador del diseño, utilizando Next.js y Tailwind CSS. El resultado de este proyecto es una web con un excelente performance, buenas practicas, accesiobilidad y SEO.',
+      'Proyecto <a href="www.efraincaicedo.com" target="_blank" className="text-primaryOrange">www.efraincaicedo.com</a>. Página web desarrollada en colaboración estrecha con el cliente quien fue el creator del diseño, utilizando Next.js y Tailwind CSS. El resultado de este proyecto es una web con un excelente performance, buenas practicas, accesiobilidad y SEO.',
     englishDescription:
       'Project <a href="www.efraincaicedo.com" target="_blank" className="text-primaryOrange">www.efraincaicedo.com</a>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS. The outcome of this project is a website with excellent performance, good practices, accessibility, and SEO.',
     bgButtonColor: "bg-primaryGreen",
@@ -30,22 +62,6 @@ export const SOLO_PROJECTS: MainProps[] = [
       'Proyecto <span className="text-primaryOrange">Madrugón Mayorista</span>. Página web desarrollada en colaboración estrecha con el cliente quien fue el creador del diseño, utilizando Next.js y Tailwind CSS. <span className="text-neutral-500">(Under construction)</span>',
     mobileEnglishDescription:
       'Project <span className="text-primaryOrange">Madrugón Mayorista</span>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS. <span className="text-neutral-500">(Under construction)</span>',
-  },
-  {
-    id: 5,
-    title: "The Moms Guide",
-    description:
-      'Proyecto <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. Página web que ofrece consejos para padres sobre salud, crecimiento y orientación durante la infancia y adolescencia. Desarrollada con Next.js, PostgreSQL y NestJS. Cada publicación se genera al instante con un único prompt, creando imágenes y blogs impulsados por IA, lo que representa un adelanto en la generación de contenido digital para el futuro.',
-    englishDescription:
-      'Project <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. A website that offers advice for parents on health, growth, and guidance throughout childhood and adolescence. Developed with Next.js, PostgreSQL, and NestJS, every post is generated instantly with a single prompt, delivering AI-powered images and blogs—a glimpse into the future of digital content creation.',
-    bgButtonColor: "bg-lightPink",
-    img: "/images/projects/the-moms-guidee.webp",
-    titleButton: "Online",
-    url: "https://themomsguide.com/",
-    mobileDescription:
-      'Proyecto <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. Página web que ofrece consejos para padres, desarrollada con Next.js, PostgreSQL y NestJS, donde cada publicación se genera instantáneamente con un único prompt mediante IA.',
-    mobileEnglishDescription:
-      'Project <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. A website offering parental advice, developed with Next.js, PostgreSQL, and NestJS, with every post generated instantly with a single prompt through AI.',
   },
 ];
 export const PROJECTS_AS_EMPLOYEE: MainProps[] = [

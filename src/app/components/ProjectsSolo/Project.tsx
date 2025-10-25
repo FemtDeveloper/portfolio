@@ -1,15 +1,15 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useIsDark, useIsSpanish, useResponsive } from "@/hooks";
 
 import { ArrowDiagonalIcon } from "@/Icons";
-import { useIsDark, useIsSpanish, useResponsive } from "@/hooks";
+import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
 import { Description } from "../UI/Common";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 interface Props {
   mainProps: MainProps;
@@ -57,7 +57,7 @@ const Project = ({ mainProps, isInSlider = false, index }: Props) => {
           loading="lazy"
           alt="project image"
           src={img}
-          className={`z-0 w-full object-cover`}
+          className={`z-0 w-full object-cover rounded-3xl lg:rounded-[80px]`}
         />
         <Link
           href={url}

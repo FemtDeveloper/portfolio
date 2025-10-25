@@ -24,6 +24,7 @@ const config: Config = {
       purpleText: "#9a90bf",
       orangeGradient: "#ff5b2a80",
       primaryGreen: "#E8FB8E",
+      greenRevolution: "#0b7954",
       primaryBlue: "#3397c2",
       primaryRed: "#fd515a",
       pink: "#fb0269",

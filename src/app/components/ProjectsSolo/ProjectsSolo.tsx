@@ -1,10 +1,10 @@
-import Project from "./Project";
-import { SOLO_PROJECTS } from "./projects";
-
 import { useIsSpanish, useResponsive } from "@/hooks";
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Project from "./Project";
+import { SOLO_PROJECTS } from "./projects";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -36,8 +36,8 @@ const ProjectsSolo = () => {
       id="solo_projects"
       className="w-full h-full max-w-wrapper px-4 lg:px-0 flex flex-col gap-4"
     >
-      <div className="branding-title flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 lg: px-4 lg:px-0">
-        <h2 className="h2 lg:d1 font-bold tracking-widest bg-gradient-to-r from-transparent to-primary dark:to-white">
+      <div className="branding-title flex flex-col lg:flex-row items-center lg:items-end justify-between w-full gap-3 px-4 lg:px-0">
+        <h2 className="h2 lg:d1 font-bold tracking-widest bg-gradient-to-r from-primary to-primary dark:from-white dark:to-white [background-size:100%_100%]">
           {isSpanish ? "PROYECTOS" : "PROJECTS"}
         </h2>
       </div>

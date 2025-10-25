@@ -12,7 +12,7 @@ html {
   }
 
   .d1 {
-    @apply text-[90px] tracking-tight leading-none;
+    @apply text-[90px] tracking-normal leading-relaxed;
   }
 
   .d2 {
