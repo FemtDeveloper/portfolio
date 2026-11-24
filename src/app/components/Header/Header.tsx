@@ -41,7 +41,7 @@ const Header = () => {
           {isSpanish ? subheaderSpanish : subheaderEnglish}
         </h2>
         <p className="l1 md:b1 text-primary dark:text-white text-center md:text-left">
-          Front End — Developer
+          Full Stack — Developer
         </p>
         <Social />
         {!isMobile && (

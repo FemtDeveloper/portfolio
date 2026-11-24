@@ -114,13 +114,13 @@ export default function RootLayout({
       className={`${dmSans.className} ${skinz.variable} ${openSans.className} dark scroll-smooth`}
     >
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta key="theme-color" name="theme-color" content="#0e0e0f" />
         <meta
           key="apple-mobile-web-app-status-bar-style"
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-title"
@@ -135,55 +135,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/images/cover.jpg" />
         <link rel="manifest" href="/manifest.json" />
 
-        {/* Additional Open Graph meta tags for better compatibility */}
-        <meta
-          property="og:title"
-          content="Felix Miranda - Full Stack Developer & UX/UI Designer"
-        />
-        <meta
-          property="og:description"
-          content="Full Stack Developer & UX/UI Designer specializing in React, Next.js, Node.js, React Native and modern web technologies. Creating engaging digital experiences with clean code and beautiful design."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.mirandadev.com/" />
-        <meta
-          property="og:image"
-          content="https://www.mirandadev.com/images/cover.jpg"
-        />
-        <meta property="og:image:width" content="1260" />
-        <meta property="og:image:height" content="630" />
-        <meta
-          property="og:image:alt"
-          content="Felix Miranda - Full Stack Developer Portfolio"
-        />
-        <meta property="og:site_name" content="Felix Miranda Portfolio" />
-        <meta property="og:locale" content="en_US" />
-
-        {/* Twitter Card meta tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Felix Miranda - Full Stack Developer & UX/UI Designer"
-        />
-        <meta
-          name="twitter:description"
-          content="Full Stack Developer & UX/UI Designer specializing in React, Next.js, Node.js, and modern web technologies."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.mirandadev.com/images/cover.jpg"
-        />
-
-        {/* Microsoft/Outlook specific meta tags */}
-        <meta
-          name="msapplication-tooltip"
-          content="Felix Miranda - Full Stack Developer Portfolio"
-        />
-        <meta
-          name="msapplication-starturl"
-          content="https://www.mirandadev.com/"
-        />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -197,8 +148,8 @@ export default function RootLayout({
               url: "https://www.mirandadev.com",
               image: "https://www.mirandadev.com/images/cover.jpg",
               sameAs: [
-                "https://github.com/felixmiranda",
-                "https://linkedin.com/in/felixmiranda",
+                "https://github.com/FemtDeveloper",
+                "https://www.linkedin.com/in/fmirandat/",
               ],
               knowsAbout: [
                 "React",
@@ -206,6 +157,11 @@ export default function RootLayout({
                 "Node.js",
                 "TypeScript",
                 "JavaScript",
+                "NestJS",
+                "PostgreSQL",
+                "Supabase",
+                "Tailwind CSS",
+                "Generative AI",
                 "UX/UI Design",
                 "Full Stack Development",
                 "Frontend Development",

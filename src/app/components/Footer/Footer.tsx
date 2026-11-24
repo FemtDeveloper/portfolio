@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container relative flex  w-full  items-start md:items-center justify-center h-[220px] lg:h-[400px] overflow-y-hidden">
         <div className="flex flex-col items-center z-10 gap-3 md:gap-8">
           <p className="l1 md:b3 text-primary dark:text-white">
-            ©2024 Felix Miranda. All Rights Reserved.
+            ©{new Date().getFullYear()} Felix Miranda. All Rights Reserved.
           </p>
           <div className="iso">
             <IsoIcon color={isDark ? "#fff" : "#1e1e1e"} />

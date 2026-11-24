@@ -9,4 +9,5 @@ interface MainProps {
   bgButtonColor: string;
   titleButton: string;
   url: string;
+  tags?: string[];
 }

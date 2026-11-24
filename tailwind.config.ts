@@ -25,6 +25,8 @@ const config: Config = {
       orangeGradient: "#ff5b2a80",
       primaryGreen: "#E8FB8E",
       greenRevolution: "#0b7954",
+      mintRevolution: "#5ef0b0",
+      coralMoms: "#f0624d",
       primaryBlue: "#3397c2",
       primaryRed: "#fd515a",
       pink: "#fb0269",

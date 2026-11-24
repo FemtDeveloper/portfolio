@@ -12,21 +12,18 @@ const ProjectsSolo = () => {
   const { isMobile } = useResponsive();
   const isSpanish = useIsSpanish();
 
-  const start = isMobile ? "top 90%" : "top bottom";
   useGSAP(() => {
-    const projects = ["#project-3", "#project-4"];
-
-    projects.forEach((project, index) => {
-      gsap.from(project, {
+    // Cada proyecto entra al hacer scroll, sin depender de ids fijos.
+    gsap.utils.toArray<HTMLElement>("#solo_projects .project").forEach((el) => {
+      gsap.from(el, {
         scrollTrigger: {
-          trigger: ".inner",
-          start,
-          end: "bottom 200%",
+          trigger: el,
+          start: isMobile ? "top 95%" : "top bottom",
+          end: "top 55%",
           scrub: true,
         },
         opacity: 0,
         y: 100,
-        duration: 1.5,
       });
     });
   }, [isMobile]);
@@ -42,8 +39,8 @@ const ProjectsSolo = () => {
         </h2>
       </div>
       <div className="inner flex flex-col gap-20 md:gap-32">
-        {SOLO_PROJECTS.map((project, i) => (
-          <Project mainProps={project} key={project.id} index={project.id} />
+        {SOLO_PROJECTS.map((project) => (
+          <Project mainProps={project} key={project.id} index={project.id + 10} />
         ))}
       </div>
     </section>

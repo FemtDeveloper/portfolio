@@ -1,100 +1,117 @@
+// Las descripciones se renderizan con html-react-parser: usar `class` (no
+// `className`) y enlaces absolutos con https://, si no el navegador los trata
+// como rutas relativas.
+
+const link = (url: string, label: string, color: string) =>
+  `<a href="${url}" target="_blank" rel="noopener noreferrer" class="${color} underline-offset-4 hover:underline">${label}</a>`;
+
+const reevolucion = link(
+  "https://www.reevoluciontech.com/",
+  "Reevolución Tech",
+  "text-greenRevolution dark:text-mintRevolution"
+);
+const momsGuide = link(
+  "https://themomsguide.com/",
+  "The Moms Guide",
+  "text-coralMoms"
+);
+const efrain = link(
+  "https://efraincaicedo.com/",
+  "efraincaicedo.com",
+  "text-primaryOrange"
+);
+const madrugon = link(
+  "https://www.madrugononline.com/",
+  "Madrugón",
+  "text-primaryOrange"
+);
+const aviva = link("https://aviva.pe/", "aviva.pe", "text-primaryOrange");
+const up = link(
+  "https://up-capacitaciones.com/",
+  "Up e-learning",
+  "text-primaryOrange"
+);
+
 export const SOLO_PROJECTS: MainProps[] = [
   {
-    id: 2,
+    id: 1,
     title: "Reevolución Tech",
-    description:
-      'Proyecto <a href="https://www.reevoluciontech.com/" target="_blank" className="text-greenRevolution">Reevolución Tech</a>. Agencia de desarrollo web especializada en crear sitios y aplicaciones que convierten visitantes en clientes. Desarrollada con Next.js y tecnologías modernas, ofrece servicios de desarrollo web, aplicaciones móviles y automatizaciones para startups y empresas en crecimiento.',
-    englishDescription:
-      'Project <a href="https://www.reevoluciontech.com/" target="_blank" className="text-greenRevolution">Reevolución Tech</a>. Web development agency specialized in creating websites and applications that convert visitors into clients. Built with Next.js and modern technologies, offering web development, mobile applications, and automation services for startups and growing companies.',
+    description: `Proyecto ${reevolucion}. Estudio digital de diseño web y video con IA. Sitio bilingüe con hero animado, laboratorio de IA y casos de estudio, construido para convertir visitas en proyectos: sitios a medida, anuncios y videos generados con inteligencia artificial para marcas que quieren crecer.`,
+    englishDescription: `Project ${reevolucion}. A digital studio for web design and AI video. Bilingual site with an animated hero, an AI lab and case studies, built to turn visits into projects: custom websites plus AI-generated ads and videos for brands that want to grow.`,
+    mobileDescription: `Proyecto ${reevolucion}. Estudio de diseño web y video con IA: sitio bilingüe, animado y enfocado en conversión.`,
+    mobileEnglishDescription: `Project ${reevolucion}. Web design and AI video studio: a bilingual, animated, conversion-focused site.`,
     bgButtonColor: "bg-greenRevolution",
     img: "/images/projects/revolution-mockup.webp",
-    titleButton: "Web - Agency",
+    titleButton: "Web + IA",
     url: "https://www.reevoluciontech.com/",
-    mobileDescription:
-      'Proyecto <a href="https://www.reevoluciontech.com/" target="_blank" className="text-greenRevolution">Reevolución Tech</a>. Agencia de desarrollo especializada en crear sitios web que convierten visitantes en clientes, usando Next.js y tecnologías modernas.',
-    mobileEnglishDescription:
-      'Project <a href="https://www.reevoluciontech.com/" target="_blank" className="text-greenRevolution">Reevolución Tech</a>. Development agency specialized in creating websites that convert visitors into clients, using Next.js and modern technologies.',
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Generative AI", "i18n"],
   },
   {
-    id: 5,
-    title: "The Moms Guide",
-    description:
-      'Proyecto <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. Página web que ofrece consejos para padres sobre salud, crecimiento y orientación durante la infancia y adolescencia. Desarrollada con Next.js, PostgreSQL y NestJS. Cada publicación se genera al instante con un único prompt, creando imágenes y blogs impulsados por IA, lo que representa un adelanto en la generación de contenido digital para el futuro.',
-    englishDescription:
-      'Project <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. A website that offers advice for parents on health, growth, and guidance throughout childhood and adolescence. Developed with Next.js, PostgreSQL, and NestJS, every post is generated instantly with a single prompt, delivering AI-powered images and blogs—a glimpse into the future of digital content creation.',
-    bgButtonColor: "bg-lightPink",
-    img: "/images/projects/the-moms-guidee.webp",
-    titleButton: "Online",
-    url: "https://themomsguide.com/",
-    mobileDescription:
-      'Proyecto <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. Página web que ofrece consejos para padres, desarrollada con Next.js, PostgreSQL y NestJS, donde cada publicación se genera instantáneamente con un único prompt mediante IA.',
-    mobileEnglishDescription:
-      'Project <a href="https://themomsguide.com" target="_blank" className="text-lightPink">The Moms Guide</a>. A website offering parental advice, developed with Next.js, PostgreSQL, and NestJS, with every post generated instantly with a single prompt through AI.',
+    id: 2,
+    title: "Madrugón",
+    description: `Proyecto ${madrugon}. Tienda en línea para Colombia con catálogo por categorías (ropa, accesorios, salud y belleza, eléctricos, herramientas y juguetes), buscador, favoritos, pago contra entrega, envío gratis y pedidos por WhatsApp. Desarrollada con Next.js, Tailwind CSS y Supabase, pensada para cargar rápido en móvil y comprar en pocos pasos.`,
+    englishDescription: `Project ${madrugon}. An online store for Colombia with a category catalog (clothing, accessories, health & beauty, electronics, tools and toys), search, wishlist, cash on delivery, free shipping and WhatsApp ordering. Built with Next.js, Tailwind CSS and Supabase, designed to load fast on mobile and check out in a few steps.`,
+    mobileDescription: `Proyecto ${madrugon}. E-commerce para Colombia con pago contra entrega, envío gratis y pedidos por WhatsApp. Next.js, Tailwind CSS y Supabase.`,
+    mobileEnglishDescription: `Project ${madrugon}. E-commerce for Colombia with cash on delivery, free shipping and WhatsApp ordering. Next.js, Tailwind CSS and Supabase.`,
+    bgButtonColor: "bg-black",
+    img: "/images/projects/madrugon-online.webp",
+    titleButton: "E-commerce",
+    url: "https://www.madrugononline.com/",
+    tags: ["Next.js", "Tailwind CSS", "Supabase", "E-commerce"],
   },
   {
     id: 3,
+    title: "The Moms Guide",
+    description: `Proyecto ${momsGuide}. Blog para padres sobre salud, crecimiento y crianza desde recién nacidos hasta adolescentes, con buscador, contenido por etapas y modo noche. Desarrollado con Next.js, NestJS y PostgreSQL: cada publicación, con sus imágenes, se genera con IA a partir de un único prompt.`,
+    englishDescription: `Project ${momsGuide}. A parenting blog on health, growth and guidance from newborns to teens, with search, content by stage and night mode. Built with Next.js, NestJS and PostgreSQL: every post, images included, is generated with AI from a single prompt.`,
+    mobileDescription: `Proyecto ${momsGuide}. Blog de crianza con Next.js, NestJS y PostgreSQL; cada publicación se genera con IA desde un único prompt.`,
+    mobileEnglishDescription: `Project ${momsGuide}. Parenting blog built with Next.js, NestJS and PostgreSQL; every post is AI-generated from a single prompt.`,
+    bgButtonColor: "bg-coralMoms",
+    img: "/images/projects/the-moms-guidee.webp",
+    titleButton: "Blog con IA",
+    url: "https://themomsguide.com/",
+    tags: ["Next.js", "NestJS", "PostgreSQL", "Generative AI"],
+  },
+  {
+    id: 4,
     title: "Web Portafolio",
-    description:
-      'Proyecto <a href="www.efraincaicedo.com" target="_blank" className="text-primaryOrange">www.efraincaicedo.com</a>. Página web desarrollada en colaboración estrecha con el cliente quien fue el creator del diseño, utilizando Next.js y Tailwind CSS. El resultado de este proyecto es una web con un excelente performance, buenas practicas, accesiobilidad y SEO.',
-    englishDescription:
-      'Project <a href="www.efraincaicedo.com" target="_blank" className="text-primaryOrange">www.efraincaicedo.com</a>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS. The outcome of this project is a website with excellent performance, good practices, accessibility, and SEO.',
+    description: `Proyecto ${efrain}. Página web desarrollada en colaboración estrecha con el cliente, quien creó el diseño, utilizando Next.js y Tailwind CSS. El resultado es un sitio con excelente rendimiento, buenas prácticas, accesibilidad y SEO.`,
+    englishDescription: `Project ${efrain}. Website developed in close collaboration with the client, who created the design, using Next.js and Tailwind CSS. The result is a site with excellent performance, good practices, accessibility and SEO.`,
+    mobileDescription: `Proyecto ${efrain}. Desarrollada en colaboración con el cliente, quien creó el diseño, con Next.js y Tailwind CSS.`,
+    mobileEnglishDescription: `Project ${efrain}. Developed in collaboration with the client, who created the design, using Next.js and Tailwind CSS.`,
     bgButtonColor: "bg-primaryGreen",
     img: "/images/projects/efra-portfolio.webp",
     titleButton: "Web - Portfolio",
     url: "https://efraincaicedo.com/",
-    mobileDescription:
-      'Proyecto <a href="www.efraincaicedo.com" target="_blank" className="text-primaryOrange">www.efraincaicedo.com</a>. Página web desarrollada en colaboración estrecha con el cliente quien fue el creador del diseño, utilizando Next.js y Tailwind CSS.',
-    mobileEnglishDescription:
-      'Project <a href="www.efraincaicedo.com" target="_blank" className="text-primaryOrange">www.efraincaicedo.com</a>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS.',
-  },
-  {
-    id: 4,
-    title: "Madrugón Mayorista",
-    description:
-      'Proyecto <span className="text-primaryOrange">Madrugón Mayorista</span>. Este proyecto de tienda en línea se desarrolla con Next.js, Tailwind CSS y Supabase, combinando renderizado eficiente, diseño responsivo y gestión de datos en tiempo real.En construcción, busca ofrecer una experiencia de usuario óptima y un proceso de compra ágil, con una plataforma escalable y fácil de mantener. <span className="text-neutral-500">(Under construction)</span>',
-    englishDescription:
-      'Project <span className="text-primaryOrange">Madrugón Mayorista</span>.This online store project is being developed using Next.js, Tailwind CSS, and Supabase, combining efficient rendering, responsive design, and real-time data management. Currently under construction, it aims to deliver an optimal user experience and a streamlined purchasing process, with a scalable and maintainable platform. <span className="text-neutral-500">(Under construction)</span>',
-    bgButtonColor: "bg-black",
-    img: "/images/projects/madrugon-store.webp",
-    titleButton: "Online",
-    url: "https://madrugon.vercel.app/",
-    mobileDescription:
-      'Proyecto <span className="text-primaryOrange">Madrugón Mayorista</span>. Página web desarrollada en colaboración estrecha con el cliente quien fue el creador del diseño, utilizando Next.js y Tailwind CSS. <span className="text-neutral-500">(Under construction)</span>',
-    mobileEnglishDescription:
-      'Project <span className="text-primaryOrange">Madrugón Mayorista</span>. Website developed in close collaboration with the client, who was the creator of the design, using Next.js and Tailwind CSS. <span className="text-neutral-500">(Under construction)</span>',
+    tags: ["Next.js", "Tailwind CSS", "SEO"],
   },
 ];
+
 export const PROJECTS_AS_EMPLOYEE: MainProps[] = [
   {
     id: 1,
     title: "Aviva Web",
-    description:
-      'Proyecto <a href="www.aviva.pe" target="_blank" className="text-primaryOrange">www.aviva.pe</a>. Este proyecto combina Next.js, SASS y Django para crear un sitio web dinámico, con un diseño elegante y una gestión de contenido eficiente.Utiliza Next.js para una experiencia de usuario fluida, SASS para estilos avanzados y Django como CMS robusto para el backend.',
-    englishDescription:
-      'Project <a href="www.aviva.pe" target="_blank" className="text-primaryOrange">www.aviva.pe</a>. This project merges Next.js, SASS, and Django to craft a dynamic website, featuring sleek design and efficient content management. It employs Next.js for a seamless user experience, SASS for styling, and Django as a robust CMS for backend.',
+    description: `Proyecto ${aviva}. Combina Next.js, SASS y Django para crear un sitio dinámico, con un diseño elegante y una gestión de contenido eficiente: Next.js para una experiencia fluida, SASS para estilos avanzados y Django como CMS para el backend.`,
+    englishDescription: `Project ${aviva}. Merges Next.js, SASS and Django into a dynamic website with sleek design and efficient content management: Next.js for a seamless experience, SASS for styling and Django as the backend CMS.`,
+    mobileDescription: `Proyecto ${aviva}. Sitio dinámico con Next.js, SASS y Django como CMS.`,
+    mobileEnglishDescription: `Project ${aviva}. Dynamic website with Next.js, SASS and Django as the CMS.`,
     bgButtonColor: "bg-primaryBlue",
     img: "/images/projects/aviva.webp",
-    titleButton: "Web - Portfolio",
+    titleButton: "Web",
     url: "https://aviva.pe/",
-    mobileDescription:
-      'Proyecto <a href="www.aviva.pe" target="_blank" className="text-primaryOrange">www.aviva.pe</a>. Este proyecto combina Next.js, SASS y Django para crear un sitio web dinámico,',
-    mobileEnglishDescription:
-      'Project <a href="www.aviva.pe" target="_blank" className="text-primaryOrange">www.aviva.pe</a>. It employs Next.js for a seamless user experience, SASS for advanced styling, and Django as a robust CMS for the backend.',
+    tags: ["Next.js", "SASS", "Django"],
   },
   {
     id: 2,
     title: "Up",
-    description:
-      'Proyecto <a href="https://up-capacitaciones.com/" target="_blank" className="text-primaryOrange">Up e-learning</a>. Esta página de e-learning, aún en etapa de preproducción, integra Next.js, SASS y Django para ofrecer una plataforma educativa interactiva y personalizable. Con Next.js aseguramos una navegación rápida, SASS permite una experiencia visual rica y Django gestiona el contenido de forma eficaz.',
-    englishDescription:
-      'Project <span className="text-primaryOrange">Up e-learning</span>. This e-learning platform, currently in the pre-production phase, incorporates Next.js, SASS, and Django, poised to revolutionize online education with an intuitive interface, customizable styles, and a powerful backend for efficient educational content management.',
+    description: `Proyecto ${up}. Plataforma de e-learning que integra Next.js, SASS y Django para ofrecer una experiencia educativa interactiva y personalizable: navegación rápida, una interfaz visual rica y un backend que gestiona el contenido de forma eficaz.`,
+    englishDescription: `Project ${up}. An e-learning platform built with Next.js, SASS and Django, offering an interactive, customizable learning experience: fast navigation, a rich interface and a backend that manages course content efficiently.`,
+    mobileDescription: `Proyecto ${up}. Plataforma de e-learning con Next.js, SASS y Django.`,
+    mobileEnglishDescription: `Project ${up}. E-learning platform built with Next.js, SASS and Django.`,
     bgButtonColor: "bg-primaryRed",
     img: "/images/projects/up.webp",
-    titleButton: "Online",
+    titleButton: "E-learning",
     url: "https://up-capacitaciones.com/",
-    mobileDescription:
-      "Actualmente en etapa de preproducción, integra Next.js, SASS y Django, preparándose para revolucionar la educación en línea con una interfaz intuitiva, estilos personalizables y un backend potente para una gestión eficaz del contenido educativo.",
-    mobileEnglishDescription:
-      'Project <span className="text-primaryOrange">Up e-learning</span>. Currently in the pre-production phase, incorporates Next.js, SASS, and Django, poised to revolutionize online education with an intuitive interface, customizable styles, and a powerful backend for efficient educational content management.',
+    tags: ["Next.js", "SASS", "Django"],
   },
 ];

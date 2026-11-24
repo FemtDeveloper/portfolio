@@ -6,7 +6,7 @@ import { AnimationLink, Description } from "../UI/Common";
 
 const Collaborations = () => {
   const isSpanish = useIsSpanish();
-  const isMobile = useResponsive();
+  const { isMobile } = useResponsive();
 
   useGSAP(() => {
     gsap.to(".branding-title > *", {
