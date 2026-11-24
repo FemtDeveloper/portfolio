@@ -16,19 +16,13 @@ const momsGuide = link(
   "text-coralMoms"
 );
 const efrain = link(
-  "https://efraincaicedo.com/",
-  "efraincaicedo.com",
+  "https://next-efra.vercel.app/",
+  "next-efra.vercel.app",
   "text-primaryOrange"
 );
 const madrugon = link(
   "https://www.madrugononline.com/",
   "Madrugón",
-  "text-primaryOrange"
-);
-const aviva = link("https://aviva.pe/", "aviva.pe", "text-primaryOrange");
-const up = link(
-  "https://up-capacitaciones.com/",
-  "Up e-learning",
   "text-primaryOrange"
 );
 
@@ -82,36 +76,7 @@ export const SOLO_PROJECTS: MainProps[] = [
     bgButtonColor: "bg-primaryGreen",
     img: "/images/projects/efra-portfolio.webp",
     titleButton: "Web - Portfolio",
-    url: "https://efraincaicedo.com/",
+    url: "https://next-efra.vercel.app/",
     tags: ["Next.js", "Tailwind CSS", "SEO"],
-  },
-];
-
-export const PROJECTS_AS_EMPLOYEE: MainProps[] = [
-  {
-    id: 1,
-    title: "Aviva Web",
-    description: `Proyecto ${aviva}. Combina Next.js, SASS y Django para crear un sitio dinámico, con un diseño elegante y una gestión de contenido eficiente: Next.js para una experiencia fluida, SASS para estilos avanzados y Django como CMS para el backend.`,
-    englishDescription: `Project ${aviva}. Merges Next.js, SASS and Django into a dynamic website with sleek design and efficient content management: Next.js for a seamless experience, SASS for styling and Django as the backend CMS.`,
-    mobileDescription: `Proyecto ${aviva}. Sitio dinámico con Next.js, SASS y Django como CMS.`,
-    mobileEnglishDescription: `Project ${aviva}. Dynamic website with Next.js, SASS and Django as the CMS.`,
-    bgButtonColor: "bg-primaryBlue",
-    img: "/images/projects/aviva.webp",
-    titleButton: "Web",
-    url: "https://aviva.pe/",
-    tags: ["Next.js", "SASS", "Django"],
-  },
-  {
-    id: 2,
-    title: "Up",
-    description: `Proyecto ${up}. Plataforma de e-learning que integra Next.js, SASS y Django para ofrecer una experiencia educativa interactiva y personalizable: navegación rápida, una interfaz visual rica y un backend que gestiona el contenido de forma eficaz.`,
-    englishDescription: `Project ${up}. An e-learning platform built with Next.js, SASS and Django, offering an interactive, customizable learning experience: fast navigation, a rich interface and a backend that manages course content efficiently.`,
-    mobileDescription: `Proyecto ${up}. Plataforma de e-learning con Next.js, SASS y Django.`,
-    mobileEnglishDescription: `Project ${up}. E-learning platform built with Next.js, SASS and Django.`,
-    bgButtonColor: "bg-primaryRed",
-    img: "/images/projects/up.webp",
-    titleButton: "E-learning",
-    url: "https://up-capacitaciones.com/",
-    tags: ["Next.js", "SASS", "Django"],
   },
 ];

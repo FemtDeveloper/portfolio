@@ -1,59 +1,66 @@
 import {
-  CssIcon,
-  HtmlIcon,
-  JsIcon,
-  NextIcon,
-  NodeIcon,
-  PythonIcon,
-  ReactIcon,
-  TailwindIcon,
-} from "@/Icons";
+  siCss,
+  siDjango,
+  siExpo,
+  siFigma,
+  siGit,
+  siGreensock,
+  siHtml5,
+  siJavascript,
+  siNestjs,
+  siNextdotjs,
+  siNodedotjs,
+  siPostgresql,
+  siPython,
+  siReact,
+  siSass,
+  siSupabase,
+  siTailwindcss,
+  siTypescript,
+  siVercel,
+} from "simple-icons";
+
+export type SkillCategory = "frontend" | "backend" | "mobile";
 
 export interface Skill {
-  skill: string;
-  icon: JSX.Element;
-  bgColor: string;
+  name: string;
+  /** Path SVG (viewBox 0 0 24 24). */
+  path: string;
+  /** Color de marca sin "#". */
+  hex: string;
+  category: SkillCategory;
 }
 
+// Icono propio para IA (no es una marca).
+const AI_PATH =
+  "M12 0l2.4 7.2L21.6 9.6 14.4 12l-2.4 7.2L9.6 12 2.4 9.6l7.2-2.4L12 0zm7.2 15.6l1.2 3.6 3.6 1.2-3.6 1.2-1.2 3.6-1.2-3.6-3.6-1.2 3.6-1.2 1.2-3.6z";
+
+const s = (
+  icon: { title: string; path: string; hex: string },
+  category: SkillCategory,
+  name = icon.title
+): Skill => ({ name, path: icon.path, hex: icon.hex, category });
+
 export const SKILLS: Skill[] = [
-  {
-    skill: "html",
-    icon: <HtmlIcon />,
-    bgColor: "#F16529",
-  },
-  {
-    skill: "css",
-    icon: <CssIcon />,
-    bgColor: "#2965F1",
-  },
-  {
-    skill: "node",
-    icon: <NodeIcon />,
-    bgColor: "#689F63",
-  },
-  {
-    skill: "js",
-    icon: <JsIcon />,
-    bgColor: "#F7DF1E",
-  },
-  {
-    skill: "python",
-    icon: <PythonIcon />,
-    bgColor: "#387EB8",
-  },
-  {
-    skill: "react",
-    icon: <ReactIcon />,
-    bgColor: "#61DAFB",
-  },
-  {
-    skill: "next",
-    icon: <NextIcon />,
-    bgColor: "#8424FF",
-  },
-  {
-    skill: "tailwind",
-    icon: <TailwindIcon />,
-    bgColor: "#0ED7B5",
-  },
+  s(siReact, "frontend"),
+  s(siNextdotjs, "frontend", "Next.js"),
+  s(siTypescript, "frontend"),
+  s(siJavascript, "frontend"),
+  s(siTailwindcss, "frontend", "Tailwind CSS"),
+  s(siGreensock, "frontend", "GSAP"),
+  s(siHtml5, "frontend", "HTML"),
+  s(siCss, "frontend", "CSS"),
+  s(siSass, "frontend"),
+  s(siNodedotjs, "backend", "Node.js"),
+  s(siNestjs, "backend", "NestJS"),
+  s(siPostgresql, "backend", "PostgreSQL"),
+  s(siSupabase, "backend"),
+  s(siPython, "backend"),
+  s(siDjango, "backend"),
+  s(siReact, "mobile", "React Native"),
+  s(siExpo, "mobile"),
+  s(siFigma, "mobile"),
+  { name: "Generative AI", path: AI_PATH, hex: "A78BFA", category: "mobile" },
+  s(siVercel, "backend"),
+  s(siGit, "backend"),
 ];
